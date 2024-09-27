@@ -1,0 +1,159 @@
+.header {
+  background-color: #000000;
+  /* Cor de fundo opcional */
+  padding: 20px;
+  /* Espaçamento ao redor do header */
+  display: flex;
+  /* Alinha os itens lado a lado */
+  justify-content: space-between;
+  /* Espaça igualmente todos os itens */
+  align-items: center;
+  /* Alinha os itens verticalmente ao centro */
+}
+
+.logoHome {
+  width: auto;
+  /* Ajuste conforme necessário */
+  height: 50px;
+  /* Exemplo de altura para a logo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-family: 'Inter', sans-serif;
+  /* Define a fonte Inter como padrão */
+  font-weight: bold;
+}
+
+.abrace {
+  color: #333;
+  /* Cor branca */
+}
+
+.sp {
+  color: #9B0202;
+  /* Cor vermelha */
+}
+
+.itensMenu {
+  flex: 2;
+  /* Ajusta o tamanho do menu em relação à logo */
+}
+
+.itensMenu ul {
+  display: flex;
+  /* Alinha os itens do menu lado a lado */
+  list-style: none;
+  /* Remove o estilo de lista padrão */
+  padding: 0;
+  margin: 0;
+  justify-content: space-around;
+  /* Espaça igualmente os itens do menu */
+  align-items: center;
+  /* Alinha os itens do menu verticalmente */
+}
+
+.itensMenu ul li {
+  position: relative;
+  /* Necessário para o posicionamento absoluto do dropdown */
+  margin: 0;
+  /* Remove o espaçamento padrão dos itens */
+}
+
+.itensMenu ul li a {
+  text-decoration: none;
+  /* Remove o sublinhado dos links */
+  color: #fff;
+  /* Cor do texto */
+  font-size: 24px;
+  /* Tamanho da fonte */
+  font-family: 'Inter', sans-serif;
+  /* Define a fonte Inter como padrão */
+  font-weight: bold;
+}
+
+.itensMenu ul li a:hover {
+  color: #9B0202;
+  font-weight: bold;
+
+  /* Cor ao passar o mouse */
+}
+
+/* Estilo para o dropdown */
+.dropdown {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Garanta que o dropdownMenu esteja exibido como um bloco */
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #000000;
+  list-style: none;
+  padding: 10px 20px;
+  /* Aumentei o padding para dar mais espaço */
+  margin: 0;
+  border-radius: 0;
+  /* Removi o arredondamento das bordas */
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+}
+
+/* Cada item do dropdown deve estar empilhado verticalmente */
+.dropdownMenu li {
+  display: block;
+  padding: 10px 0px;
+  /* Aumentei o padding para deixar os itens maiores */
+}
+
+/* Ajuste para links dentro dos itens do dropdown */
+.dropdownMenu li a {
+  display: block;
+  padding: 10px 20px;
+  /* Aumentei o padding dos links */
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Estilo para os links ao passar o mouse */
+/* .dropdownMenu li a:hover {
+  background-color: #b6b6b6;
+} */
+
+/* Estilo para o botão de cadastro */
+.botaoCadastro {
+  display: flex;
+  /* Alinha o botão no container */
+  align-items: center;
+  /* Alinha verticalmente o botão */
+}
+
+.botaoCadastro button {
+  padding: 10px 20px;
+  /* Espaçamento interno do botão */
+  font-size: 24px;
+  /* Tamanho da fonte */
+  font-family: 'Inter', sans-serif;
+  /* Define a fonte Inter como padrão */
+  font-weight: bold;
+  border: none;
+  /* Remove a borda padrão do botão */
+  background-color: #9B0202;
+  /* Cor de fundo do botão */
+  color: #fff;
+  /* Cor do texto do botão */
+  cursor: pointer;
+  /* Muda o cursor para uma mão ao passar o mouse */
+  border-radius: 12px;
+  /* Arredonda as bordas do botão */
+}
+
+.botaoCadastro button:hover {
+  background-color: #6d0b0b;
+  /* Cor ao passar o mouse */
+}
