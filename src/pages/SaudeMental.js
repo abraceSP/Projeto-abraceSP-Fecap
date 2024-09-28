@@ -191,21 +191,21 @@ function SaudeMental() {
                 <img src="img/paroquia.png" alt="Imagem 1" className="card-image" />
                 <h3 title="Atendimento Psicológico Paróquia São Luís Gonzaga" className="card-title">Atendimento Psicológico Paróquia... </h3>
                 <p className="card-description">Um grupo de psicólogos voluntários ao qual atendem às quintas-feiras na Paróquia da Igreja São Luís Gonzaga, recebendo todos os tipos de pacientes. </p>
-                <Link className="card-link" to="/servicos01"> Veja Mais! </Link>
+                <Link className="card-link" to="/saude-mental/servicos01"> Veja Mais! </Link>
             </div>
 
             <div className="card">
               <img src='img/sinpesp.jpg' alt="Imagem 2" className="card-image" />
               <h3 title="SINPESP" className="card-title">SINPESP</h3>
               <p className="card-description">O valor mínimo de cada sessão é, em média, R$ 40, definido de acordo com a condição financeira do paciente. Atendem pessoas de todas as classes sociais, incluindo adultos, jovens, crianças, adolescentes, famílias e idosos.</p>
-              <Link className="card-link" to="/servicos02"> Veja Mais! </Link>
+              <Link className="card-link" to="/saude-mental/servicos02"> Veja Mais! </Link>
             </div>
 
             <div className="card">
               <img src="img/AnaMariaPopo.jpg" alt="Imagem 3" className="card-image" />
               <h3 title="Clínica  Ana Maria Popovic" className="card-title">Clínica  Ana Maria Popovic </h3>
               <p className="card-description">"A Clínica Psicológica 'Ana Maria Poppovic' oferece terapia para casais e famílias, crianças e adultos, além de tratar processos de luto, dificuldades nos relacionamentos, questões relacionadas ao trabalho, orientação vocacional/profissional e outros. O atendimento é online e gratuito. Antes de iniciar o tratamento, é necessário agendar por telefone.</p>
-              <Link className="card-link" to="/servicos03"> Veja Mais! </Link>
+              <Link className="card-link" to="/saude-mental/servicos03"> Veja Mais! </Link>
             </div>
           </div>
 
@@ -215,21 +215,21 @@ function SaudeMental() {
               <img src="img/ClinicaGuarulhos.jpg" alt="Imagem 4" className="card-image" />
               <h3 title="Clínica Pscicologica da Universidade de Guarulhos" className="card-title">Clínica Psicologa da Universidade...</h3>
               <p className="card-description">Entre os serviços prestados estão psicodiagnóstico, psicoterapia infantil e para adultos, psicoterapia familiar e de casal. As inscrições devem ser feitas por telefone. As sessões, com duração de 50 minutos e ao custo de R$ 10 cada, são realizadas exclusivamente no formato presencial. </p>
-              <Link className="card-link" to="/servicos04"> Veja Mais! </Link>
+              <Link className="card-link" to="/saude-mental/servicos04"> Veja Mais! </Link>
             </div>
 
             <div className="card">
               <img src="img/PAN.avif" alt="Imagem 5" className="card-image" />
               <h3 title="PAN" className="card-title">PAN</h3>
               <p className="card-description">É um serviço especializado em São Paulo, voltado para o atendimento de idosos com necessidades neuropsiquiátricas. Oferece suporte e tratamento para condições como demência, depressão, ansiedade e outras questões de saúde mental que afetam a população idosa.</p>
-              <Link className="card-link" to="/servicos05"> Veja Mais! </Link>
+              <Link className="card-link" to="/saude-mental/servicos05"> Veja Mais! </Link>
             </div>
 
             <div className="card">
               <img src="img/ABPS.jpeg" alt="Imagem 6" className="card-image" />
               <h3 title="ABPS" className="card-title">ABPS</h3>
               <p className="card-description">O centro de formação em psicodrama para psicólogos já graduados (com CRP) oferece atendimentos psicológicos online para adultos, adolescentes, crianças, casais e famílias. O valor é social, sendo o mínimo R$ 160 por quatro sessões, ou R$ 40 cada uma.</p>
-              <Link className="card-link" to="/servicos06"> Veja Mais! </Link>
+              <Link className="card-link" to="/saude-mental/servicos06"> Veja Mais! </Link>
             </div>
           </div>
 

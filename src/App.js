@@ -32,12 +32,12 @@ function App() {
         <Route path="/educacao" element={<Educacao />} />
 
         <Route path="/saude-mental" element={<SaudeMental />}/>
-          <Route path="/servicos01" element={<Servicos01/>}/>
-          <Route path="/servicos02" element={<Servicos02/>}/>
-          <Route path="/servicos03" element={<Servicos03/>}/>
-          <Route path="/servicos04" element={<Servicos04/>}/>
-          <Route path="/servicos05" element={<Servicos05/>}/>
-          <Route path="/servicos06" element={<Servicos06/>}/>
+          <Route path="/saude-mental/servicos01" element={<Servicos01/>}/>
+          <Route path="/saude-mental/servicos02" element={<Servicos02/>}/>
+          <Route path="/saude-mental/servicos03" element={<Servicos03/>}/>
+          <Route path="/saude-mental/servicos04" element={<Servicos04/>}/>
+          <Route path="/saude-mental/servicos05" element={<Servicos05/>}/>
+          <Route path="/saude-mental/servicos06" element={<Servicos06/>}/>
         
         <Route path="/mais-servicos" element={<MaisServicos />} />
         <Route path="/sobre-nos" element={<SobreNos />} />
