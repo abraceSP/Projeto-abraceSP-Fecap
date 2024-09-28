@@ -1,1 +1,0 @@
-const fogolin = 1;
