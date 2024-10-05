@@ -102,7 +102,7 @@ const HomeServicos = styled.div` /* Design para resumo dos serviços (carrossel)
   padding: 50px;
   font-family: 'Inter', sans-serif;
  
-  .textServicos {
+  #servicos {
     max-width: 50%;
   }
 
@@ -259,13 +259,13 @@ function Home() {
       </HomeResumo>
 
       <HomeServicos> {/* Importação do resumo dos serviços (carrossel) */}
-        <div className="textServicos">
+        <div id="servicos">
           <h2 className="textEmpodere">EMPODERE NOSSA COMUNIDADE!</h2>
           <h1 className="tituloServicos">
             Se conecte com
             <span className="sp"> serviços sociais</span>
           </h1>
-          <p className="descricaoServicos" id="servicos">
+          <p className="descricaoServicos">
             Descubra ONG's, instituições públicas ou privadas e pessoas com serviços
             gratuitos ou com preços populares!
           </p>

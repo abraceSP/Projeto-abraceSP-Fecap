@@ -1,6 +1,6 @@
+import React, { useEffect } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import React, { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLocationDot,
@@ -221,7 +221,8 @@ function Servicos01() {
           </div>
 
           <div>
-            <button
+            <a
+              href="/#servicos"
               style={{
                 padding: "20px 20px",
                 marginRight: "350px",
@@ -233,7 +234,7 @@ function Servicos01() {
               }}
             >
               ENTRE EM CONTATO!
-            </button>
+            </a>
           </div>
         </section>
       </main>
