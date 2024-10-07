@@ -10,7 +10,7 @@ const HomeContent = styled.div` /* Design para conteúdos da home (abaixo do hea
   .containerHome {
     width: 100%;
     min-height: 100vh;
-    background-image: url('img/logoAbraceSP.jpg'); 
+    background-image: url('img/home/logoAbraceSP.jpg'); 
     background-size: cover;
     background-position: center;
     display: flex;
@@ -74,11 +74,13 @@ const HomeResumo = styled.div` /* Design para resumo do ABRACESP */
   .descricaoResumo {
     font-size: 24px;
     line-height: 1.6;
-    margin-bottom: 150px;
+    margin-bottom: 50px;
   }
 
   .imgResumo {
     max-width: 50%;
+    margin-right: 100px;
+    margin-top: 50px;
   }
 
   .styleImgResumo {
@@ -101,7 +103,7 @@ const HomeServicos = styled.div` /* Design para resumo dos serviços (carrossel)
   padding: 50px;
   font-family: 'Inter', sans-serif;
  
-  .textServicos {
+  #servicos {
     max-width: 50%;
   }
 
@@ -250,7 +252,7 @@ function Home() {
         </div>
         <div className="imgResumo">
           <img
-            src="img/logoResumo.jpg"
+            src="img/home/logoResumo.jpg"
             alt="São Paulo city"
             className="styleImgResumo"
           />
@@ -258,13 +260,13 @@ function Home() {
       </HomeResumo>
 
       <HomeServicos> {/* Importação do resumo dos serviços (carrossel) */}
-        <div className="textServicos">
+        <div id="servicos">
           <h2 className="textEmpodere">EMPODERE NOSSA COMUNIDADE!</h2>
           <h1 className="tituloServicos">
             Se conecte com
             <span className="sp"> serviços sociais</span>
           </h1>
-          <p className="descricaoServicos" id="servicos">
+          <p className="descricaoServicos">
             Descubra ONG's, instituições públicas ou privadas e pessoas com serviços
             gratuitos ou com preços populares!
           </p>
@@ -294,7 +296,7 @@ function Home() {
 
               <div className="carousel-item">
                 <Link to="/acolhimento">
-                  <img src="img/LgoDiversidade.jpg" className="d-block w-100" alt="Imagem acolhimento" />
+                  <img src="img/home/LgoDiversidade.jpg" className="d-block w-100" alt="Imagem acolhimento" />
                   <div class="carousel-caption custom-caption-center">
                     <h2><span className="sp">Acolhi</span>mento</h2>
                     <p>Para momentos em que um lugar para receber acolhimento é essencial! </p>
@@ -348,7 +350,7 @@ function Home() {
       </HomeServicos>
 
       <HomeContato> {/* Importação do contato */}
-        <div>
+        <div id="contato">
           <h1> Container para o contato </h1>
           <p> Esperar o André dos Santos concluir! </p>
         </div>
@@ -360,3 +362,4 @@ function Home() {
 }
 
 export default Home;
+
