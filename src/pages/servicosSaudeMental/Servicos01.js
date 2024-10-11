@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLocationDot,
@@ -13,11 +12,7 @@ function Servicos01() {
     document.body.style.backgroundColor = "black";
   }, []);
 
-  const navigate = useNavigate();
 
-  const handleContactClick = () => {
-    navigate('/#contato'); // Navega para a página HOME e para o container 'servicos'
-  };
 
   return (
     <div>
@@ -64,21 +59,21 @@ function Servicos01() {
             habitant ipsum. Turpis mi vitae fames amet pulvinar. Donec amet
             ultrices egestas sit nam enim. Sed sed mattis nunc libero sit
             interdum.
-            <br></br> Leo leo et quisque ut tellus. Eget egestas sed
-            pharetra sem gravida semper nisi proin. Imperdiet quis vel aliquam
-            quam vehicula feugiat arcu sit. Erat egestas nibh facilisi at
-            venenatis neque ultrices tellus. Vel libero nisi pellentesque lacus
-            in mattis non. Vulputate quisque neque urna habitasse justo pulvinar
-            egestas auctor. Vel id sed lacus bibendum mauris sed vel.
-            Suspendisse ultrices ipsum a proin augue arcu sodales fermentum.
-            <br></br> Lorem ipsum dolor sit amet consectetur. Euismod rutrum nisi ante
-            nunc. Vitae odio ornare condimentum libero. Est sed laoreet sed at
-            at lectus neque. Amet eu mauris fermentum eu nunc eleifend eu
-            elementum natoque. Pretium nulla et pulvinar nisi fames arcu nulla.
-            Dictumst maecenas pharetra et pellentesque. Urna urna nec dignissim
-            habitant ipsum. Turpis mi vitae fames amet pulvinar. Donec amet
-            ultrices egestas sit nam enim. Sed sed mattis nunc libero sit
-            interdum.
+            <br></br> Leo leo et quisque ut tellus. Eget egestas sed pharetra
+            sem gravida semper nisi proin. Imperdiet quis vel aliquam quam
+            vehicula feugiat arcu sit. Erat egestas nibh facilisi at venenatis
+            neque ultrices tellus. Vel libero nisi pellentesque lacus in mattis
+            non. Vulputate quisque neque urna habitasse justo pulvinar egestas
+            auctor. Vel id sed lacus bibendum mauris sed vel. Suspendisse
+            ultrices ipsum a proin augue arcu sodales fermentum.
+            <br></br> Lorem ipsum dolor sit amet consectetur. Euismod rutrum
+            nisi ante nunc. Vitae odio ornare condimentum libero. Est sed
+            laoreet sed at at lectus neque. Amet eu mauris fermentum eu nunc
+            eleifend eu elementum natoque. Pretium nulla et pulvinar nisi fames
+            arcu nulla. Dictumst maecenas pharetra et pellentesque. Urna urna
+            nec dignissim habitant ipsum. Turpis mi vitae fames amet pulvinar.
+            Donec amet ultrices egestas sit nam enim. Sed sed mattis nunc libero
+            sit interdum.
           </p>
         </section>
 
@@ -224,33 +219,7 @@ function Servicos01() {
             justifyContent: "space-between",
             alignItems: "center",
           }}
-        >
-          <div style={{ flex: 1, marginLeft: "70px" }}>
-            <h2 style={{ color: "#9B0202", fontSize: "15px", fontWeight: "bolder", marginBottom: "20px" }}>
-              VAMOS CONVERSAR
-            </h2>
-            <p style={{ fontSize: "30px", color: "#FFF", fontWeight: "bolder" }}>
-              Dê suas opiniões, sugestões, tire dúvidas!
-            </p>
-          </div>
-
-          <div>
-            <button
-              onClick={handleContactClick} // Usa a função handleContactClick ao invés de href
-              style={{
-                padding: "20px 20px",
-                marginRight: "350px",
-                fontSize: "1.3rem",
-                backgroundColor: "#000",
-                border: "2px solid #fff",
-                color: "#fff",
-                cursor: "pointer",
-              }}
-            >
-              ENTRE EM CONTATO!
-            </button>
-          </div>
-        </section>
+        ></section>
       </main>
       <Footer />
     </div>
