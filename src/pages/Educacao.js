@@ -1,15 +1,16 @@
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import React from 'react'
-import styled from 'styled-components'
-import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import React from "react";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-const HomeServicos = styled.div` /* Design para abaixo do header */
+const HomeServicos = styled.div`
+  /* Design para abaixo do header */
   .containerSuperior {
     width: 100%;
     min-height: 60vh;
-    background-image: url('img/saudeMental/capaSaude.jpg');
+    background-image: url("img/educacao/headEducacao.png");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -18,27 +19,32 @@ const HomeServicos = styled.div` /* Design para abaixo do header */
     padding: 20px;
   }
 
-  .contentSuperior {
-    font-weight: bold;
-  }
-
   .contentSuperior h1 {
     font-size: 48px;
     margin-bottom: 20px;
-    font-family: 'Inter', sans-serif;
-    margin-bottom: 50px;
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
+    margin-bottom: 20px; /* Ajuste a margem conforme necessário */
     transition: transform 0.3s ease;
   }
 
-  .containerSuperior h1:hover{
-    transform: scale(1.06);
+  .containerSuperior h1:hover {
+    transform: scale(1.02);
   }
+
   .contentSuperior h2 {
     font-size: 25px;
-    margin-bottom: 40px;
-    font-family: 'Inter', sans-serif;
-    font-weight: bold;  
-    color: #FFF;
+    margin-bottom: 20px; /* Ajuste a margem conforme necessário */
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .contentSuperior p {
+    font-size: 16px;
+    margin-bottom: 20px; /* Ajuste a margem conforme necessário */
+    font-family: "Inter", sans-serif;
+    color: #fff;
   }
 
   .abrace {
@@ -46,256 +52,204 @@ const HomeServicos = styled.div` /* Design para abaixo do header */
   }
 
   .sp {
-    color: #9B0202;
+    color: #9b0202;
   }
-`
+`;
 
 const Cards = styled.div`
+  background-color: #000;
+  padding: 40px 20px;
 
-background-color: #000;
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Define 3 colunas para os cards */
+    gap: 20px; /* Espaçamento entre os cards */
+  }
 
-.cards-container {
-  display: flex;
-  flex-direction: column; /* Organiza as linhas de cartões verticalmente */
-  gap: 10px; /* Espaço entre as linhas */
-  padding: 20px;
-}
+  .card {
+    background-color: #1f1e1e;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 
-.row {
-  display: flex;
-  justify-content: space-between; /* Espaça igualmente os cartões dentro da linha */
-}
+  .card:hover {
+    transform: translateY(-10px); /* Efeito de hover */
+  }
 
-.card {
-  background-color: #1F1E1E;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 30%; /* Largura de cada cartão */
-  padding: 20px;
-  text-align: center;
-  transition: transform 0.3s;
-  text-align: justify;
-}
+  .card-image {
+    width: 100%;
+    height: 180px; /* Altura fixa para as imagens */
+    object-fit: cover;
+    border-radius: 8px;
+  }
 
-.card:hover {
-  transform: translateY(-10px); /* Efeito de hover */
-}
+  .card-title {
+    font-size: 1.5rem;
+    margin: 20px 0 10px 0;
+    color: #fff;
+    font-family: "Inter", sans-serif;
+    cursor: pointer;
+  }
 
-.card-image {
-  width: 100%;
-  height: auto;
-  border-radius: 8px 8px 0 0;
-}
+  .card-title:hover {
+    color: #9b0202;
+  }
 
-.card-title {
-  font-size: 1.5rem;
-  margin: 10px 0;
-  color: #fff;
-  font-family: 'Inter', sans-serif;
-  cursor: pointer;
-}
+  .card-description {
+    font-size: 1rem;
+    color: #fff;
+    font-family: "Inter", sans-serif;
+    margin: 10px 0;
+    flex-grow: 1;
+  }
 
-.card-title:hover {
-  color: #9B0202;
-}
+  .card-link {
+    color: #9b0202;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
 
-.card-description {
-  font-size: 20px;
-  color: #fff;
-  font-family: 'Inter', sans-serif;
-}
+  .card-link:hover {
+    color: #fff;
+  }
 
-.card-link {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 15px;
-  color: #9B0202;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 20px;
-  transition: transform 0.3s ease; 
-  font-family: 'Inter', sans-serif;
-}
+  .subtituloCards {
+    color: #9b0202;
+    margin-top: 5px;
+    font-family: "Inter", sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+  }
 
-.card-link:hover {
-  color: #fff;
-  transform: scale(1.2); /* Zoom de 1.2 */
-}
+  .tituloCards {
+    color: #fff;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    font-family: "Inter", sans-serif;
+    font-size: 2.5rem;
+    text-align: left;
+    font-weight: bold;
+  }
 
-.subtituloCards{
-  color: #9B0202;
-  margin-top: 5px;
-  font-family: 'Inter', sans-serif;
-  font-size: 16px;
-  font-weight: bold;
-}
+  .text {
+    color: #fff;
+    font-family: "Inter", sans-serif;
+    font-size: 1.5rem;
+    text-align: left;
+    margin-bottom: 30px;
+  }
 
-.tituloCards{
-  color: #fff;
-  margin-top: 5px;
-  font-family: 'Inter', sans-serif;
-  font-size: 48px;
-}
-.text{
-  color: #fff;
-  margin-top: 0;
-  margin-bottom: 30px;
-  font-family: 'Inter', sans-serif;
-  font-size: 24px;
-
-}
-.sp{
-  color: #9B0202;
-  /* <span className="sp"</span> */
-}
-
-  `
-
+  .tituloEducacao{
+    color: #9b0202;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 29px;
+  }
+`;
 
 function Educacao() {
+  const navigate = useNavigate();
 
-    const navigate = useNavigate();
+  const handleContactClick = () => {
+    navigate("/#contato"); // Navega para a página HOME e para o container 'servicos'
+  };
 
-    const handleContactClick = () => {
-        navigate('/#contato'); // Navega para a página HOME e para o container 'servicos'
-    };
+  return (
+    <div>
+      <Header />
 
-    return (
-        <div>
-            <Header />
-
-            <HomeServicos> {/* Importação home abaixo do header */}
-                <div className="containerSuperior">
-                    <div className="contentSuperior">
-                        <h1>
-                            <span className="abrace"> Educ</span>
-                            <span className="sp">ação </span>
-                        </h1>
-                        <h2>Para momentos em que um lugar para receber acolhimento é essencial!</h2>
-
-                    </div>
-                </div>
-            </HomeServicos>
-
-
-            <Cards>
-                <div className="cards-container">
-
-                    <h2 title="O Melhos Site ddo Mundo " className='subtituloCards'>
-                        SAÚDE MENTAL
-                    </h2>
-
-                    <h1 className='tituloCards'>
-                        Encontre diversos <span className="sp"> espaços! </span>
-                    </h1>
-
-                    <p className='text '>
-                        Locais para ajuda quando a vida estiver muito dificil e você precisar conversar com alguém!
-                    </p>
-
-                    {/* Primeira linha de cartões */}
-                    <div className="row">
-                        <div className="card">
-                            <img src="img/saudeMental/paroquia.png" alt="Imagem 1" className="card-image" />
-                            <h3 title="Atendimento Psicológico Paróquia São Luís Gonzaga" className="card-title">Atendimento Psicológico Paróquia... </h3>
-                            <p className="card-description">Um grupo de psicólogos voluntários ao qual atendem às quintas-feiras na Paróquia da Igreja São Luís Gonzaga, recebendo todos os tipos de pacientes. </p>
-                            <Link className="card-link" to="/acolhimento/servicos25"> Veja Mais! </Link>
-                        </div>
-
-                        <div className="card">
-                            <img src='img/saudeMental/sinpesp.jpg' alt="Imagem 2" className="card-image" />
-                            <h3 title="SINPESP" className="card-title">SINPESP</h3>
-                            <p className="card-description">O valor mínimo de cada sessão é, em média, R$ 40, definido de acordo com a condição financeira do paciente. Atendem pessoas de todas as classes sociais, incluindo adultos, jovens, crianças, adolescentes, famílias e idosos.</p>
-                            <Link className="card-link" to="/acolhimento/servicos26"> Veja Mais! </Link>
-                        </div>
-
-                        <div className="card">
-                            <img src="img/saudeMental/AnaMariaPopo.jpg" alt="Imagem 3" className="card-image" />
-                            <h3 title="Clínica  Ana Maria Popovic" className="card-title">Clínica  Ana Maria Popovic </h3>
-                            <p className="card-description">"A Clínica Psicológica 'Ana Maria Poppovic' oferece terapia para casais e famílias, crianças e adultos, além de tratar processos de luto, dificuldades nos relacionamentos, questões relacionadas ao trabalho, orientação vocacional/profissional e outros. O atendimento é online e gratuito. Antes de iniciar o tratamento, é necessário agendar por telefone.</p>
-                            <Link className="card-link" to="/acolhimento/servicos27"> Veja Mais! </Link>
-                        </div>
-                    </div>
-
-                    {/* Segunda linha de cartões */}
-                    <div className="row">
-                        <div className="card">
-                            <img src="img/saudeMental/ClinicaGuarulhos.jpg" alt="Imagem 4" className="card-image" />
-                            <h3 title="Clínica Pscicologica da Universidade de Guarulhos" className="card-title">Clínica Psicologa da Universidade...</h3>
-                            <p className="card-description">Entre os serviços prestados estão psicodiagnóstico, psicoterapia infantil e para adultos, psicoterapia familiar e de casal. As inscrições devem ser feitas por telefone. As sessões, com duração de 50 minutos e ao custo de R$ 10 cada, são realizadas exclusivamente no formato presencial. </p>
-                            <Link className="card-link" to="/acolhimento/servicos28"> Veja Mais! </Link>
-                        </div>
-
-                        <div className="card">
-                            <img src="img/saudeMental/PAN.avif" alt="Imagem 5" className="card-image" />
-                            <h3 title="PAN" className="card-title">PAN</h3>
-                            <p className="card-description">É um serviço especializado em São Paulo, voltado para o atendimento de idosos com necessidades neuropsiquiátricas. Oferece suporte e tratamento para condições como demência, depressão, ansiedade e outras questões de saúde mental que afetam a população idosa.</p>
-                            <Link className="card-link" to="/acolhimento/servicos29"> Veja Mais! </Link>
-                        </div>
-
-                        <div className="card">
-                            <img src="img/saudeMental/ABPS.jpeg" alt="Imagem 6" className="card-image" />
-                            <h3 title="ABPS" className="card-title">ABPS</h3>
-                            <p className="card-description">O centro de formação em psicodrama para psicólogos já graduados (com CRP) oferece atendimentos psicológicos online para adultos, adolescentes, crianças, casais e famílias. O valor é social, sendo o mínimo R$ 160 por quatro sessões, ou R$ 40 cada uma.</p>
-                            <Link className="card-link" to="/acolhimento/servicos30"> Veja Mais! </Link>
-                        </div>
-                    </div>
-
-                </div>
-            </Cards>
-
-            <section
-                style={{
-                    marginTop: "0px", /* Ajuste ou remova a margem superior */
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    backgroundColor: "#000",
-                    padding: "20px 0", /* Reduza o padding se necessário */
-                }}
-            >
-                <div style={{ flex: 1, marginLeft: "30px" }}>
-                    <h2
-                        style={{
-                            color: "#9B0202",
-                            fontSize: "15px",
-                            fontWeight: "bolder",
-                            marginBottom: "20px",
-                        }}
-                    >
-                        VAMOS CONVERSAR
-                    </h2>
-                    <p
-                        style={{
-                            fontSize: "30px",
-                            color: "#FFF",
-                            fontWeight: "bolder",
-                        }}
-                    >
-                        Dê suas opiniões, sugestões, tire dúvidas!
-                    </p>
-                </div>
-
-                <div>
-                    <button
-                        onClick={handleContactClick}
-                        style={{
-                            padding: "20px 20px",
-                            marginRight: "350px",
-                            fontSize: "1.3rem",
-                            backgroundColor: "#000",
-                            border: "2px solid #fff",
-                            color: "#fff",
-                            cursor: "pointer",
-                        }}
-                    >
-                        ENTRE EM CONTATO!
-                    </button>
-                </div>
-            </section>
-            <Footer />
+      <HomeServicos>
+        <div className="containerSuperior">
+          <div className="contentSuperior">
+            <h1>
+              <span className="abrace"> Educ</span>
+              <span className="sp">ação </span>
+            </h1>
+            <h2>
+              Você encontrará cursos online, certificações, oficinas, workshops
+              gratuitamente ou em promoção!
+            </h2>
+          </div>
         </div>
-    )
+      </HomeServicos>
+
+      <Cards>
+        {/* Mantendo o título e o texto fora do cards-container */}
+        <p className="tituloEducacao">
+          EDUCAÇÃO
+        </p>
+        <h1 className="tituloCards">
+          Cursos online <span className="sp">gratuitos!</span>
+        </h1>
+        <p className="text">
+          Cursos gratuitos com certificações, de diversos temas! Aqui você
+          encontrará os mais em alta.
+        </p>
+
+        <div className="cards-container">
+          {/* Linha de cartões */}
+          <div className="card">
+            <img
+              src="img/educacao/sebraeMiniatura.png"
+              alt="Imagem 1"
+              className="card-image"
+            />
+            <h3 className="card-title">Sebrae</h3>
+            <p className="card-description">
+              Uma das maiores plataformas de cursos online do Brasil, a Sebrae
+              proporciona cursos de marketing, empreendedorismo e muito mais!
+            </p>
+            <Link className="card-link" to="/acolhimento/servicos25">
+              Veja Mais!
+            </Link>
+          </div>
+
+          <div className="card">
+            <img
+              src="img/saudeMental/sinpesp.jpg"
+              alt="Imagem 2"
+              className="card-image"
+            />
+            <h3 className="card-title">SINPESP</h3>
+            <p className="card-description">
+              O valor mínimo de cada sessão é, em média, R$ 40, definido de
+              acordo com a condição financeira do paciente.
+            </p>
+            <Link className="card-link" to="/acolhimento/servicos26">
+              Veja Mais!
+            </Link>
+          </div>
+
+          <div className="card">
+            <img
+              src="img/saudeMental/AnaMariaPopo.jpg"
+              alt="Imagem 3"
+              className="card-image"
+            />
+            <h3 className="card-title">Clínica Ana Maria Popovic</h3>
+            <p className="card-description">
+              A Clínica Psicológica 'Ana Maria Poppovic' oferece terapia para
+              casais e famílias, crianças e adultos.
+            </p>
+            <Link className="card-link" to="/acolhimento/servicos27">
+              Veja Mais!
+            </Link>
+          </div>
+        </div>
+      </Cards>
+
+      <Footer />
+    </div>
+  );
 }
 
-export default Educacao
+export default Educacao;
