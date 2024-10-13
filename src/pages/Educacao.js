@@ -223,7 +223,7 @@ function Educacao() {
               oferecem certificações reconhecidas para o mercado de trabalho em
               geral.
             </p>
-            <Link className="card-link" to="/acolhimento/servicos26">
+            <Link className="card-link" to="/educacao/servicos14">
               Veja Mais!
             </Link>
           </div>
@@ -239,7 +239,7 @@ function Educacao() {
               Cursos de tecnologia gratuitos e com certificações reconhecidas
               nacionalmente.
             </p>
-            <Link className="card-link" to="/acolhimento/servicos27">
+            <Link className="card-link" to="/educacao/servicos15">
               Veja Mais!
             </Link>
           </div>
@@ -271,7 +271,7 @@ function Educacao() {
               onde você aprende a montar seu próprio arranjo de flores! A
               experiência é acompanhada de bebidas, comidinhas e brindes.
             </p>
-            <Link className="card-link" to="/acolhimento/servicos25">
+            <Link className="card-link" to="/educacao/servicos16">
               Veja Mais!
             </Link>
           </div>
@@ -290,7 +290,7 @@ function Educacao() {
               As aulas recorrentes ocorrem uma vez por semana, com duração de 3
               horas.
             </p>
-            <Link className="card-link" to="/acolhimento/servicos26">
+            <Link className="card-link" to="/educacao/servicos17">
               Veja Mais!
             </Link>
           </div>
@@ -310,7 +310,7 @@ function Educacao() {
               excelente alternativa para aprender a criar e customizar suas
               próprias peças!
             </p>
-            <Link className="card-link" to="/acolhimento/servicos27">
+            <Link className="card-link" to="/educacao/servicos18">
               Veja Mais!
             </Link>
           </div>
