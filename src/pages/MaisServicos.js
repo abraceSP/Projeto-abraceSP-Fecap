@@ -254,44 +254,7 @@ function MaisServicos() {
                     padding: "20px 0", /* Reduza o padding se necessário */
                 }}
             >
-                <div style={{ flex: 1, marginLeft: "30px" }}>
-                    <h2
-                        style={{
-                            color: "#9B0202",
-                            fontSize: "15px",
-                            fontWeight: "bolder",
-                            marginBottom: "20px",
-                        }}
-                    >
-                        VAMOS CONVERSAR
-                    </h2>
-                    <p
-                        style={{
-                            fontSize: "30px",
-                            color: "#FFF",
-                            fontWeight: "bolder",
-                        }}
-                    >
-                        Dê suas opiniões, sugestões, tire dúvidas!
-                    </p>
-                </div>
-
-                <div>
-                    <button
-                        onClick={handleContactClick}
-                        style={{
-                            padding: "20px 20px",
-                            marginRight: "350px",
-                            fontSize: "1.3rem",
-                            backgroundColor: "#000",
-                            border: "2px solid #fff",
-                            color: "#fff",
-                            cursor: "pointer",
-                        }}
-                    >
-                        ENTRE EM CONTATO!
-                    </button>
-                </div>
+                
             </section>
             <Footer />
         </div>

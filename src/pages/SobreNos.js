@@ -2,19 +2,18 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import React, { useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
-import { width } from "@fortawesome/free-brands-svg-icons/fa42Group";
 
 function SobreNos() {
 
-    useEffect(() => {
-        document.body.style.backgroundColor = "black";
-      }, []);
-    
-      const navigate = useNavigate();
-    
-      const handleContactClick = () => {
-        navigate('/#contato'); // Navega para a página HOME e para o container 'servicos'
-      };
+  useEffect(() => {
+    document.body.style.backgroundColor = "black";
+  }, []);
+
+  const navigate = useNavigate();
+
+  const handleSaibaMaisClick = () => {
+    navigate('/'); // Redireciona para a página Home
+  };
 
   return (
     <div>
@@ -54,6 +53,7 @@ function SobreNos() {
               <div style={styles.botaoContainer}>
                 <button
                   style={styles.saibaMaisBtn}
+                  onClick={handleSaibaMaisClick}
                   onMouseOver={(e) =>
                     (e.target.style.backgroundColor =
                       styles.saibaMaisBtnHover.backgroundColor)
@@ -101,41 +101,6 @@ function SobreNos() {
         </section>
       </main>
 
-      <section
-          style={{
-            marginTop: "40px",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
-        >
-          <div style={{ flex: 1, marginLeft: "70px" }}>
-            <h2 style={{ color: "#9B0202", fontSize: "15px", fontWeight: "bolder", marginBottom: "20px" }}>
-              VAMOS CONVERSAR
-            </h2>
-            <p style={{ fontSize: "30px", color: "#FFF", fontWeight: "bolder" }}>
-              Dê suas opiniões, sugestões, tire dúvidas!
-            </p>
-          </div>
-
-          <div>
-            <button
-              onClick={handleContactClick} // Usa a função handleContactClick ao invés de href
-              style={{
-                padding: "20px 20px",
-                marginRight: "350px",
-                fontSize: "1.3rem",
-                backgroundColor: "#000",
-                border: "2px solid #fff",
-                color: "#fff",
-                cursor: "pointer",
-              }}
-            >
-              ENTRE EM CONTATO!
-            </button>
-          </div>
-        </section>
-
       <Footer />
     </div>
   );
@@ -177,13 +142,12 @@ const styles = {
     display: "flex",
     justifyContent: "space-between",
     maxWidth: "1000px",
-    width: "100%",
+    width: "100%"
   },
   content2: {
     display: "block",
     width: "100%",
     maxWidth: "1000px",
-    margin: "0 auto", // Centraliza o conteúdo horizontalmente
     padding: "0 20px",
   },
   fotoGrupo: {
@@ -207,9 +171,10 @@ const styles = {
     display: "flex",
     flexDirection: "column", // Itens ficam um embaixo do outro
     justifyContent: "space-between", // Espalha os itens (texto e botão)
-    padding: "20px",
+    padding: "10px",
   },
   descricao: {
+    marginLeft: "170px",
     marginBottom: "20px", // Espaçamento entre descrição e botão
   },
   titulo: {
@@ -242,6 +207,7 @@ const styles = {
   botaoContainer: {
     display: "flex",
     justifyContent: "center",
+    alignItems: "center",
     width: "100%",
   },
   saibaMaisBtn: {
