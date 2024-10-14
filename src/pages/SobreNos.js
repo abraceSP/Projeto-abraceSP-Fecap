@@ -1,10 +1,15 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import React, { useEffect } from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faInstagram,
+  faXTwitter,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
 
 function SobreNos() {
-
   useEffect(() => {
     document.body.style.backgroundColor = "black";
   }, []);
@@ -12,7 +17,7 @@ function SobreNos() {
   const navigate = useNavigate();
 
   const handleSaibaMaisClick = () => {
-    navigate('/'); // Redireciona para a página Home
+    navigate("/"); // Redireciona para a página Home
   };
 
   return (
@@ -99,6 +104,26 @@ function SobreNos() {
             </p>
           </div>
         </section>
+
+        {/* Nova section para redes sociais */}
+        <section style={styles.redesSociais}>
+          <h2 style={styles.tituloRedesSociais}>Siga-nos nas redes sociais</h2>
+          <div style={styles.linksContainer}>
+            <a href="https://www.instagram.com" style={styles.link}> {/* Alterar o link para nossa rede */}
+              <FontAwesomeIcon icon={faInstagram} style={styles.icon} />
+              Instagram
+            </a>
+            <a href="https://www.twitter.com" style={styles.link}> {/* Alterar o link para nossa rede */}
+              <FontAwesomeIcon icon={faXTwitter} style={styles.icon} />
+              X.com
+            </a>
+            <a href="https://www.linkedin.com" style={styles.link}> {/* Alterar o link para nossa rede */}
+              <FontAwesomeIcon icon={faLinkedin} style={styles.icon} />
+              LinkedIn
+            </a>
+          </div>
+        </section>
+
       </main>
 
       <Footer />
@@ -142,7 +167,7 @@ const styles = {
     display: "flex",
     justifyContent: "space-between",
     maxWidth: "1000px",
-    width: "100%"
+    width: "100%",
   },
   content2: {
     display: "block",
@@ -224,6 +249,31 @@ const styles = {
   },
   saibaMaisBtnHover: {
     backgroundColor: "#d11a1a",
+  },
+  redesSociais: {
+    padding: "50px 20px",
+    backgroundColor: "#222",
+    textAlign: "center",
+  },
+  tituloRedesSociais: {
+    color: "#9B0202",
+    fontSize: "2rem",
+    marginBottom: "30px",
+  },
+  linksContainer: {
+    display: "flex",
+    justifyContent: "center",
+    gap: "20px",
+  },
+  link: {
+    color: "#fff",
+    fontSize: "1.2rem",
+    textDecoration: "none",
+    display: "flex",
+    alignItems: "center",
+  },
+  icon: {
+    marginRight: "10px",
   },
 };
 
