@@ -114,7 +114,7 @@ const Cards = styled.div`
     color: #9b0202;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 20px;
     transition: color 0.3s ease;
   }
 

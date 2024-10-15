@@ -193,7 +193,7 @@ function Servicos01() {
               }}
             >
               <a
-                href="link-para-gestao-financeira"
+                href="https://sebrae.com.br/sites/PortalSebrae/cursosonline/gestao-financeira,7370b8a6a28bb610VgnVCM1000004c00210aRCRD"
                 style={{
                   position: "relative",
                   width: "35%",
@@ -231,7 +231,7 @@ function Servicos01() {
                 </div>
               </a>
               <a
-                href="link-para-marketing"
+                href="https://sebrae.com.br/sites/PortalSebrae/cursosonline/marketing-digital-para-o-empreendedor,f870b8a6a28bb610VgnVCM1000004c00210aRCRD"
                 style={{
                   position: "relative",
                   width: "35%",
@@ -269,7 +269,7 @@ function Servicos01() {
                 </div>
               </a>
               <a
-                href="link-para-gestao-pessoas"
+                href="https://sebrae.com.br/sites/PortalSebrae/cursosonline/gestao-de-pessoas,eda0b8a6a28bb610VgnVCM1000004c00210aRCRD"
                 style={{
                   position: "relative",
                   width: "35%",
@@ -307,7 +307,7 @@ function Servicos01() {
                 </div>
               </a>
               <a
-                href="link-para-empreender"
+                href="https://sebrae.com.br/sites/PortalSebrae/cursosonline/aprender-a-empreender,b070b8a6a28bb610VgnVCM1000004c00210aRCRD"
                 style={{
                   position: "relative",
                   width: "35%",
