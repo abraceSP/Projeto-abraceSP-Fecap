@@ -181,18 +181,12 @@ function Servicos01() {
                   textDecoration: "none",
                 }}
               >
-                <div
-                  style={{
-                    position: "relative",
-                    width: "100%",
-                    transition: "transform 0.3s",
-                    overflow: "hidden",
-                  }}
+                <div style={styles.cardImageContainer}
                 >
                   <img
                     src="/img/educacao/ceramica1.png"
                     alt="Curso de Ajustes e reformas"
-                    style={{ width: "100%", borderRadius: "5px" }}
+                    style={styles.cardImage}
                   />
                 </div>
               </a>
@@ -203,18 +197,12 @@ function Servicos01() {
                   textDecoration: "none",
                 }}
               >
-                <div
-                  style={{
-                    position: "relative",
-                    width: "100%",
-                    transition: "transform 0.3s",
-                    overflow: "hidden",
-                  }}
+                <div style={styles.cardImageContainer}
                 >
                   <img
                     src="/img/educacao/ceramica2.jpg"
                     alt="Curso de Corte e costura - Malha"
-                    style={{ width: "100%", borderRadius: "5px" }}
+                    style={styles.cardImage}
                   />
                 </div>
               </a>
@@ -225,18 +213,12 @@ function Servicos01() {
                   textDecoration: "none",
                 }}
               >
-                <div
-                  style={{
-                    position: "relative",
-                    width: "100%",
-                    transition: "transform 0.3s",
-                    overflow: "hidden",
-                  }}
+                <div style={styles.cardImageContainer}
                 >
                   <img
                     src="/img/educacao/ceramica3.png"
                     alt="Curso de Manuseio de maquina de costura"
-                    style={{ width: "100%", borderRadius: "5px" }}
+                    style={styles.cardImage}
                   />
                 </div>
               </a>
@@ -247,18 +229,12 @@ function Servicos01() {
                   textDecoration: "none",
                 }}
               >
-                <div
-                  style={{
-                    position: "relative",
-                    width: "100%",
-                    transition: "transform 0.3s",
-                    overflow: "hidden",
-                  }}
+                <div style={styles.cardImageContainer}
                 >
                   <img
                     src="/img/educacao/ceramica4.png"
                     alt="Curso de modelagem industrial"
-                    style={{ width: "100%", borderRadius: "5px" }}
+                    style={styles.cardImage}
                   />
                 </div>
               </a>
@@ -332,6 +308,20 @@ const styles = {
     color: "#fff", // Cor do texto
     fontSize: "20px", // Tamanho da fonte
     textAlign: "center", // Centraliza o texto
+  },
+  cardImageContainer: {
+    position: "relative",
+    width: "100%",
+    textDecoration: "none",
+    height: "100%", // Fixed height for uniformity
+    overflow: "hidden",
+  },
+  cardImage: {
+    width: "100%",
+    height: "100%",
+    objectFit: "cover", // Ensures the image covers the container without distortion
+    borderRadius: "5px",
+    transition: "transform 0.3s",
   },
 };
 
