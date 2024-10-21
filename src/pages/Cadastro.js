@@ -1,15 +1,402 @@
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import React from 'react'
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import React, { useState } from "react";
+import styled from "styled-components";
+import { useForm } from "react-hook-form";
+
+const CepButton = styled.button`
+  padding: 5px 20px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  color: #9f1818;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: gray;
+  }
+`;
+
+const FormPage = styled.div`
+  background: linear-gradient(
+    155deg,
+    #111010,
+    #5a0f0f
+  ); // Degradê de preto para vermelho mais escuro
+  min-height: 130vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
+`;
+
+const FormContainer = styled.form`
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  padding: 10px;
+  margin-right: 5%;
+`;
+const FormTitle = styled.h2`
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+  text-shadow: 6px 6px 8px #9f1818; /* Sombra branca */
+`;
+const Label = styled.label`
+  color: #fff;
+  margin-bottom: 10px;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+`;
+const Input = styled.input`
+  background-color: #761212;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #fff;
+
+  &::placeholder {
+    color: #b78f8f;
+  }
+`;
+const Textarea = styled.textarea`
+  background-color: #761212;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #fff;
+  resize: none; // Desabilita o redimensionamento
+  height: calc(4 * 24px); // Define a altura da área de texto
+
+  &::placeholder {
+    color: #b78f8f;
+  }
+`;
+const Select = styled.select`
+  background-color: #761212;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #b78f8f;
+
+  option {
+    // Estiliza as opções dentro do seletor
+    background-color: #b78f8f;
+    color: #fff;
+  }
+`;
+const FileInputContainer = styled.div`
+  background-color: #761212;
+  margin-bottom: 30px;
+  padding: 10px;
+  border-radius: 5px;
+  color: #b78f8f;
+  font-size: 16px;
+`;
+const FileInput = styled.input`
+  margin-top: 5px;
+  color: #b78f8f;
+`;
+const SubmitButton = styled.button`
+  padding: 10px;
+  background-color: #9f1818;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+
+  &:hover {
+    background-color: #7f1414;
+  }
+`;
+const Dropdown = styled.div`
+  background-color: #28a745;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+  text-align: center;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  max-height: ${({ isVisible }) => (isVisible ? "100px" : "0")};
+  opacity: ${({ isVisible }) => (isVisible ? "1" : "0")};
+  overflow: hidden;
+`;
 
 function Cadastro() {
-    return (
-        <div>
-            <Header />
-            <h1 style={{ color: "#9B0202" }}> Página para cadastro!</h1>
-            <Footer />
-        </div>
-    )
+  const [message, setMessage] = useState("");
+  const [isVisible, setIsVisible] = useState(false);
+
+  // Definir os estados dos campos do formulário
+  const [nomeOng, setNomeOng] = useState("");
+  const [telefoneOng, setTelefoneOng] = useState("");
+  const [emailOng, setEmailOng] = useState("");
+  const [linkSite, setLinkSite] = useState("");
+  const [linkRedesSociais, setLinkRedesSociais] = useState("");
+  const [logoOng, setLogoOng] = useState(null);
+  const [fotosCarrosel, setFotosCarrosel] = useState(null);
+
+  const [endereco, setEndereco] = useState("");
+  const [numero, setNumero] = useState("");
+  const [bairro, setBairro] = useState("");
+  const [cidade, setCidade] = useState("");
+  const [cep, setCep] = useState("");
+
+  const [descricao, setDescricao] = useState("");
+  const [modeloOng, setModeloOng] = useState("");
+  const [causa, setCausa] = useState("");
+
+  //Cadastro no banco de dados
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Concatena os campos de endereço
+    const enderecoOng = `${endereco}, ${numero}, ${bairro}, ${cidade}, ${cep}`;
+
+    const formData = new FormData();
+    formData.append("nomeOng", nomeOng);
+    formData.append("telefoneOng", telefoneOng);
+    formData.append("emailOng", emailOng);
+    formData.append("linkSite", linkSite);
+    formData.append("linkRedesSociais", linkRedesSociais);
+    formData.append("logoOng", logoOng);
+    formData.append("fotosCarrosel", fotosCarrosel);
+    formData.append("enderecoOng", enderecoOng);
+    formData.append("descricao", descricao);
+    formData.append("modeloOng", modeloOng);
+    formData.append("causa", causa);
+
+    fetch("http://localhost:3001/cadastro", {
+      method: "POST",
+      body: formData,
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Cadastro realizado com sucesso:", data);
+        setMessage("Cadastro realizado com sucesso!");
+        setIsVisible(true);
+        e.target.reset(); // Reseta o formulário
+      })
+      .catch((error) => {
+        console.error("Erro ao cadastrar:", error);
+      });
+  };
+
+  // Atualize os manipuladores de mudança para os campos de arquivo
+  const handleLogoChange = (e) => {
+    setLogoOng(e.target.files[0]);
+  };
+
+  const handleFotosCarroselChange = (e) => {
+    setFotosCarrosel(e.target.files);
+  };
+
+  const handleModeloOngChange = (e) => {
+    setModeloOng(e.target.value);
+  };
+
+  const handleCausaChange = (e) => {
+    setCausa(e.target.value);
+  };
+
+  const { setValue, setFocus } = useForm();
+
+  const checkCep = () => {
+    const formattedCep = cep.replace(/\D/g, "");
+    console.log(formattedCep);
+    fetch(`https://viacep.com.br/ws/${formattedCep}/json/`)
+      .then((resposta) => resposta.json())
+      .then((data) => {
+        console.log(data);
+        setEndereco(data.logradouro);
+        setFocus("numero");
+        setBairro(data.bairro);
+        setCidade(data.localidade);
+      });
+  };
+
+  return (
+    <div>
+      <Header />
+      <FormPage>
+        <FormContainer onSubmit={handleSubmit}>
+          <FormTitle>Cadastro de Serviço</FormTitle>
+          <Label for="causas">Causas</Label>
+          <Select
+            id="causas"
+            value={causa}
+            onChange={handleCausaChange}
+            required
+          >
+            <option value="" disabled selected>
+              Selecione a sua causa
+            </option>
+            <option value="alimentacao">Alimentação</option>
+            <option value="acolhimento">Acolhimento</option>
+            <option value="educacao">Educação</option>
+            <option value="saudeMental">Saúde Mental</option>
+            <option value="outros">Outros</option>
+          </Select>
+          <Label for="modalidade">Tipo de Serviço</Label>
+          <Select
+            id="modalidade"
+            value={modeloOng}
+            onChange={handleModeloOngChange}
+            required
+          >
+            <option value="" disabled selected>
+              Selecione o tipo de serviço
+            </option>
+            <option value="presencial">Presencial</option>
+            <option value="online">Online</option>
+            <option value="hibrido">Híbrido</option>
+          </Select>
+          {/* Campos de Endereço visíveis apenas se o serviço não for Online */}
+          {modeloOng !== "online" && ( // Condicional para exibir campos adicionais
+            <>
+              <Label for="cep">CEP</Label>
+              <Input
+                id="cep"
+                type="text"
+                value={cep}
+                onChange={(e) => setCep(e.target.value)}
+                placeholder="Digite o seu CEP"
+              />
+              <CepButton type="button" onClick={checkCep}>
+                Buscar CEP
+              </CepButton>
+
+              <Label for="endereco">Endereço</Label>
+              <Input
+                id="endereco"
+                type="text"
+                value={endereco}
+                onChange={(e) => setEndereco(e.target.value)}
+                placeholder="Logradouro"
+              />
+
+              <Label for="numeroEndereco">Número</Label>
+              <Input
+                id="numeroEndereco"
+                type="text"
+                value={numero}
+                onChange={(e) => setNumero(e.target.value)}
+                placeholder="Número"
+              />
+
+              <Label for="bairroEndereco">Bairro</Label>
+              <Input
+                id="bairroEndereco"
+                type="text"
+                value={bairro}
+                onChange={(e) => setBairro(e.target.value)}
+                placeholder="Bairro"
+              />
+
+              <Label for="cidadeEndereco">Cidade</Label>
+              <Input
+                id="cidadeEndereco"
+                type="text"
+                value={cidade}
+                onChange={(e) => setCidade(e.target.value)}
+                placeholder="Cidade"
+              />
+            </>
+          )}
+          <Label for="nomeOng">Nome da ONG</Label>
+          <Input
+            id="nomeOng"
+            type="text"
+            value={nomeOng}
+            onChange={(e) => setNomeOng(e.target.value)}
+            placeholder="Nome da ONG"
+            required
+          />
+          <Label for="telefone">Telefone</Label>
+          <Input
+            id="telefone"
+            type="tel"
+            value={telefoneOng}
+            onChange={(e) => setTelefoneOng(e.target.value)}
+            placeholder="Telefone"
+            required
+          />
+          <Label for="email">Endereço de e-mail</Label>
+          <Input
+            id="email"
+            type="email"
+            value={emailOng}
+            onChange={(e) => setEmailOng(e.target.value)}
+            placeholder="E-mail"
+            required
+          />
+          <Label for="site">Site</Label>
+          <Input
+            id="site"
+            type="text"
+            value={linkSite}
+            onChange={(e) => setLinkSite(e.target.value)}
+            placeholder="www.seusite.com.br"
+            required
+          />
+          <Label for="redeSocial">Redes sociais</Label>
+          <Input
+            id="redeSocial"
+            type="text"
+            value={linkRedesSociais}
+            onChange={(e) => setLinkRedesSociais(e.target.value)}
+            placeholder="@suaredesocial"
+            required
+          />
+          <Label for="servicos">Descrição dos Serviços</Label>
+          <Textarea
+            id="servicos"
+            value={descricao}
+            onChange={(e) => setDescricao(e.target.value)}
+            placeholder="Descrição dos Serviços"
+            required
+          />
+          <FileInputContainer>
+            <Label for="logo">Logo da ONG:</Label>
+            <FileInput
+              type="file"
+              id="logo"
+              accept="image/*"
+              onChange={handleLogoChange}
+              required
+            />
+          </FileInputContainer>
+          <FileInputContainer>
+            <Label for="imagem">Fotos para Carrossel de Imagens:</Label>
+            <FileInput
+              type="file"
+              id="imagem"
+              accept="image/*"
+              multiple
+              onChange={handleFotosCarroselChange}
+              required
+            />
+          </FileInputContainer>
+          <SubmitButton type="submit">CADASTRAR</SubmitButton>
+          <Dropdown isVisible={isVisible}>{message}</Dropdown>{" "}
+          {/* Exibe a mensagem de sucesso */}
+        </FormContainer>
+      </FormPage>
+      <Footer />
+    </div>
+  );
 }
 
-export default Cadastro
+export default Cadastro;

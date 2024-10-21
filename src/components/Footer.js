@@ -3,6 +3,8 @@ import { Link, useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 const FooterContainer = styled.footer`
+  background-color: #000000; /* Adicione esta linha para definir a cor de fundo */
+
   .footer {
     background-color: #000000;
     padding: 20px;
@@ -93,7 +95,6 @@ function Footer() {
             alignItems: "center",
             justifyContent: "space-between",
             width: "100%",
-            marginTop: "70px",
             marginBottom: "70px",
           }}
         >
