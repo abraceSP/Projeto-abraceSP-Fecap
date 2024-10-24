@@ -5,7 +5,6 @@ import Header from '../components/Header'; // Importação Header
 import Footer from '../components/Footer'; // Importação Footer
 import 'bootstrap/dist/css/bootstrap.min.css'; // Importação Boot
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // Importação Boot
-import { useEffect } from 'react';
 
 const HomeContent = styled.div` /* Design para conteúdos da home (abaixo do header) */
   .containerHome {
@@ -210,9 +209,6 @@ const HomeContato = styled.div`
 `
 
 function Home() {
-  useEffect(() => {
-    document.body.style.backgroundColor = "black";
-  }, []);
   return (
     <div>
       <Header /> {/*Importação do Header */}

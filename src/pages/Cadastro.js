@@ -1,8 +1,9 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import styled from "styled-components";
 import { useForm } from "react-hook-form";
+import axios from "axios";
 
 const CepButton = styled.button`
   padding: 5px 20px;
@@ -47,7 +48,7 @@ const FormTitle = styled.h2`
   text-align: center;
   color: #fff;
   margin-bottom: 20px;
-  text-shadow: 6px 6px 8px #9f1818; /* Sombra branca */
+  text-shadow: 6px 6c 8px #9f1818; /* Sombra branca */
 `;
 const Label = styled.label`
   color: #fff;
@@ -158,8 +159,13 @@ function Cadastro() {
   const [modeloOng, setModeloOng] = useState("");
   const [causa, setCausa] = useState("");
 
-  //Cadastro no banco de dados
-  const handleSubmit = (e) => {
+  const { reset } = useForm();
+
+  // Crie referências para os campos de arquivo
+  const logoOngRef = useRef(null);
+  const fotosCarroselRef = useRef(null);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     // Concatena os campos de endereço
@@ -178,20 +184,68 @@ function Cadastro() {
     formData.append("modeloOng", modeloOng);
     formData.append("causa", causa);
 
-    fetch("http://localhost:3001/cadastro", {
-      method: "POST",
-      body: formData,
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("Cadastro realizado com sucesso:", data);
-        setMessage("Cadastro realizado com sucesso!");
-        setIsVisible(true);
-        e.target.reset(); // Reseta o formulário
-      })
-      .catch((error) => {
-        console.error("Erro ao cadastrar:", error);
+    // Adicione os arquivos do carrossel ao FormData
+    if (fotosCarrosel) {
+      Array.from(fotosCarrosel).forEach((file) => {
+        formData.append("fotosCarrosel", file);
       });
+    }
+
+    try {
+      const response = await axios.post(
+        "http://localhost:3001/cadastro",
+        formData
+      );
+
+      if (response.status === 200) {
+        console.log("Cadastro realizado com sucesso:");
+        reset();
+        resetForm();
+        setMessage("Cadastro realizado com sucesso");
+        setIsVisible(true);
+        alert("Cadastro realizado com sucesso!");
+      }
+    } catch (error) {
+      console.error("Erro ao cadastrar: ", error);
+      alert("Erro ao realizar o cadastro.");
+    }
+    // axios.post("http://localhost:3001/cadastro", formData)
+    //   .then((response) => {
+    //     console.log("Cadastro realizado com sucesso:", response.data);
+    //     setMessage("Cadastro realizado com sucesso!");
+    //     setIsVisible(true);
+    //     resetForm(); // Reseta o formulário
+    //   })
+    //   .catch((error) => {
+    //     console.error("Erro ao cadastrar:", error);
+    //   });
+  };
+
+  const resetForm = () => {
+    setNomeOng("");
+    setTelefoneOng("");
+    setEmailOng("");
+    setLinkSite("");
+    setLinkRedesSociais("");
+    setLogoOng(null);
+    setFotosCarrosel(null);
+    setEndereco("");
+    setNumero("");
+    setBairro("");
+    setCidade("");
+    setCep("");
+    setDescricao("");
+    setModeloOng("");
+    setCausa("");
+    reset(); // Reseta o formulário usando react-hook-form
+
+    // Redefine os campos de arquivo
+    if (logoOngRef.current) {
+      logoOngRef.current.value = "";
+    }
+    if (fotosCarroselRef.current) {
+      fotosCarroselRef.current.value = "";
+    }
   };
 
   // Atualize os manipuladores de mudança para os campos de arquivo
@@ -211,8 +265,6 @@ function Cadastro() {
     setCausa(e.target.value);
   };
 
-  const { setValue, setFocus } = useForm();
-
   const checkCep = () => {
     const formattedCep = cep.replace(/\D/g, "");
     console.log(formattedCep);
@@ -221,7 +273,6 @@ function Cadastro() {
       .then((data) => {
         console.log(data);
         setEndereco(data.logradouro);
-        setFocus("numero");
         setBairro(data.bairro);
         setCidade(data.localidade);
       });
@@ -233,7 +284,7 @@ function Cadastro() {
       <FormPage>
         <FormContainer onSubmit={handleSubmit}>
           <FormTitle>Cadastro de Serviço</FormTitle>
-          <Label for="causas">Causas</Label>
+          <Label htmlFor="causas">Causas</Label>
           <Select
             id="causas"
             value={causa}
@@ -249,7 +300,7 @@ function Cadastro() {
             <option value="saudeMental">Saúde Mental</option>
             <option value="outros">Outros</option>
           </Select>
-          <Label for="modalidade">Tipo de Serviço</Label>
+          <Label htmlFor="modalidade">Tipo de Serviço</Label>
           <Select
             id="modalidade"
             value={modeloOng}
@@ -266,83 +317,100 @@ function Cadastro() {
           {/* Campos de Endereço visíveis apenas se o serviço não for Online */}
           {modeloOng !== "online" && ( // Condicional para exibir campos adicionais
             <>
-              <Label for="cep">CEP</Label>
+              <Label htmlFor="cep">CEP</Label>
               <Input
                 id="cep"
                 type="text"
                 value={cep}
                 onChange={(e) => setCep(e.target.value)}
                 placeholder="Digite o seu CEP"
+                maxLength="50"
+                title="CEP deve ter no máximo 50 caracteres."
               />
               <CepButton type="button" onClick={checkCep}>
                 Buscar CEP
               </CepButton>
 
-              <Label for="endereco">Endereço</Label>
+              <Label htmlFor="endereco">Endereço</Label>
               <Input
                 id="endereco"
                 type="text"
                 value={endereco}
                 onChange={(e) => setEndereco(e.target.value)}
                 placeholder="Logradouro"
+                maxLength="300"
+                title="Logradouro deve ter no máximo 300 caracteres."
               />
 
-              <Label for="numeroEndereco">Número</Label>
+              <Label htmlFor="numeroEndereco">Número</Label>
               <Input
                 id="numeroEndereco"
                 type="text"
                 value={numero}
                 onChange={(e) => setNumero(e.target.value)}
-                placeholder="Número"
+                placeholder="Número do seu endereço..."
+                maxLength="50"
+                title="Numero deve ter no máximo 50 caracteres."
               />
 
-              <Label for="bairroEndereco">Bairro</Label>
+              <Label htmlFor="bairroEndereco">Bairro</Label>
               <Input
                 id="bairroEndereco"
                 type="text"
                 value={bairro}
                 onChange={(e) => setBairro(e.target.value)}
                 placeholder="Bairro"
+                maxLength="100"
+                title="Bairro deve ter no máximo 100 caracteres."
               />
 
-              <Label for="cidadeEndereco">Cidade</Label>
+              <Label htmlFor="cidadeEndereco">Cidade</Label>
               <Input
                 id="cidadeEndereco"
                 type="text"
                 value={cidade}
                 onChange={(e) => setCidade(e.target.value)}
                 placeholder="Cidade"
+                maxLength="100"
+                title="Cidade deve ter no máximo 100 caracteres."
               />
             </>
           )}
-          <Label for="nomeOng">Nome da ONG</Label>
+          <Label htmlFor="nomeOng">Nome da ONG</Label>
           <Input
             id="nomeOng"
             type="text"
             value={nomeOng}
             onChange={(e) => setNomeOng(e.target.value)}
-            placeholder="Nome da ONG"
+            placeholder="Nome da Instituição..."
             required
+            maxLength="100"
+            title="Nome da instituição deve ter no máximo 100 caracteres."
           />
-          <Label for="telefone">Telefone</Label>
+          <Label htmlFor="telefone">Telefone</Label>
           <Input
             id="telefone"
             type="tel"
             value={telefoneOng}
             onChange={(e) => setTelefoneOng(e.target.value)}
-            placeholder="Telefone"
+            placeholder="Insira seu telefone: 1199999999..."
             required
+            maxLength="10"
+            title="Telefone deve estar no formato (XX)XXXXXXXXX."
           />
-          <Label for="email">Endereço de e-mail</Label>
+          <Label htmlFor="email">Endereço de e-mail</Label>
           <Input
             id="email"
             type="email"
             value={emailOng}
             onChange={(e) => setEmailOng(e.target.value)}
-            placeholder="E-mail"
+            placeholder="E-mail..."
             required
+            maxLength="150"
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+            title="Por favor, insira um e-mail válido."
           />
-          <Label for="site">Site</Label>
+          <Label htmlFor="site">Site</Label>
           <Input
             id="site"
             type="text"
@@ -350,42 +418,49 @@ function Cadastro() {
             onChange={(e) => setLinkSite(e.target.value)}
             placeholder="www.seusite.com.br"
             required
+            maxLength="300"
           />
-          <Label for="redeSocial">Redes sociais</Label>
+          <Label htmlFor="redeSocial">Redes sociais</Label>
           <Input
             id="redeSocial"
             type="text"
             value={linkRedesSociais}
             onChange={(e) => setLinkRedesSociais(e.target.value)}
-            placeholder="@suaredesocial"
+            placeholder="@suaredesocial..."
             required
+            maxLength="100"
+            title="Redes sociais deve ter no máximo 100 caracteres."
           />
-          <Label for="servicos">Descrição dos Serviços</Label>
+          <Label htmlFor="servicos">Descrição dos Serviços</Label>
           <Textarea
             id="servicos"
             value={descricao}
             onChange={(e) => setDescricao(e.target.value)}
-            placeholder="Descrição dos Serviços"
+            placeholder="Digite aqui a descrição do(s) serviço(s)..."
             required
+            maxLength="500"
+            title="A descrição deve ter no máximo 500 caracteres."
           />
           <FileInputContainer>
-            <Label for="logo">Logo da ONG:</Label>
+            <Label htmlFor="logo">Logo da Instituição:</Label>
             <FileInput
               type="file"
               id="logo"
               accept="image/*"
               onChange={handleLogoChange}
+              ref={logoOngRef}
               required
             />
           </FileInputContainer>
           <FileInputContainer>
-            <Label for="imagem">Fotos para Carrossel de Imagens:</Label>
+            <Label htmlFor="imagem">Fotos para Carrossel de Imagens:</Label>
             <FileInput
               type="file"
               id="imagem"
               accept="image/*"
               multiple
               onChange={handleFotosCarroselChange}
+              ref={fotosCarroselRef}
               required
             />
           </FileInputContainer>
