@@ -177,12 +177,15 @@ function Cadastro() {
     formData.append("emailOng", emailOng);
     formData.append("linkSite", linkSite);
     formData.append("linkRedesSociais", linkRedesSociais);
-    formData.append("logoOng", logoOng);
-    formData.append("fotosCarrosel", fotosCarrosel);
     formData.append("enderecoOng", enderecoOng);
     formData.append("descricao", descricao);
     formData.append("modeloOng", modeloOng);
     formData.append("causa", causa);
+
+    // Adicione o caminho completo do logoOng ao FormData
+    if (logoOng) {
+      formData.append("logoOng", logoOng);
+    }
 
     // Adicione os arquivos do carrossel ao FormData
     if (fotosCarrosel) {
@@ -209,16 +212,6 @@ function Cadastro() {
       console.error("Erro ao cadastrar: ", error);
       alert("Erro ao realizar o cadastro.");
     }
-    // axios.post("http://localhost:3001/cadastro", formData)
-    //   .then((response) => {
-    //     console.log("Cadastro realizado com sucesso:", response.data);
-    //     setMessage("Cadastro realizado com sucesso!");
-    //     setIsVisible(true);
-    //     resetForm(); // Reseta o formulário
-    //   })
-    //   .catch((error) => {
-    //     console.error("Erro ao cadastrar:", error);
-    //   });
   };
 
   const resetForm = () => {
@@ -324,8 +317,9 @@ function Cadastro() {
                 value={cep}
                 onChange={(e) => setCep(e.target.value)}
                 placeholder="Digite o seu CEP"
-                maxLength="50"
-                title="CEP deve ter no máximo 50 caracteres."
+                maxLength="9"
+                title="CEP deve ter no máximo 9 caracteres."
+                pattern="^[0-9]{5}-?[0-9]{3}$"
               />
               <CepButton type="button" onClick={checkCep}>
                 Buscar CEP
