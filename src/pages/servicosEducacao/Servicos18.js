@@ -359,7 +359,7 @@ function Servicos01() {
 
 const styles = {
   background: {
-    backgroundImage: "url(/img/educacao/bgsigbol.png)", // Certifique-se de que a extensão do arquivo está correta
+    backgroundImage: "url(/img/educacao/bgsigbol.webp)", // Certifique-se de que a extensão do arquivo está correta
     backgroundSize: "cover",
     backgroundPosition: "center",
     height: "80vh", // Ajuste conforme necessário

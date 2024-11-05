@@ -58,9 +58,7 @@ function Servicos01() {
           <p
             style={{ color: "#FFF", paddingLeft: "70px", paddingRight: "70px" }}
           >
-            Somos a Se Flor Pra Ser de São Paulo, uma floricultura conceitual
-            com produtos exclusivos e diferenciados para atender pessoas
-            exigêntes.
+            O Se Flor pra Ser é um ateliê paulistano focado em workshops de montagem de arranjos florais. Essa experiência é pensada para que os participantes aprendam técnicas de design floral de maneira prática e divertida, além de incluir um ambiente acolhedor e descontraído com bebidas, petiscos e brindes. Esses workshops costumam atrair aqueles que querem explorar a criatividade e aprender algo novo enquanto socializam.
           </p>
         </section>
 

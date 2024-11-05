@@ -265,7 +265,7 @@ const styles = {
     position: "relative",
   },
   overlay: {
-    backgroundColor: "rgba(0, 0, 0, 0.8)", // Escurece a imagem de fundo
+    backgroundColor: "rgba(0, 0, 0, 0.7)", // Escurece a imagem de fundo
     height: "100%",
     width: "100%",
     display: "flex",
