@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Switch } from 'react-router-dom';
 import React from 'react';
 import Home from './pages/Home';
 import Alimentacao from './pages/Alimentacao';
@@ -38,6 +38,9 @@ import Servicos27 from './pages/servicosAcolhimento/Servicos27.js';
 import Servicos28 from './pages/servicosAcolhimento/Servicos28.js';
 import Servicos29 from './pages/servicosAcolhimento/Servicos29.js';
 import Servicos30 from './pages/servicosAcolhimento/Servicos30.js';
+import Admin from './pages/Admin.js';
+import Login from './pages/Login.js';
+import RotaProtegida from './pages/RotaProtegida.js';
 
 const url = 'https://placehold.co/414x248'
 
@@ -95,6 +98,10 @@ function App() {
 
         <Route path="/sobre-nos" element={<SobreNos />} />
         <Route path="/cadastro" element={<Cadastro />} />
+
+        
+        <Route path="/admin" element={<RotaProtegida component={Admin} />} />
+        <Route path="/login" element={<Login />} />
         {/* <Route path="/servicos01" element={<Servicos01/>}/> */}
       </Routes>
     </Router>

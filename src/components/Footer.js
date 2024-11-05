@@ -1,8 +1,11 @@
 import styled from "styled-components";
 import { Link, useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from 'react';
 
 const FooterContainer = styled.footer`
+  background-color: #000000; /* Adicione esta linha para definir a cor de fundo */
+
   .footer {
     background-color: #000000;
     padding: 20px;
@@ -84,6 +87,9 @@ function Footer() {
     navigate("/#contato"); // Navega para a página HOME e para o container 'servicos'
   };
 
+  useEffect(() => {
+    document.body.style.backgroundColor = "black";
+  }, []);
   return (
     <FooterContainer>
       {location.pathname !== "/" && ( // Condicionalmente renderiza as divs se não estiver na rota '/'
