@@ -12,8 +12,6 @@ function Servicos01() {
     document.body.style.backgroundColor = "black";
   }, []);
 
-
-
   return (
     <div>
       <Header />
@@ -23,20 +21,12 @@ function Servicos01() {
             <div style={styles.container}>
               <div style={styles.logoContainer}>
                 <div style={styles.logoCircle}>
-                  <img
-                    src="/img/acolhimento/casa1/casa1.jpeg"
-                    alt="Logo Casa1"
-                    style={styles.logoImage}
-                  />
                 </div>
               </div>
               <div style={styles.textContainer}>
-                <h1 style={styles.title}>Casa 1</h1>
+                <h1 style={styles.title}>Atendimento Psicológico Paróquia São Luís Gonzaga</h1>
                 <p style={styles.description}>
-                  Um projeto de sociedade civil que tem como propósito a
-                  acolhida de jovens entre 18 e 25 anos que foram expulsos de
-                  casa pela família por suas orientações afetivas sexuais e
-                  identidade de gênero.
+                  Somos um grupo de psicólogos voluntários que oferece atendimento gratuito às quintas-feiras na Paróquia São Luis Gonzaga, na Avenida Paulista, 2378. Atendemos a todos, sem discriminação de raça, credo, gênero ou orientação sexual.
                 </p>
               </div>
             </div>
@@ -51,29 +41,16 @@ function Servicos01() {
           <p
             style={{ color: "#FFF", paddingLeft: "70px", paddingRight: "70px" }}
           >
-            Lorem ipsum dolor sit amet consectetur. Euismod rutrum nisi ante
-            nunc. Vitae odio ornare condimentum libero. Est sed laoreet sed at
-            at lectus neque. Amet eu mauris fermentum eu nunc eleifend eu
-            elementum natoque. Pretium nulla et pulvinar nisi fames arcu nulla.
-            Dictumst maecenas pharetra et pellentesque. Urna urna nec dignissim
-            habitant ipsum. Turpis mi vitae fames amet pulvinar. Donec amet
-            ultrices egestas sit nam enim. Sed sed mattis nunc libero sit
-            interdum.
-            <br></br> Leo leo et quisque ut tellus. Eget egestas sed pharetra
-            sem gravida semper nisi proin. Imperdiet quis vel aliquam quam
-            vehicula feugiat arcu sit. Erat egestas nibh facilisi at venenatis
-            neque ultrices tellus. Vel libero nisi pellentesque lacus in mattis
-            non. Vulputate quisque neque urna habitasse justo pulvinar egestas
-            auctor. Vel id sed lacus bibendum mauris sed vel. Suspendisse
-            ultrices ipsum a proin augue arcu sodales fermentum.
-            <br></br> Lorem ipsum dolor sit amet consectetur. Euismod rutrum
-            nisi ante nunc. Vitae odio ornare condimentum libero. Est sed
-            laoreet sed at at lectus neque. Amet eu mauris fermentum eu nunc
-            eleifend eu elementum natoque. Pretium nulla et pulvinar nisi fames
-            arcu nulla. Dictumst maecenas pharetra et pellentesque. Urna urna
-            nec dignissim habitant ipsum. Turpis mi vitae fames amet pulvinar.
-            Donec amet ultrices egestas sit nam enim. Sed sed mattis nunc libero
-            sit interdum.
+            O Serviço de Psicologia da Paróquia São Luis Gonzaga oferece atendimento psicológico gratuito todas as quintas-feiras, localizado na Avenida Paulista, 2378. O grupo é formado por psicólogos voluntários com CRP ativo, atendendo pessoas de toda a Grande São Paulo, sem qualquer distinção de raça, gênero, credo ou orientação sexual. Iniciado em 2006, o projeto faz parte do Núcleo de Promoção Humana e Social da paróquia, surgido da necessidade de apoiar casos mais complexos que demandavam acompanhamento especializado.
+            <br></br>
+            <br></br>
+            O serviço realiza triagens para identificar as necessidades dos pacientes, encaminhando-os para psicoterapia breve, individual ou em grupo, com duração de até 12 sessões. Em alguns casos, os pacientes são direcionados para parceiros que oferecem orientação jurídica, psiquiátrica ou outros serviços públicos. Esse processo garante que os indivíduos recebam o suporte adequado, seja na paróquia ou em instituições parceiras com boa reputação.
+            <br></br>
+            <br></br>
+            Além dos atendimentos, os profissionais participam de reuniões clínicas, onde discutem casos, trocam experiências e revisam abordagens terapêuticas. Com diferentes formações teóricas, o grupo promove um ambiente de aprendizado contínuo, o que enriquece tanto o atendimento quanto a prática profissional. Esse modelo de supervisão mútua assegura a qualidade e a ética no tratamento oferecido à comunidade.
+            <br></br>
+            <br></br>
+            O serviço cresce continuamente e já ultrapassa mil atendimentos por ano. Além de fornecer acolhimento em momentos de crise, o projeto tem se mostrado um espaço de pertencimento para os pacientes, oferecendo reflexão e suporte emocional. Para os psicólogos voluntários, o trabalho também é uma oportunidade de aprendizado prático, que complementa suas experiências profissionais em outros locais de atuação.
           </p>
         </section>
 
@@ -103,22 +80,22 @@ function Servicos01() {
               Site:{" "}
               <a
                 style={{ color: "#FFF" }}
-                href="https://www.casaum.org/"
+                href="http://www.saoluis.org.br/"
                 target="_blank"
                 rel="noreferrer"
               >
-                https://www.casaum.org/
+                http://www.saoluis.org.br/
               </a>
             </p>
             <p style={{ color: "#FFF" }}>
               Rede social:{" "}
               <a
                 style={{ color: "#FFF" }}
-                href="https://www.instagram.com/casa1/"
+                href="https://www.instagram.com/paroquiaslg21/"
                 target="_blank"
                 rel="noreferrer"
               >
-                https://www.instagram.com/casa1/
+                https://www.instagram.com/paroquiaslg21/
               </a>
             </p>
           </div>
@@ -145,11 +122,11 @@ function Servicos01() {
               Endereço:{" "}
               <a
                 style={{ color: "#FFF" }}
-                href="https://www.google.com/search?sca_esv=db38b91c37c5cf98&sxsrf=ADLYWIJg_RRJrJ5BLQ2sQaKnAf74rvbblg:1726444969151&q=CASA+1+-+Centro+de+Cultura+e+Acolhimento+LGBT&ludocid=2957159734955648964&lsig=AB86z5XQxjXJ4whGJapQGIZMc-OG&sa=X&ved=2ahUKEwid7fDYlMaIAxXGqpUCHWLdCwkQoAJ6BAgdEAc"
+                href="https://www.google.com/maps/place/Av.+Paulista,+2378+-+Bela+Vista,+S%C3%A3o+Paulo+-+SP,+01310-300/@-23.5563169,-46.6640946,17z/data=!3m1!4b1!4m6!3m5!1s0x94ce582d680ed021:0xf37b1dd93128c8ec!8m2!3d-23.5563169!4d-46.6615197!16s%2Fg%2F11bw3zj2np?entry=ttu&g_ep=EgoyMDI0MTAwMi4xIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
                 rel="noreferrer"
               >
-                Rua Adoniran Barbosa 151, São Paulo, SP, 01318-020
+                Av. Paulista, 2378 - Bela Vista, São Paulo - SP, 01310-300
               </a>
             </p>
             <p style={{ color: "#FFF" }}>
@@ -160,11 +137,11 @@ function Servicos01() {
               Contato:{" "}
               <a
                 style={{ color: "#FFF" }}
-                href="tel:11982976671"
+                href="tel:1132315954"
                 target="_blank"
                 rel="noreferrer"
               >
-                (11) 98297-6671
+                (11) 3231 5954
               </a>
             </p>
           </div>
@@ -190,36 +167,27 @@ function Servicos01() {
             }}
           >
             <img
-              src="/img/acolhimento/casa1/img1.png"
-              alt="Biblioteca"
+              src="/img/saudeMental/paroquia/img1.jpg"
+              alt="Paroquia"
               style={{ width: "35%", borderRadius: "5px" }}
             />
             <img
-              src="/img/acolhimento/casa1/img2.png"
-              alt="Palestra"
+              src="/img/saudeMental/paroquia/img2.jpg"
+              alt="Igreja"
               style={{ width: "35%", borderRadius: "5px" }}
             />
             <img
-              src="/img/acolhimento/casa1/img3.png"
-              alt="Abraço"
+              src="/img/saudeMental/paroquia/img3.jpg"
+              alt="logo"
               style={{ width: "35%", borderRadius: "5px" }}
             />
             <img
-              src="/img/acolhimento/casa1/img4.png"
-              alt="Aula de yoga"
+              src="/img/saudeMental/paroquia/img4.jpg"
+              alt="ajudados"
               style={{ width: "35%", borderRadius: "5px" }}
             />
           </div>
         </section>
-
-        <section
-          style={{
-            marginTop: "40px",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
-        ></section>
       </main>
       <Footer />
     </div>
@@ -228,7 +196,7 @@ function Servicos01() {
 
 const styles = {
   background: {
-    backgroundImage: "url(/img/acolhimento/casa1/casa1background.png)", // Certifique-se de que a extensão do arquivo está correta
+    backgroundImage: "url(/img/saudeMental/paroquia/img5background.jpg)", // Certifique-se de que a extensão do arquivo está correta
     backgroundSize: "cover",
     backgroundPosition: "center",
     height: "80vh", // Ajuste conforme necessário
@@ -258,7 +226,7 @@ const styles = {
     height: "80px",
     borderRadius: "50%", // Torna o contêiner circular
     overflow: "hidden", // Garante que a imagem não ultrapasse os limites do círculo
-    backgroundImage: "url(/img/acolhimento/casa1/casa1.jpeg)",
+    backgroundImage: "url(/img/saudeMental/paroquia/img3.jpg)",
     backgroundSize: "cover", // Garante que a imagem preencha todo o contêiner
     backgroundPosition: "center", // Centraliza a imagem
   },

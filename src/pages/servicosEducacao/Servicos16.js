@@ -8,7 +8,7 @@ import {
   faPhoneVolume,
 } from "@fortawesome/free-solid-svg-icons";
 
-function Servicos01() {
+function Servicos16() {
   useEffect(() => {
     document.body.style.backgroundColor = "black";
   }, []);
@@ -197,7 +197,7 @@ function Servicos01() {
                     alt="Curso de Ajustes e reformas"
                     style={{ width: "100%", borderRadius: "5px" }}
                   />
-                  
+
                 </div>
               </a>
               <a
@@ -220,7 +220,7 @@ function Servicos01() {
                     alt="Curso de Corte e costura - Malha"
                     style={{ width: "100%", borderRadius: "5px" }}
                   />
-                  
+
                 </div>
               </a>
               <a
@@ -243,7 +243,7 @@ function Servicos01() {
                     alt="Curso de Manuseio de maquina de costura"
                     style={{ width: "100%", borderRadius: "5px" }}
                   />
-                  
+
                 </div>
               </a>
               <a
@@ -266,7 +266,7 @@ function Servicos01() {
                     alt="Curso de modelagem industrial"
                     style={{ width: "100%", borderRadius: "5px" }}
                   />
-                  
+
                 </div>
               </a>
             </div>
@@ -342,4 +342,4 @@ const styles = {
   },
 };
 
-export default Servicos01;
+export default Servicos16;

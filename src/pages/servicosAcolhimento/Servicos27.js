@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLocationDot,
@@ -12,12 +11,6 @@ function Servicos27() {
   useEffect(() => {
     document.body.style.backgroundColor = "black";
   }, []);
-
-  const navigate = useNavigate();
-
-  const handleContactClick = () => {
-    navigate('/#contato'); // Navega para a página HOME e para o container 'servicos'
-  };
 
   return (
     <div>
@@ -36,12 +29,9 @@ function Servicos27() {
                 </div>
               </div>
               <div style={styles.textContainer}>
-                <h1 style={styles.title}>PESQUISAR OUTRO</h1>
+                <h1 style={styles.title}>Centro Social Santo Dias</h1>
                 <p style={styles.description}>
-                  Um projeto de sociedade civil que tem como propósito a
-                  acolhida de jovens entre 18 e 25 anos que foram expulsos de
-                  casa pela família por suas orientações afetivas sexuais e
-                  identidade de gênero.
+                  Organização da Sociedade Civil sem fins econômicos, oferecendo programas e serviços de assistência e desenvolvimento social e de educação que beneficiam o desenvolvimento integral de crianças, adolescentes, jovens, adultos e idosos em situação de vulnerabilidade social.
                 </p>
               </div>
             </div>
@@ -56,29 +46,28 @@ function Servicos27() {
           <p
             style={{ color: "#FFF", paddingLeft: "70px", paddingRight: "70px" }}
           >
-            Lorem ipsum dolor sit amet consectetur. Euismod rutrum nisi ante
-            nunc. Vitae odio ornare condimentum libero. Est sed laoreet sed at
-            at lectus neque. Amet eu mauris fermentum eu nunc eleifend eu
-            elementum natoque. Pretium nulla et pulvinar nisi fames arcu nulla.
-            Dictumst maecenas pharetra et pellentesque. Urna urna nec dignissim
-            habitant ipsum. Turpis mi vitae fames amet pulvinar. Donec amet
-            ultrices egestas sit nam enim. Sed sed mattis nunc libero sit
-            interdum.
-            <br></br> Leo leo et quisque ut tellus. Eget egestas sed
-            pharetra sem gravida semper nisi proin. Imperdiet quis vel aliquam
-            quam vehicula feugiat arcu sit. Erat egestas nibh facilisi at
-            venenatis neque ultrices tellus. Vel libero nisi pellentesque lacus
-            in mattis non. Vulputate quisque neque urna habitasse justo pulvinar
-            egestas auctor. Vel id sed lacus bibendum mauris sed vel.
-            Suspendisse ultrices ipsum a proin augue arcu sodales fermentum.
-            <br></br> Lorem ipsum dolor sit amet consectetur. Euismod rutrum nisi ante
-            nunc. Vitae odio ornare condimentum libero. Est sed laoreet sed at
-            at lectus neque. Amet eu mauris fermentum eu nunc eleifend eu
-            elementum natoque. Pretium nulla et pulvinar nisi fames arcu nulla.
-            Dictumst maecenas pharetra et pellentesque. Urna urna nec dignissim
-            habitant ipsum. Turpis mi vitae fames amet pulvinar. Donec amet
-            ultrices egestas sit nam enim. Sed sed mattis nunc libero sit
-            interdum.
+            O Centro Social Santo Dias, situado no bairro do Butantã, em São Paulo, é uma instituição que se dedica a prestar serviços de assistência social, desenvolvimento humano e educação para a comunidade local e arredores. Fundada em 1987, a organização atua sem fins lucrativos, e sua missão é atender, principalmente, pessoas em situação de vulnerabilidade social, promovendo seu desenvolvimento integral.
+            <br></br>
+            <br></br>
+            O centro oferece uma ampla gama de programas sociais que buscam apoiar crianças, adolescentes, jovens, adultos e idosos, integrando diferentes gerações em ações voltadas ao fortalecimento das famílias e da comunidade. Algumas de suas atividades incluem:
+            <br></br>
+            <br></br>
+            Educação e Capacitação Profissional: O Centro Social Santo Dias promove cursos de capacitação e oficinas para jovens e adultos, voltados à inserção no mercado de trabalho, ampliando as chances de empregabilidade e geração de renda.
+            <br></br>
+            <br></br>
+            Programas de Apoio à Criança e Adolescente: O espaço oferece atividades socioeducativas, culturais e esportivas que visam o desenvolvimento integral de crianças e adolescentes, com o objetivo de afastá-los de situações de risco e promover o bem-estar físico e emocional.
+            <br></br>
+            <br></br>
+            Assistência a Idosos: Além de atender a juventude, o Centro também realiza ações voltadas para a terceira idade, promovendo atividades de convivência, lazer e saúde, garantindo a inclusão e o apoio necessário para essa faixa etária.
+            <br></br>
+            <br></br>
+            Apoio às Famílias em Situação de Vulnerabilidade: A entidade oferece programas de atendimento às famílias, visando a melhoria das condições de vida, por meio de doações, orientação social e acesso a serviços básicos.
+            <br></br>
+            <br></br>
+            Além desses serviços, o Centro Social Santo Dias busca criar um ambiente de convivência comunitária, onde valores como solidariedade, cidadania e inclusão social são fomentados. A entidade depende de doações, voluntariado e parcerias com órgãos públicos e privados para continuar desenvolvendo suas atividades e expandir seu impacto positivo na comunidade.
+            <br></br>
+            <br></br>
+            Seus projetos sociais são estruturados para garantir um atendimento humanizado e universal, respeitando a dignidade e os direitos dos beneficiários. O trabalho realizado no Centro Social Santo Dias é essencial para o fortalecimento do tecido social da região, contribuindo para a construção de uma sociedade mais justa e solidária.
           </p>
         </section>
 
@@ -108,22 +97,22 @@ function Servicos27() {
               Site:{" "}
               <a
                 style={{ color: "#FFF" }}
-                href="https://www.casaum.org/"
+                href="https://santodias-sp.org.br/"
                 target="_blank"
                 rel="noreferrer"
               >
-                https://www.casaum.org/
+                https://santodias-sp.org.br/
               </a>
             </p>
             <p style={{ color: "#FFF" }}>
               Rede social:{" "}
               <a
                 style={{ color: "#FFF" }}
-                href="https://www.instagram.com/casa1/"
+                href="https://www.instagram.com/cssantodias/"
                 target="_blank"
                 rel="noreferrer"
               >
-                https://www.instagram.com/casa1/
+                https://www.instagram.com/cssantodias/
               </a>
             </p>
           </div>
@@ -150,11 +139,11 @@ function Servicos27() {
               Endereço:{" "}
               <a
                 style={{ color: "#FFF" }}
-                href="https://www.google.com/search?sca_esv=db38b91c37c5cf98&sxsrf=ADLYWIJg_RRJrJ5BLQ2sQaKnAf74rvbblg:1726444969151&q=CASA+1+-+Centro+de+Cultura+e+Acolhimento+LGBT&ludocid=2957159734955648964&lsig=AB86z5XQxjXJ4whGJapQGIZMc-OG&sa=X&ved=2ahUKEwid7fDYlMaIAxXGqpUCHWLdCwkQoAJ6BAgdEAc"
+                href="https://www.google.com/maps/dir/-23.5601802,-46.6415726/Av.+Otac%C3%ADlio+Tomanik,+1555+-+Rio+Pequeno,+S%C3%A3o+Paulo+-+SP,+05363-101/@-23.5758457,-46.778515,12z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x94ce55e1218a3b07:0xba24eb08834f5411!2m2!1d-46.7516161!2d-23.5669655?entry=ttu&g_ep=EgoyMDI0MTAyMS4xIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
                 rel="noreferrer"
               >
-                Rua Adoniran Barbosa 151, São Paulo, SP, 01318-020
+                Av. Otacílio Tomanik, 1555 - Rio Pequeno, São Paulo - SP, 05363-101
               </a>
             </p>
             <p style={{ color: "#FFF" }}>
@@ -165,11 +154,11 @@ function Servicos27() {
               Contato:{" "}
               <a
                 style={{ color: "#FFF" }}
-                href="tel:11982976671"
+                href="tel:11983151689"
                 target="_blank"
                 rel="noreferrer"
               >
-                (11) 98297-6671
+                (11) 98315 - 1689
               </a>
             </p>
           </div>
@@ -195,60 +184,25 @@ function Servicos27() {
             }}
           >
             <img
-              src="/img/acolhimento/casa1/img1.png"
-              alt="Biblioteca"
+              src="/img/acolhimento/santodias/sd1.jpg"
+              alt="Reunião"
               style={{ width: "35%", borderRadius: "5px" }}
             />
             <img
-              src="/img/acolhimento/casa1/img2.png"
-              alt="Palestra"
+              src="/img/acolhimento/santodias/sd2.jpg"
+              alt="Professora e criança"
               style={{ width: "35%", borderRadius: "5px" }}
             />
             <img
-              src="/img/acolhimento/casa1/img3.png"
-              alt="Abraço"
+              src="/img/acolhimento/santodias/sd3.jpg"
+              alt="Ar livre"
               style={{ width: "35%", borderRadius: "5px" }}
             />
             <img
-              src="/img/acolhimento/casa1/img4.png"
-              alt="Aula de yoga"
+              src="/img/acolhimento/santodias/sd4.jpg"
+              alt="Festa"
               style={{ width: "35%", borderRadius: "5px" }}
             />
-          </div>
-        </section>
-
-        <section
-          style={{
-            marginTop: "40px",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
-        >
-          <div style={{ flex: 1, marginLeft: "70px" }}>
-            <h2 style={{ color: "#9B0202", fontSize: "15px", fontWeight: "bolder", marginBottom: "20px" }}>
-              VAMOS CONVERSAR
-            </h2>
-            <p style={{ fontSize: "30px", color: "#FFF", fontWeight: "bolder" }}>
-              Dê suas opiniões, sugestões, tire dúvidas!
-            </p>
-          </div>
-
-          <div>
-            <button
-              onClick={handleContactClick} // Usa a função handleContactClick ao invés de href
-              style={{
-                padding: "20px 20px",
-                marginRight: "350px",
-                fontSize: "1.3rem",
-                backgroundColor: "#000",
-                border: "2px solid #fff",
-                color: "#fff",
-                cursor: "pointer",
-              }}
-            >
-              ENTRE EM CONTATO!
-            </button>
           </div>
         </section>
       </main>
@@ -259,7 +213,7 @@ function Servicos27() {
 
 const styles = {
   background: {
-    backgroundImage: "url(/img/acolhimento/casa1/casa1background.png)", // Certifique-se de que a extensão do arquivo está correta
+    backgroundImage: "url(/img/acolhimento/santodias/sdback.jpg)", // Certifique-se de que a extensão do arquivo está correta
     backgroundSize: "cover",
     backgroundPosition: "center",
     height: "80vh", // Ajuste conforme necessário
@@ -289,7 +243,7 @@ const styles = {
     height: "80px",
     borderRadius: "50%", // Torna o contêiner circular
     overflow: "hidden", // Garante que a imagem não ultrapasse os limites do círculo
-    backgroundImage: "url(/img/acolhimento/casa1/casa1.jpeg)",
+    backgroundImage: "url(/img/acolhimento/santodias/sdcircle.png)",
     backgroundSize: "cover", // Garante que a imagem preencha todo o contêiner
     backgroundPosition: "center", // Centraliza a imagem
   },

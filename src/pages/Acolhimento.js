@@ -31,7 +31,7 @@ const HomeServicos = styled.div` /* Design para abaixo do header */
   }
 
   .containerSuperior h1:hover{
-    transform: scale(1.06);
+    transform: scale(1.02);
   }
   .contentSuperior h2 {
     font-size: 25px;
@@ -119,7 +119,7 @@ background-color: #000;
 
 .card-link:hover {
   color: #fff;
-  transform: scale(1.2); /* Zoom de 1.2 */
+  transform: scale(1.07);
 }
 
 .subtituloCards{
@@ -151,13 +151,17 @@ background-color: #000;
 
   `
 
-
 function Acolhimento() {
 
   const navigate = useNavigate();
 
   const handleContactClick = () => {
-    navigate('/#contato'); // Navega para a página HOME e para o container 'servicos'
+    navigate('/'); // Navega para a Home primeiro
+
+    // Aguardar para garantir que a navegação foi concluída, então rolar até o contato
+    setTimeout(() => {
+      document.getElementById('contato').scrollIntoView({ behavior: 'smooth' });
+    }, 100);
   };
 
   return (
@@ -210,9 +214,10 @@ function Acolhimento() {
             </div>
 
             <div className="card">
-              <img src="img/acolhimento/helena.jpeg" alt="Imagem 3" className="card-image" />
-              <h3 title="Casa Abrigo - Helenira Rezende de Souza Nazareth" className="card-title">Casa Abrigo – Helenira Rezende de Souza Nazareth </h3>
-              <p className="card-description">Fornece alojamento temporário, em endereço sigiloso, oferecendo proteção e atendimento integral às mulheres em situação de violência doméstica e familiar de gênero.</p>
+              <img src="img/acolhimento/dias.jpg" alt="Imagem 3" className="card-image" />
+              <h3 title="Centro Social Santo Dias" className="card-title">Centro Social Santo Dias </h3>
+              <p className="card-description">Organização de
+                 Sociedade Civil sem fins econômicos, oferecendo programas e serviços de assistência e desenvolvimento social e de educação que beneficiam o desenvolvimento integral de crianças, adolescentes, jovens, adultos e idosos em situação de vulnerabilidade social.</p>
               <Link className="card-link" to="/acolhimento/servicos27"> Veja Mais! </Link>
             </div>
           </div>
@@ -223,12 +228,12 @@ function Acolhimento() {
               <img src="img/acolhimento/aconchegoLogo.png" alt="Imagem 4" className="card-image" />
               <h3 title="Casa do Aconchego" className="card-title">Casa do Aconchego</h3>
               <p className="card-description">Sua missão é apoiar famílias vulneráveis com crianças em tratamento de saúde, oferecendo um ambiente seguro e acolhedor.</p>
-              <Link className="card-link" to="/acolhimento/servicos28"> Veja Mais! </Link>
+              <Link className="card-link" to="/acolhimento/casa-do-aconchego"> Veja Mais! </Link>
             </div>
 
             <div className="card">
               <img src="img/acolhimento/casaIsabel.jpeg" alt="Imagem 5" className="card-image" />
-              <h3 title="Casa de Isabel" className="card-title">Casa de Isabel</h3>
+              <h3 title="Organização Social de Saúde Casa de Isabel" className="card-title">Organização Social de Saúde Casa de Isabel</h3>
               <p className="card-description">Seus objetivos são defender os cidadãos vítimas de violência doméstica e familiar, bem como a situação de risco (pessoal e social), em especial a mulher, a criança, o adolescente, adulto, idosos e pessoas com deficiências.</p>
               <Link className="card-link" to="/acolhimento/servicos29"> Veja Mais! </Link>
             </div>
@@ -236,26 +241,13 @@ function Acolhimento() {
             <div className="card">
               <img src="img/acolhimento/florescer.jpeg" alt="Imagem 6" className="card-image" />
               <h3 title="Casa Florescer" className="card-title">Casa Florescer</h3>
-              <p className="card-description">Um centro de acolhida pioneiro no Brasil que acolhe e atende 30 mulheres transexuais e travestis em situação de vulnerabilidade.</p>
+              <p className="card-description">Um centro de acolhida pioneiro no Brasil que acolhe e atende mulheres transexuais e travestis em situação de vulnerabilidade.</p>
               <Link className="card-link" to="/acolhimento/servicos30"> Veja Mais! </Link>
             </div>
           </div>
 
         </div>
       </Cards>
-
-      <section
-        style={{
-          marginTop: "0px", /* Ajuste ou remova a margem superior */
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          backgroundColor: "#000",
-          padding: "20px 0", /* Reduza o padding se necessário */
-        }}
-      >
-        
-      </section>
       <Footer />
     </div>
   )

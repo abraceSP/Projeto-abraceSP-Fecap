@@ -141,8 +141,8 @@ function Header() {
         <div className="itensMenu">
           <ul id="menu">
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/alimentacao">Alimentação</Link></li>
             <li><Link to="/acolhimento">Acolhimento</Link></li>
+            <li><Link to="/alimentacao">Alimentação</Link></li>
             <li><Link to="/educacao">Educação</Link></li>
             <li><Link to="/saude-mental">Saúde Mental</Link></li>
             <li
@@ -166,7 +166,7 @@ function Header() {
           </Link>
         </div>
       </header>
-      
+
     </HeaderContainer>
   )
 }

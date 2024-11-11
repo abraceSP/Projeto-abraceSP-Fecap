@@ -3,13 +3,12 @@ import Footer from '../components/Footer'
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
 
 const HomeServicos = styled.div` /* Design para abaixo do header */
   .containerSuperior {
     width: 100%;
     min-height: 60vh;
-    background-image: url('img/saudeMental/capaSaude.jpg');
+    background-image: url('img/alimentacao/capaAliment.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -31,7 +30,7 @@ const HomeServicos = styled.div` /* Design para abaixo do header */
   }
 
   .containerSuperior h1:hover{
-    transform: scale(1.06);
+    transform: scale(1.02);
   }
   .contentSuperior h2 {
     font-size: 25px;
@@ -119,7 +118,7 @@ background-color: #000;
 
 .card-link:hover {
   color: #fff;
-  transform: scale(1.2); /* Zoom de 1.2 */
+  transform: scale(1.07); /* Zoom de 1.2 */
 }
 
 .subtituloCards{
@@ -151,14 +150,7 @@ background-color: #000;
 
   `
 
-
 function Alimentacao() {
-
-  const navigate = useNavigate();
-
-  const handleContactClick = () => {
-    navigate('/#contato'); // Navega para a página HOME e para o container 'servicos'
-  };
 
   return (
     <div>
@@ -171,7 +163,7 @@ function Alimentacao() {
               <span className="abrace"> Aliment</span>
               <span className="sp">ação </span>
             </h1>
-            <h2>Para momentos em que um lugar para receber acolhimento é essencial!</h2>
+            <h2>Em parceria com restaurantes populares, ONG's e projetos sociais ajudamos a combater a fome </h2>
 
           </div>
         </div>
@@ -182,7 +174,7 @@ function Alimentacao() {
         <div className="cards-container">
 
           <h2 title="O Melhos Site ddo Mundo " className='subtituloCards'>
-            SAÚDE MENTAL
+            ALIMENTAÇÃO
           </h2>
 
           <h1 className='tituloCards'>
@@ -190,72 +182,59 @@ function Alimentacao() {
           </h1>
 
           <p className='text '>
-            Locais para ajuda quando a vida estiver muito dificil e você precisar conversar com alguém!
+            Quando a fome bater, já sabe onde ir!
           </p>
 
           {/* Primeira linha de cartões */}
           <div className="row">
             <div className="card">
-              <img src="img/saudeMental/paroquia.png" alt="Imagem 1" className="card-image" />
-              <h3 title="Atendimento Psicológico Paróquia São Luís Gonzaga" className="card-title">Atendimento Psicológico Paróquia... </h3>
-              <p className="card-description">Um grupo de psicólogos voluntários ao qual atendem às quintas-feiras na Paróquia da Igreja São Luís Gonzaga, recebendo todos os tipos de pacientes. </p>
-              <Link className="card-link" to="/acolhimento/servicos25"> Veja Mais! </Link>
+              <img src="img/alimentacao/capaBom.jpg" alt="Imagem 1" className="card-image" />
+              <h3 title="Bom-Prato" className="card-title">Bom-Prato</h3>
+              <p className="card-description">Criado em 28 de dezembro de 2.000, o programa Bom Prato tem como objetivo oferecer refeições saudáveis e de alta qualidade a um custo acessível à população em vulnerabilidade social.  </p>
+              <Link className="card-link" to="/alimentacao/servicos19"> Veja Mais! </Link>
             </div>
 
             <div className="card">
-              <img src='img/saudeMental/sinpesp.jpg' alt="Imagem 2" className="card-image" />
-              <h3 title="SINPESP" className="card-title">SINPESP</h3>
-              <p className="card-description">O valor mínimo de cada sessão é, em média, R$ 40, definido de acordo com a condição financeira do paciente. Atendem pessoas de todas as classes sociais, incluindo adultos, jovens, crianças, adolescentes, famílias e idosos.</p>
-              <Link className="card-link" to="/acolhimento/servicos26"> Veja Mais! </Link>
+              <img src='img/alimentacao/capabanco.jpg' alt="Imagem 2" className="card-image" />
+              <h3 title="Banco de Alimentos" className="card-title">Banco de Alimentos</h3>
+              <p className="card-description">Fundada em 1998, a ONG Banco de Alimentos é uma associação civil que recolhe alimentos que já perderam valor de prateleira no comércio e indústria, mas ainda estão aptos para consumo, e os distribui onde são mais necessários.</p>
+              <Link className="card-link" to="/alimentacao/servicos20"> Veja Mais! </Link>
             </div>
 
             <div className="card">
-              <img src="img/saudeMental/AnaMariaPopo.jpg" alt="Imagem 3" className="card-image" />
-              <h3 title="Clínica  Ana Maria Popovic" className="card-title">Clínica  Ana Maria Popovic </h3>
-              <p className="card-description">"A Clínica Psicológica 'Ana Maria Poppovic' oferece terapia para casais e famílias, crianças e adultos, além de tratar processos de luto, dificuldades nos relacionamentos, questões relacionadas ao trabalho, orientação vocacional/profissional e outros. O atendimento é online e gratuito. Antes de iniciar o tratamento, é necessário agendar por telefone.</p>
-              <Link className="card-link" to="/acolhimento/servicos27"> Veja Mais! </Link>
+              <img src="img/alimentacao/capaPao.png" alt="Imagem 3" className="card-image" />
+              <h3 title="Pão do Povo da Rua" className="card-title">Pão do Povo da Rua </h3>
+              <p className="card-description">O projeto Pão do Povo da Rua existe desde 2020 e alimenta diariamente 1.200 pessoas em situação de rua, no Centro de São Paulo. </p>
+              <Link className="card-link" to="/alimentacao/servicos21"> Veja Mais! </Link>
             </div>
           </div>
 
           {/* Segunda linha de cartões */}
           <div className="row">
             <div className="card">
-              <img src="img/saudeMental/ClinicaGuarulhos.jpg" alt="Imagem 4" className="card-image" />
-              <h3 title="Clínica Pscicologica da Universidade de Guarulhos" className="card-title">Clínica Psicologa da Universidade...</h3>
-              <p className="card-description">Entre os serviços prestados estão psicodiagnóstico, psicoterapia infantil e para adultos, psicoterapia familiar e de casal. As inscrições devem ser feitas por telefone. As sessões, com duração de 50 minutos e ao custo de R$ 10 cada, são realizadas exclusivamente no formato presencial. </p>
-              <Link className="card-link" to="/acolhimento/servicos28"> Veja Mais! </Link>
+              <img src="img/alimentacao/capaTonk2.png" alt="Imagem 4" className="card-image" />
+              <h3 title="Tonkiri" className="card-title">Tonkiri</h3>
+              <p className="card-description">Tonkiri Voa é um projeto social de impacto, diante da situação de fome nas periferias de São Paulo. Tudo começou com a entrega de marmitas, em torno da qual uma rede de mais de cem amigas e amigos solidários se mobilizaram. </p>
+              <Link className="card-link" to="/alimentacao/servicos22"> Veja Mais! </Link>
             </div>
 
             <div className="card">
-              <img src="img/saudeMental/PAN.avif" alt="Imagem 5" className="card-image" />
-              <h3 title="PAN" className="card-title">PAN</h3>
-              <p className="card-description">É um serviço especializado em São Paulo, voltado para o atendimento de idosos com necessidades neuropsiquiátricas. Oferece suporte e tratamento para condições como demência, depressão, ansiedade e outras questões de saúde mental que afetam a população idosa.</p>
-              <Link className="card-link" to="/acolhimento/servicos29"> Veja Mais! </Link>
+              <img src="img/alimentacao/capasesc.jpg" alt="Imagem 5" className="card-image" />
+              <h3 title="Sesc Mesa Brasil" className="card-title">Sesc Mesa Brasil</h3>
+              <p className="card-description">A maior rede privada de bancos de alimentos da América Latina combate a fome e o desperdício, a partir de doações de parceiros.</p>
+              <Link className="card-link" to="/alimentacao/servicos23"> Veja Mais! </Link>
             </div>
 
             <div className="card">
-              <img src="img/saudeMental/ABPS.jpeg" alt="Imagem 6" className="card-image" />
-              <h3 title="ABPS" className="card-title">ABPS</h3>
-              <p className="card-description">O centro de formação em psicodrama para psicólogos já graduados (com CRP) oferece atendimentos psicológicos online para adultos, adolescentes, crianças, casais e famílias. O valor é social, sendo o mínimo R$ 160 por quatro sessões, ou R$ 40 cada uma.</p>
-              <Link className="card-link" to="/acolhimento/servicos30"> Veja Mais! </Link>
+              <img src="img/alimentacao/capaOrg.jpg" alt="Imagem 6" className="card-image" />
+              <h3 title="Orgânico Solidario" className="card-title">Orgânico Solidario</h3>
+              <p className="card-description">O Orgânico Solidário é uma iniciativa comprometida em enfrentar os desafios da segurança alimentar e geração de renda sustentável.</p>
+              <Link className="card-link" to="/alimentacao/servicos24"> Veja Mais! </Link>
             </div>
           </div>
 
         </div>
       </Cards>
-
-      <section
-        style={{
-          marginTop: "0px", /* Ajuste ou remova a margem superior */
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          backgroundColor: "#000",
-          padding: "20px 0", /* Reduza o padding se necessário */
-        }}
-      >
-        
-      </section>
       <Footer />
     </div>
   )

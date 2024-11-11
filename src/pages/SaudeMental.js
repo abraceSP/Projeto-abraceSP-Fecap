@@ -3,7 +3,6 @@ import Footer from '../components/Footer'
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
 
 const HomeServicos = styled.div` /* Design para abaixo do header */
   .containerSuperior {
@@ -31,7 +30,7 @@ const HomeServicos = styled.div` /* Design para abaixo do header */
   }
 
   .containerSuperior h1:hover{
-    transform: scale(1.06);
+    transform: scale(1.02);
   }
   .contentSuperior h2 {
     font-size: 25px;
@@ -103,6 +102,7 @@ background-color: #000;
   font-size: 20px;
   color: #fff;
   font-family: 'Inter', sans-serif;
+  text-align: left;
 }
 
 .card-link {
@@ -119,7 +119,7 @@ background-color: #000;
 
 .card-link:hover {
   color: #fff;
-  transform: scale(1.2); /* Zoom de 1.2 */
+  transform: scale(1.07); 
 }
 
 .subtituloCards{
@@ -151,14 +151,7 @@ background-color: #000;
 
   `
 
-
 function SaudeMental() {
-
-  const navigate = useNavigate();
-
-  const handleContactClick = () => {
-    navigate('/#contato'); // Navega para a página HOME e para o container 'servicos'
-  };
 
   return (
     <div>
@@ -190,15 +183,15 @@ function SaudeMental() {
           </h1>
 
           <p className='text '>
-            Locais para ajuda quando a vida estiver muito dificil e você precisar conversar com alguém!
+            Locais para ajuda quando a vida estiver muito difícil e você precisar conversar com alguém!
           </p>
 
           {/* Primeira linha de cartões */}
           <div className="row">
             <div className="card">
               <img src="img/saudeMental/paroquia.png" alt="Imagem 1" className="card-image" />
-              <h3 title="Atendimento Psicológico Paróquia São Luís Gonzaga" className="card-title">Atendimento Psicológico Paróquia... </h3>
-              <p className="card-description">Um grupo de psicólogos voluntários ao qual atendem às quintas-feiras na Paróquia da Igreja São Luís Gonzaga, recebendo todos os tipos de pacientes. </p>
+              <h3 title="Atendimento Psicológico Paróquia São Luís Gonzaga" className="card-title">Atendimento Psicológico Paróquia São Luís Gonzaga</h3>
+              <p className="card-description">Um grupo de psicólogos voluntários ao qual atendem às quintas-feiras na Paróquia da Igreja São Luís Gonzaga, recebendo todos os tipos de pacientes </p>
               <Link className="card-link" to="/saude-mental/servicos01"> Veja Mais! </Link>
             </div>
 
@@ -212,7 +205,7 @@ function SaudeMental() {
             <div className="card">
               <img src="img/saudeMental/AnaMariaPopo.jpg" alt="Imagem 3" className="card-image" />
               <h3 title="Clínica  Ana Maria Popovic" className="card-title">Clínica  Ana Maria Popovic </h3>
-              <p className="card-description">"A Clínica Psicológica 'Ana Maria Poppovic' oferece terapia para casais e famílias, crianças e adultos, além de tratar processos de luto, dificuldades nos relacionamentos, questões relacionadas ao trabalho, orientação vocacional/profissional e outros. O atendimento é online e gratuito. Antes de iniciar o tratamento, é necessário agendar por telefone.</p>
+              <p className="card-description">A Clínica Psicológica Ana Maria Poppovic oferece terapia para casais e famílias, crianças e adultos, além de tratar processos de luto, dificuldades nos relacionamentos, questões relacionadas ao trabalho, orientação vocacional/profissional e outros. O atendimento é online e gratuito. Antes de iniciar o tratamento, é necessário agendar por telefone.</p>
               <Link className="card-link" to="/saude-mental/servicos03"> Veja Mais! </Link>
             </div>
           </div>
@@ -221,7 +214,7 @@ function SaudeMental() {
           <div className="row">
             <div className="card">
               <img src="img/saudeMental/ClinicaGuarulhos.jpg" alt="Imagem 4" className="card-image" />
-              <h3 title="Clínica Pscicologica da Universidade de Guarulhos" className="card-title">Clínica Psicologa da Universidade...</h3>
+              <h3 title="Clínica Psicológica da Universidade de Guarulhos" className="card-title">Clínica Psicológica da Universidade de Guarulhos</h3>
               <p className="card-description">Entre os serviços prestados estão psicodiagnóstico, psicoterapia infantil e para adultos, psicoterapia familiar e de casal. As inscrições devem ser feitas por telefone. As sessões, com duração de 50 minutos e ao custo de R$ 10 cada, são realizadas exclusivamente no formato presencial. </p>
               <Link className="card-link" to="/saude-mental/servicos04"> Veja Mais! </Link>
             </div>
@@ -243,19 +236,6 @@ function SaudeMental() {
 
         </div>
       </Cards>
-
-      <section
-        style={{
-          marginTop: "0px", /* Ajuste ou remova a margem superior */
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          backgroundColor: "#000",
-          padding: "20px 0", /* Reduza o padding se necessário */
-        }}
-      >
-        
-      </section>
       <Footer />
     </div>
   )

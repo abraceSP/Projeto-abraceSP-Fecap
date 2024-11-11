@@ -7,11 +7,12 @@ const FooterContainer = styled.footer`
   background-color: #000000; /* Adicione esta linha para definir a cor de fundo */
 
   .footer {
-    background-color: #000000;
+    background-color: #00000;
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-top: 3px solid #9b0202;
   }
 
   .logoHome {
@@ -79,17 +80,44 @@ const FooterContainer = styled.footer`
   }
 `;
 
+const StyledButton = styled.button`
+  padding: 20px 20px;
+  font-size: 1.3rem;
+  background-color: #000;
+  border: 2px solid #fff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-right: 75px;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+
+  &:hover {
+    background-color: #fff; 
+    color: #000;
+    border: 2px solid grey;
+    transform: scale(1.09);
+  }
+`;
+
 function Footer() {
   const navigate = useNavigate();
+
   const location = useLocation();
 
   const handleContactClick = () => {
-    navigate("/#contato"); // Navega para a página HOME e para o container 'servicos'
+    navigate('/'); // Navega para a Home primeiro
+
+    // Aguardar para garantir que a navegação foi concluída, então rolar até o contato
+    setTimeout(() => {
+      document.getElementById('contato').scrollIntoView({ behavior: 'smooth' });
+    }, 100);
   };
 
   useEffect(() => {
     document.body.style.backgroundColor = "black";
-  }, []);
+  }, [])
+
   return (
     <FooterContainer>
       {location.pathname !== "/" && ( // Condicionalmente renderiza as divs se não estiver na rota '/'
@@ -99,11 +127,13 @@ function Footer() {
             alignItems: "center",
             justifyContent: "space-between",
             width: "100%",
-            marginTop: "70px",
-            marginBottom: "70px",
+            marginTop: "10px",
+            marginBottom: "10px",
+            borderTop: "3px solid #9b0202",
+            padding: "20px",
           }}
         >
-          <div style={{ flex: 1, marginLeft: "70px" }}>
+          <div style={{ flex: 1, marginLeft: "10px" }}>
             <h2
               style={{
                 color: "#9B0202",
@@ -112,7 +142,7 @@ function Footer() {
                 marginBottom: "20px",
               }}
             >
-              VAMOS CONVERSAR
+              VAMOS CONVERSAR!
             </h2>
             <p
               style={{ fontSize: "30px", color: "#FFF", fontWeight: "bolder" }}
@@ -120,22 +150,9 @@ function Footer() {
               Dê suas opiniões, sugestões, tire dúvidas!
             </p>
           </div>
-
-          <div style={{ marginRight: "300px" }}>
-            <button
-              onClick={handleContactClick} // Usa a função handleContactClick ao invés de href
-              style={{
-                padding: "20px 20px",
-                fontSize: "1.3rem",
-                backgroundColor: "#000",
-                border: "2px solid #fff",
-                color: "#fff",
-                cursor: "pointer",
-              }}
-            >
-              ENTRE EM CONTATO!
-            </button>
-          </div>
+          <StyledButton onClick={handleContactClick}>
+            ENTRE EM CONTATO!
+          </StyledButton>
         </div>
       )}
 
@@ -147,10 +164,10 @@ function Footer() {
         <div className="itensMenu">
           <ul id="menu">
             <li>
-              <Link to="/alimentacao">Alimentação</Link>
+              <Link to="/acolhimento">Acolhimento</Link>
             </li>
             <li>
-              <Link to="/acolhimento">Acolhimento</Link>
+              <Link to="/alimentacao">Alimentação</Link>
             </li>
             <li>
               <Link to="/educacao">Educação</Link>
@@ -170,7 +187,7 @@ function Footer() {
           </ul>
         </div>
         <div className="copyright">
-          Copyright © 2024 - 2024 ABRACE<span className="sp">SP</span> FECAP
+          Copyright © 2024 - 2024 ABRACE<span className="sp">SP</span>
         </div>
       </footer>
     </FooterContainer>

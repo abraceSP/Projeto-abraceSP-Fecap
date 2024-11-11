@@ -8,7 +8,7 @@ import {
   faPhoneVolume,
 } from "@fortawesome/free-solid-svg-icons";
 
-function Servicos01() {
+function Servicos18() {
   useEffect(() => {
     document.body.style.backgroundColor = "black";
   }, []);
@@ -138,7 +138,7 @@ function Servicos01() {
                 style={{ marginRight: "8px" }}
               />
               Endereço:{" "}
-              <a style={{ color: "#FFF" }} target="_blank" rel="noreferrer">
+              <a style={{ color: "#FFF" }} href="https://www.google.com.br/maps/place/R.+Oriente,+275+-+Barcelona,+S%C3%A3o+Caetano+do+Sul+-+SP,+09551-010/@-23.6235513,-46.55266,17z/data=!3m1!4b1!4m6!3m5!1s0x94ce5d2600fedb8f:0x4ac7f7303e75376d!8m2!3d-23.6235562!4d-46.5500851!16s%2Fg%2F11c4p7zyt6?entry=ttu&g_ep=EgoyMDI0MTAyNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noreferrer">
               Rua Oriente 275, São Caetano do Sul, SP, 09551-010 
               </a>
             </p>
@@ -359,7 +359,7 @@ function Servicos01() {
 
 const styles = {
   background: {
-    backgroundImage: "url(/img/educacao/bgsigbol.webp)", // Certifique-se de que a extensão do arquivo está correta
+    backgroundImage: "url(/img/educacao/bgsigbol.webp)",
     backgroundSize: "cover",
     backgroundPosition: "center",
     height: "80vh", // Ajuste conforme necessário
@@ -412,4 +412,4 @@ const styles = {
   },
 };
 
-export default Servicos01;
+export default Servicos18;

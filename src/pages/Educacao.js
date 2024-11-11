@@ -22,8 +22,7 @@ const HomeServicos = styled.div`
   .contentSuperior h1 {
     font-size: 48px;
     margin-bottom: 20px;
-    font-family: "Inter", sans-serif;
-    font-weight: bold;
+    font-family: 'Inter', sans-serif;
     margin-bottom: 20px; /* Ajuste a margem conforme necessário */
     transition: transform 0.3s ease;
   }
@@ -250,11 +249,11 @@ function Educacao() {
         </h1>
         <p className="text">
           No meio da agitação da capital, às vezes esquecemos que precisamos
-          nos presentar com tempo de qualidade. Esse respiro da mente é
-          importante para uma rotina saudável e feliz. Além de nos
-          fazer enxergar os desafios com outros olhos e gerar motivação. Por
-          isso, listamos dez oficinas e workshops em SP para você que
-          busca momentos de lazer que exercitem sua criatividade.
+          nos presentar com tempo de qualidade. Esse respiro da mente é
+          importante para uma rotina saudável e feliz. Além de nos
+          fazer enxergar os desafios com outros olhos e gerar motivação. Por
+          isso, listamos algumas oficinas e workshops em SP para você que
+          busca momentos de lazer que exercitem sua criatividade.
         </p>
 
         <div className="cards-container">
@@ -267,9 +266,9 @@ function Educacao() {
             />
             <h3 className="card-title">Montagem de arranjos florais</h3>
             <p className="card-description">
-              O ateliê paulistano Se Flor pra Ser realiza workshops esporádicos
-              onde você aprende a montar seu próprio arranjo de flores! A
-              experiência é acompanhada de bebidas, comidinhas e brindes.
+              O ateliê paulistano Se Flor pra Ser realiza workshops esporádicos
+              onde você aprende a montar seu próprio arranjo de flores! A
+              experiência é acompanhada de bebidas, comidinhas e brindes.
             </p>
             <Link className="card-link" to="/educacao/servicos16">
               Veja Mais!
@@ -284,10 +283,10 @@ function Educacao() {
             />
             <h3 className="card-title">Cerâmica</h3>
             <p className="card-description">
-              Se você sonha em criar lindas peças de cerâmica com suas próprias
-              mãos, o Ateliê Beija-flor da alma é o lugar certo!<br></br>{" "}
+              Se você sonha em criar lindas peças de cerâmica com suas próprias
+              mãos, o Ateliê Beija-flor da alma é o lugar certo!<br></br>{" "}
               <br></br>
-              As aulas recorrentes ocorrem uma vez por semana, com duração de 3
+              As aulas recorrentes ocorrem uma vez por semana, com duração de 3
               horas.
             </p>
             <Link className="card-link" to="/educacao/servicos17">
@@ -303,11 +302,11 @@ function Educacao() {
             />
             <h3 className="card-title">Corte e costura</h3>
             <p className="card-description">
-              A Sigbol tem sete unidades de ensino em São Paulo onde
-              oferta diversos cursos na área da moda. De costura
-              criativa, customização a até mesmo personal stylist, você encontra
+              A Sigbol tem sete unidades de ensino em São Paulo onde
+              oferta diversos cursos na área da moda. De costura
+              criativa, customização a até mesmo personal stylist, você encontra
               várias opções por lá. Se você gosta de linha e agulha, é uma
-              excelente alternativa para aprender a criar e customizar suas
+              excelente alternativa para aprender a criar e customizar suas
               próprias peças!
             </p>
             <Link className="card-link" to="/educacao/servicos18">

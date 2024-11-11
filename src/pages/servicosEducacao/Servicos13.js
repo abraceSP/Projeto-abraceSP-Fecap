@@ -1,23 +1,16 @@
 import React, { useEffect } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLocationDot,
   faPhoneVolume,
 } from "@fortawesome/free-solid-svg-icons";
 
-function Servicos01() {
+function Servicos13() {
   useEffect(() => {
     document.body.style.backgroundColor = "black";
   }, []);
-
-  const navigate = useNavigate();
-
-  const handleContactClick = () => {
-    navigate("/#contato"); // Navega para a página HOME e para o container 'servicos'
-  };
 
   return (
     <div>
@@ -144,7 +137,7 @@ function Servicos01() {
                 rel="noreferrer"
               >
                 R. Maj. Carlos del Prete, 651 - Centro, São Caetano do Sul - Sp,
-                9560-000, São Caetano do Sul, SP, 09560-000 
+                9560-000, São Caetano do Sul, SP, 09560-000 
               </a>
             </p>
             <p style={{ color: "#FFF" }}>
@@ -420,4 +413,4 @@ const styles = {
   },
 };
 
-export default Servicos01;
+export default Servicos13;

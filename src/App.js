@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import React from 'react';
 import Home from './pages/Home';
 import Alimentacao from './pages/Alimentacao';
@@ -42,14 +42,9 @@ import Admin from './pages/Admin.js';
 import Login from './pages/Login.js';
 import RotaProtegida from './pages/RotaProtegida.js';
 
-const url = 'https://placehold.co/414x248'
-
 function App() {
   return (
-    // <div className="App">
-    //   <CaixaInformacoesComponente/>
-    //   <img src={url} alt="minha imagem"></img>
-    // </div>
+
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -91,18 +86,17 @@ function App() {
         <Route path="/acolhimento/servicos25" element={<Servicos25 />} />
         <Route path="/acolhimento/servicos26" element={<Servicos26 />} />
         <Route path="/acolhimento/servicos27" element={<Servicos27 />} />
-        <Route path="/acolhimento/servicos28" element={<Servicos28 />} />
+        <Route path="/acolhimento/casa-do-aconchego" element={<Servicos28 />} />
         <Route path="/acolhimento/servicos29" element={<Servicos29 />} />
         <Route path="/acolhimento/servicos30" element={<Servicos30 />} />
 
-
         <Route path="/sobre-nos" element={<SobreNos />} />
+        
         <Route path="/cadastro" element={<Cadastro />} />
-
         
         <Route path="/admin" element={<RotaProtegida component={Admin} />} />
         <Route path="/login" element={<Login />} />
-        {/* <Route path="/servicos01" element={<Servicos01/>}/> */}
+
       </Routes>
     </Router>
   );

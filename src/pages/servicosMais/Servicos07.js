@@ -1,23 +1,16 @@
 import React, { useEffect } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLocationDot,
   faPhoneVolume,
 } from "@fortawesome/free-solid-svg-icons";
 
-function Servicos01() {
+function Servicos07() {
   useEffect(() => {
     document.body.style.backgroundColor = "black";
   }, []);
-
-  const navigate = useNavigate();
-
-  const handleContactClick = () => {
-    navigate('/#contato'); // Navega para a página HOME e para o container 'servicos'
-  };
 
   return (
     <div>
@@ -29,19 +22,16 @@ function Servicos01() {
               <div style={styles.logoContainer}>
                 <div style={styles.logoCircle}>
                   <img
-                    src="/img/acolhimento/casa1/casa1.jpeg"
-                    alt="Logo Casa1"
+                    src="/img/maisServicos/carrapicho/carrapichologo.jpg"
+                    alt="Logo Carrapicho"
                     style={styles.logoImage}
                   />
                 </div>
               </div>
               <div style={styles.textContainer}>
-                <h1 style={styles.title}>Casa 1</h1>
+                <h1 style={styles.title}>ASSOCIAÇÃO VIDA CARRAPICHo</h1>
                 <p style={styles.description}>
-                  Um projeto de sociedade civil que tem como propósito a
-                  acolhida de jovens entre 18 e 25 anos que foram expulsos de
-                  casa pela família por suas orientações afetivas sexuais e
-                  identidade de gênero.
+                  Esta ONG promove o desenvolvimento comunitário e a cidadania em áreas vulneráveis, focando em projetos que melhoram a qualidade de vida por meio de educação, saúde e inclusão social.
                 </p>
               </div>
             </div>
@@ -56,28 +46,13 @@ function Servicos01() {
           <p
             style={{ color: "#FFF", paddingLeft: "70px", paddingRight: "70px" }}
           >
-            Lorem ipsum dolor sit amet consectetur. Euismod rutrum nisi ante
-            nunc. Vitae odio ornare condimentum libero. Est sed laoreet sed at
-            at lectus neque. Amet eu mauris fermentum eu nunc eleifend eu
-            elementum natoque. Pretium nulla et pulvinar nisi fames arcu nulla.
-            Dictumst maecenas pharetra et pellentesque. Urna urna nec dignissim
-            habitant ipsum. Turpis mi vitae fames amet pulvinar. Donec amet
-            ultrices egestas sit nam enim. Sed sed mattis nunc libero sit
-            interdum.
-            <br></br> Leo leo et quisque ut tellus. Eget egestas sed
-            pharetra sem gravida semper nisi proin. Imperdiet quis vel aliquam
-            quam vehicula feugiat arcu sit. Erat egestas nibh facilisi at
-            venenatis neque ultrices tellus. Vel libero nisi pellentesque lacus
-            in mattis non. Vulputate quisque neque urna habitasse justo pulvinar
-            egestas auctor. Vel id sed lacus bibendum mauris sed vel.
-            Suspendisse ultrices ipsum a proin augue arcu sodales fermentum.
-            <br></br> Lorem ipsum dolor sit amet consectetur. Euismod rutrum nisi ante
-            nunc. Vitae odio ornare condimentum libero. Est sed laoreet sed at
-            at lectus neque. Amet eu mauris fermentum eu nunc eleifend eu
-            elementum natoque. Pretium nulla et pulvinar nisi fames arcu nulla.
-            Dictumst maecenas pharetra et pellentesque. Urna urna nec dignissim
-            habitant ipsum. Turpis mi vitae fames amet pulvinar. Donec amet
-            ultrices egestas sit nam enim. Sed sed mattis nunc libero sit
+            A Associação Vida Carrapicho é uma organização não governamental que trabalha para promover o desenvolvimento comunitário e a cidadania em áreas vulneráveis. Seus projetos são focados em melhorar a qualidade de vida dos moradores, abordando questões como educação, saúde, meio ambiente e inclusão social. A ONG busca integrar a comunidade em atividades que estimulem o engajamento coletivo, permitindo que as pessoas possam contribuir para a transformação de seu ambiente e, consequentemente, para o desenvolvimento sustentável da região.
+            <br></br>
+            <br></br>
+            Por meio de oficinas, eventos comunitários e ações de conscientização, a Associação Vida Carrapicho se esforça para fortalecer os laços sociais e empoderar os moradores. A organização acredita que o desenvolvimento de uma comunidade depende não apenas de iniciativas externas, mas também do envolvimento ativo de seus integrantes. Dessa forma, ela promove oportunidades que capacitam os indivíduos a resolverem seus próprios desafios, cultivando um sentimento de pertencimento e de responsabilidade compartilhada.
+            <br></br>
+            <br></br>
+            Além disso, a ONG atua como facilitadora na criação de redes de apoio que envolvem outros atores sociais e institucionais, fortalecendo o impacto de suas iniciativas. Com uma abordagem integrada e sustentável, a Associação Vida Carrapicho desempenha um papel fundamental na construção de uma sociedade mais justa e equitativa, onde todos têm a chance de prosperar.
             interdum.
           </p>
         </section>
@@ -108,22 +83,22 @@ function Servicos01() {
               Site:{" "}
               <a
                 style={{ color: "#FFF" }}
-                href="https://www.casaum.org/"
+                href="https://www.atados.com.br/ong/associacao-vida-carrapicho"
                 target="_blank"
                 rel="noreferrer"
               >
-                https://www.casaum.org/
+                https://www.atados.com.br/ong/associacao-vida-carrapicho
               </a>
             </p>
             <p style={{ color: "#FFF" }}>
               Rede social:{" "}
               <a
                 style={{ color: "#FFF" }}
-                href="https://www.instagram.com/casa1/"
+                href="https://www.instagram.com/associacaovidacarrapicho/"
                 target="_blank"
                 rel="noreferrer"
               >
-                https://www.instagram.com/casa1/
+                https://www.instagram.com/associacaovidacarrapicho/
               </a>
             </p>
           </div>
@@ -150,11 +125,11 @@ function Servicos01() {
               Endereço:{" "}
               <a
                 style={{ color: "#FFF" }}
-                href="https://www.google.com/search?sca_esv=db38b91c37c5cf98&sxsrf=ADLYWIJg_RRJrJ5BLQ2sQaKnAf74rvbblg:1726444969151&q=CASA+1+-+Centro+de+Cultura+e+Acolhimento+LGBT&ludocid=2957159734955648964&lsig=AB86z5XQxjXJ4whGJapQGIZMc-OG&sa=X&ved=2ahUKEwid7fDYlMaIAxXGqpUCHWLdCwkQoAJ6BAgdEAc"
+                href="https://www.google.com/maps/place/R.+Ira%C3%AD+de+Minas,+202+-+Jardim+Paraguacu,+S%C3%A3o+Paulo+-+SP,+03941-040/@-23.5946667,-46.4981829,17z/data=!3m1!4b1!4m6!3m5!1s0x94ce67956b5a7459:0x9d5694b4454f7501!8m2!3d-23.5946667!4d-46.4981829!16s%2Fg%2F11c5jxq6mc?entry=ttu&g_ep=EgoyMDI0MTAxMy4wIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
                 rel="noreferrer"
               >
-                Rua Adoniran Barbosa 151, São Paulo, SP, 01318-020
+                Rua Iraí de Minas 202, São Paulo, SP, 03941-040
               </a>
             </p>
             <p style={{ color: "#FFF" }}>
@@ -165,11 +140,11 @@ function Servicos01() {
               Contato:{" "}
               <a
                 style={{ color: "#FFF" }}
-                href="tel:11982976671"
+                href="tel:11940595320"
                 target="_blank"
                 rel="noreferrer"
               >
-                (11) 98297-6671
+                (11) 94059-5320
               </a>
             </p>
           </div>
@@ -195,60 +170,25 @@ function Servicos01() {
             }}
           >
             <img
-              src="/img/acolhimento/casa1/img1.png"
-              alt="Biblioteca"
+              src="/img/maisServicos/carrapicho/img1.jpg"
+              alt="Crianças no cinema"
               style={{ width: "35%", borderRadius: "5px" }}
             />
             <img
-              src="/img/acolhimento/casa1/img2.png"
-              alt="Palestra"
+              src="/img/maisServicos/carrapicho/img2.jpg"
+              alt="Barbeiro"
               style={{ width: "35%", borderRadius: "5px" }}
             />
             <img
-              src="/img/acolhimento/casa1/img3.png"
-              alt="Abraço"
+              src="/img/maisServicos/carrapicho/img3.jpg"
+              alt="Acolhimento"
               style={{ width: "35%", borderRadius: "5px" }}
             />
             <img
-              src="/img/acolhimento/casa1/img4.png"
-              alt="Aula de yoga"
+              src="/img/maisServicos/carrapicho/img4.jpg"
+              alt="Comidas"
               style={{ width: "35%", borderRadius: "5px" }}
             />
-          </div>
-        </section>
-
-        <section
-          style={{
-            marginTop: "40px",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
-        >
-          <div style={{ flex: 1, marginLeft: "70px" }}>
-            <h2 style={{ color: "#9B0202", fontSize: "15px", fontWeight: "bolder", marginBottom: "20px" }}>
-              VAMOS CONVERSAR
-            </h2>
-            <p style={{ fontSize: "30px", color: "#FFF", fontWeight: "bolder" }}>
-              Dê suas opiniões, sugestões, tire dúvidas!
-            </p>
-          </div>
-
-          <div>
-            <button
-              onClick={handleContactClick} // Usa a função handleContactClick ao invés de href
-              style={{
-                padding: "20px 20px",
-                marginRight: "350px",
-                fontSize: "1.3rem",
-                backgroundColor: "#000",
-                border: "2px solid #fff",
-                color: "#fff",
-                cursor: "pointer",
-              }}
-            >
-              ENTRE EM CONTATO!
-            </button>
           </div>
         </section>
       </main>
@@ -259,7 +199,7 @@ function Servicos01() {
 
 const styles = {
   background: {
-    backgroundImage: "url(/img/acolhimento/casa1/casa1background.png)", // Certifique-se de que a extensão do arquivo está correta
+    backgroundImage: "url(/img/maisServicos/carrapicho/img1.jpg)", // Certifique-se de que a extensão do arquivo está correta
     backgroundSize: "cover",
     backgroundPosition: "center",
     height: "80vh", // Ajuste conforme necessário
@@ -289,7 +229,7 @@ const styles = {
     height: "80px",
     borderRadius: "50%", // Torna o contêiner circular
     overflow: "hidden", // Garante que a imagem não ultrapasse os limites do círculo
-    backgroundImage: "url(/img/acolhimento/casa1/casa1.jpeg)",
+    backgroundImage: "url(/img/maisServicos/carrapicho/carrapichologo.jpg)",
     backgroundSize: "cover", // Garante que a imagem preencha todo o contêiner
     backgroundPosition: "center", // Centraliza a imagem
   },
@@ -312,4 +252,4 @@ const styles = {
   },
 };
 
-export default Servicos01;
+export default Servicos07;

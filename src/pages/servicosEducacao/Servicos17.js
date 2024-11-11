@@ -1,23 +1,16 @@
 import React, { useEffect } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLocationDot,
   faPhoneVolume,
 } from "@fortawesome/free-solid-svg-icons";
 
-function Servicos01() {
+function Servicos17() {
   useEffect(() => {
     document.body.style.backgroundColor = "black";
   }, []);
-
-  const navigate = useNavigate();
-
-  const handleContactClick = () => {
-    navigate("/#contato"); // Navega para a página HOME e para o container 'servicos'
-  };
 
   return (
     <div>
@@ -125,7 +118,7 @@ function Servicos01() {
                 style={{ marginRight: "8px" }}
               />
               Endereço:{" "}
-              <a style={{ color: "#FFF" }} target="_blank" rel="noreferrer">
+              <a style={{ color: "#FFF" }} href="https://www.google.com.br/maps/place/R.+Mirante,+171+-+Jardim+S%C3%A3o+Paulo,+S%C3%A3o+Paulo+-+SP,+02045-060/@-23.4965962,-46.6175182,17z/data=!3m1!4b1!4m6!3m5!1s0x94cef622531de0db:0x5e053c1fcd97204c!8m2!3d-23.4966011!4d-46.6149433!16s%2Fg%2F11c4n3n1y8?entry=ttu&g_ep=EgoyMDI0MTAyNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noreferrer">
               R. Mirante, 171 - Jardim São Paulo, São Paulo - SP, 02045-060 
               </a>
             </p>
@@ -325,4 +318,4 @@ const styles = {
   },
 };
 
-export default Servicos01;
+export default Servicos17;
