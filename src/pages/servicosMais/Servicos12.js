@@ -1,23 +1,16 @@
 import React, { useEffect } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLocationDot,
   faPhoneVolume,
 } from "@fortawesome/free-solid-svg-icons";
 
-function Servicos01() {
+function Servicos12() {
   useEffect(() => {
     document.body.style.backgroundColor = "black";
   }, []);
-
-  const navigate = useNavigate();
-
-  const handleContactClick = () => {
-    navigate('/#contato'); // Navega para a página HOME e para o container 'servicos'
-  };
 
   return (
     <div>
@@ -29,19 +22,16 @@ function Servicos01() {
               <div style={styles.logoContainer}>
                 <div style={styles.logoCircle}>
                   <img
-                    src="/img/acolhimento/casa1/casa1.jpeg"
-                    alt="Logo Casa1"
+                    src="/img/maisServicos/abrinq/abrinqlogo.jpg"
+                    alt="Logo ABRINQ"
                     style={styles.logoImage}
                   />
                 </div>
               </div>
               <div style={styles.textContainer}>
-                <h1 style={styles.title}>Casa 1</h1>
+                <h1 style={styles.title}>Fundação ABRINQ</h1>
                 <p style={styles.description}>
-                  Um projeto de sociedade civil que tem como propósito a
-                  acolhida de jovens entre 18 e 25 anos que foram expulsos de
-                  casa pela família por suas orientações afetivas sexuais e
-                  identidade de gênero.
+                  Desde 1990, a fundação defende os direitos de crianças e adolescentes no Brasil, garantindo acesso a educação, saúde e proteção, e promovendo políticas públicas para a infância.
                 </p>
               </div>
             </div>
@@ -56,29 +46,13 @@ function Servicos01() {
           <p
             style={{ color: "#FFF", paddingLeft: "70px", paddingRight: "70px" }}
           >
-            Lorem ipsum dolor sit amet consectetur. Euismod rutrum nisi ante
-            nunc. Vitae odio ornare condimentum libero. Est sed laoreet sed at
-            at lectus neque. Amet eu mauris fermentum eu nunc eleifend eu
-            elementum natoque. Pretium nulla et pulvinar nisi fames arcu nulla.
-            Dictumst maecenas pharetra et pellentesque. Urna urna nec dignissim
-            habitant ipsum. Turpis mi vitae fames amet pulvinar. Donec amet
-            ultrices egestas sit nam enim. Sed sed mattis nunc libero sit
-            interdum.
-            <br></br> Leo leo et quisque ut tellus. Eget egestas sed
-            pharetra sem gravida semper nisi proin. Imperdiet quis vel aliquam
-            quam vehicula feugiat arcu sit. Erat egestas nibh facilisi at
-            venenatis neque ultrices tellus. Vel libero nisi pellentesque lacus
-            in mattis non. Vulputate quisque neque urna habitasse justo pulvinar
-            egestas auctor. Vel id sed lacus bibendum mauris sed vel.
-            Suspendisse ultrices ipsum a proin augue arcu sodales fermentum.
-            <br></br> Lorem ipsum dolor sit amet consectetur. Euismod rutrum nisi ante
-            nunc. Vitae odio ornare condimentum libero. Est sed laoreet sed at
-            at lectus neque. Amet eu mauris fermentum eu nunc eleifend eu
-            elementum natoque. Pretium nulla et pulvinar nisi fames arcu nulla.
-            Dictumst maecenas pharetra et pellentesque. Urna urna nec dignissim
-            habitant ipsum. Turpis mi vitae fames amet pulvinar. Donec amet
-            ultrices egestas sit nam enim. Sed sed mattis nunc libero sit
-            interdum.
+            A Fundação Abrinq é uma organização não governamental que trabalha desde 1990 pela defesa dos direitos das crianças e adolescentes no Brasil. Seu objetivo é garantir que todas as crianças tenham acesso a educação, saúde e proteção, além de combater o trabalho infantil. A Fundação desenvolve uma série de projetos e parcerias que beneficiam milhares de jovens em situação de vulnerabilidade, oferecendo oportunidades para que possam se desenvolver plenamente e ter uma infância digna.
+            <br></br>
+            <br></br>
+            A Fundação Abrinq também atua como uma voz ativa na promoção e fiscalização de políticas públicas que protejam os direitos das crianças e adolescentes. Ela trabalha junto a governos e empresas para que legislações e práticas que favorecem o bem-estar infantil sejam implementadas e respeitadas. Além disso, a fundação incentiva práticas empresariais socialmente responsáveis, mobilizando a sociedade para garantir que os direitos das crianças sejam prioridade.
+            <br></br>
+            <br></br>
+            Com uma atuação ampla e diversificada, a Fundação Abrinq se destaca como uma referência na luta pelos direitos das crianças e adolescentes no Brasil. Através de suas ações e parcerias, ela tem transformado a vida de milhares de jovens, assegurando que possam crescer em um ambiente saudável e com as condições necessárias para desenvolver todo o seu potencial.
           </p>
         </section>
 
@@ -108,22 +82,22 @@ function Servicos01() {
               Site:{" "}
               <a
                 style={{ color: "#FFF" }}
-                href="https://www.casaum.org/"
+                href="https://www.fadc.org.br/"
                 target="_blank"
                 rel="noreferrer"
               >
-                https://www.casaum.org/
+                https://www.fadc.org.br/
               </a>
             </p>
             <p style={{ color: "#FFF" }}>
               Rede social:{" "}
               <a
                 style={{ color: "#FFF" }}
-                href="https://www.instagram.com/casa1/"
+                href="https://www.instagram.com/fundacaoabrinq/"
                 target="_blank"
                 rel="noreferrer"
               >
-                https://www.instagram.com/casa1/
+                https://www.instagram.com/fundacaoabrinq/
               </a>
             </p>
           </div>
@@ -150,11 +124,11 @@ function Servicos01() {
               Endereço:{" "}
               <a
                 style={{ color: "#FFF" }}
-                href="https://www.google.com/search?sca_esv=db38b91c37c5cf98&sxsrf=ADLYWIJg_RRJrJ5BLQ2sQaKnAf74rvbblg:1726444969151&q=CASA+1+-+Centro+de+Cultura+e+Acolhimento+LGBT&ludocid=2957159734955648964&lsig=AB86z5XQxjXJ4whGJapQGIZMc-OG&sa=X&ved=2ahUKEwid7fDYlMaIAxXGqpUCHWLdCwkQoAJ6BAgdEAc"
+                href="https://www.google.com/maps/place/Funda%C3%A7%C3%A3o+Abrinq/@-23.6030895,-46.6741962,15z/data=!4m2!3m1!1s0x0:0x6492ef0c475c2f76?sa=X&ved=1t:2428&ictx=111"
                 target="_blank"
                 rel="noreferrer"
               >
-                Rua Adoniran Barbosa 151, São Paulo, SP, 01318-020
+                Rua Araguari 835, São Paulo, SP, 04514-041
               </a>
             </p>
             <p style={{ color: "#FFF" }}>
@@ -165,11 +139,11 @@ function Servicos01() {
               Contato:{" "}
               <a
                 style={{ color: "#FFF" }}
-                href="tel:11982976671"
+                href="tel:03001012345"
                 target="_blank"
                 rel="noreferrer"
               >
-                (11) 98297-6671
+                0300 10 12345
               </a>
             </p>
           </div>
@@ -195,60 +169,25 @@ function Servicos01() {
             }}
           >
             <img
-              src="/img/acolhimento/casa1/img1.png"
-              alt="Biblioteca"
+              src="/img/maisServicos/abrinq/img1.jpg"
+              alt="Apresentação"
               style={{ width: "35%", borderRadius: "5px" }}
             />
             <img
-              src="/img/acolhimento/casa1/img2.png"
-              alt="Palestra"
+              src="/img/maisServicos/abrinq/img2.jpg"
+              alt="Sorriso"
               style={{ width: "35%", borderRadius: "5px" }}
             />
             <img
-              src="/img/acolhimento/casa1/img3.png"
-              alt="Abraço"
+              src="/img/maisServicos/abrinq/img3.jpg"
+              alt="Equipe"
               style={{ width: "35%", borderRadius: "5px" }}
             />
             <img
-              src="/img/acolhimento/casa1/img4.png"
-              alt="Aula de yoga"
+              src="/img/maisServicos/abrinq/img4.jpg"
+              alt="Associadas Abrinq"
               style={{ width: "35%", borderRadius: "5px" }}
             />
-          </div>
-        </section>
-
-        <section
-          style={{
-            marginTop: "40px",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
-        >
-          <div style={{ flex: 1, marginLeft: "70px" }}>
-            <h2 style={{ color: "#9B0202", fontSize: "15px", fontWeight: "bolder", marginBottom: "20px" }}>
-              VAMOS CONVERSAR
-            </h2>
-            <p style={{ fontSize: "30px", color: "#FFF", fontWeight: "bolder" }}>
-              Dê suas opiniões, sugestões, tire dúvidas!
-            </p>
-          </div>
-
-          <div>
-            <button
-              onClick={handleContactClick} // Usa a função handleContactClick ao invés de href
-              style={{
-                padding: "20px 20px",
-                marginRight: "350px",
-                fontSize: "1.3rem",
-                backgroundColor: "#000",
-                border: "2px solid #fff",
-                color: "#fff",
-                cursor: "pointer",
-              }}
-            >
-              ENTRE EM CONTATO!
-            </button>
           </div>
         </section>
       </main>
@@ -259,7 +198,7 @@ function Servicos01() {
 
 const styles = {
   background: {
-    backgroundImage: "url(/img/acolhimento/casa1/casa1background.png)", // Certifique-se de que a extensão do arquivo está correta
+    backgroundImage: "url(/img/maisServicos/abrinq/abrinqbanner.jpg)", // Certifique-se de que a extensão do arquivo está correta
     backgroundSize: "cover",
     backgroundPosition: "center",
     height: "80vh", // Ajuste conforme necessário
@@ -289,7 +228,7 @@ const styles = {
     height: "80px",
     borderRadius: "50%", // Torna o contêiner circular
     overflow: "hidden", // Garante que a imagem não ultrapasse os limites do círculo
-    backgroundImage: "url(/img/acolhimento/casa1/casa1.jpeg)",
+    backgroundImage: "url(/img/maisServicos/abrinq/abrinqlogo.jpg)",
     backgroundSize: "cover", // Garante que a imagem preencha todo o contêiner
     backgroundPosition: "center", // Centraliza a imagem
   },
@@ -312,4 +251,4 @@ const styles = {
   },
 };
 
-export default Servicos01;
+export default Servicos12;

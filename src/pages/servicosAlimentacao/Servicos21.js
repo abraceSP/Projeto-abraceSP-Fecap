@@ -1,23 +1,16 @@
 import React, { useEffect } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLocationDot,
   faPhoneVolume,
 } from "@fortawesome/free-solid-svg-icons";
 
-function Servicos01() {
+function Servicos21() {
   useEffect(() => {
     document.body.style.backgroundColor = "black";
   }, []);
-
-  const navigate = useNavigate();
-
-  const handleContactClick = () => {
-    navigate('/#contato'); // Navega para a página HOME e para o container 'servicos'
-  };
 
   return (
     <div>
@@ -36,12 +29,9 @@ function Servicos01() {
                 </div>
               </div>
               <div style={styles.textContainer}>
-                <h1 style={styles.title}>Casa 1</h1>
+                <h1 style={styles.title}>Pão do Povo da Rua</h1>
                 <p style={styles.description}>
-                  Um projeto de sociedade civil que tem como propósito a
-                  acolhida de jovens entre 18 e 25 anos que foram expulsos de
-                  casa pela família por suas orientações afetivas sexuais e
-                  identidade de gênero.
+                  O projeto Pão do Povo da Rua existe desde 2020 e alimenta diariamente 1.200 pessoas em situação de rua, no Centro de São Paulo.
                 </p>
               </div>
             </div>
@@ -56,29 +46,10 @@ function Servicos01() {
           <p
             style={{ color: "#FFF", paddingLeft: "70px", paddingRight: "70px" }}
           >
-            Lorem ipsum dolor sit amet consectetur. Euismod rutrum nisi ante
-            nunc. Vitae odio ornare condimentum libero. Est sed laoreet sed at
-            at lectus neque. Amet eu mauris fermentum eu nunc eleifend eu
-            elementum natoque. Pretium nulla et pulvinar nisi fames arcu nulla.
-            Dictumst maecenas pharetra et pellentesque. Urna urna nec dignissim
-            habitant ipsum. Turpis mi vitae fames amet pulvinar. Donec amet
-            ultrices egestas sit nam enim. Sed sed mattis nunc libero sit
-            interdum.
-            <br></br> Leo leo et quisque ut tellus. Eget egestas sed
-            pharetra sem gravida semper nisi proin. Imperdiet quis vel aliquam
-            quam vehicula feugiat arcu sit. Erat egestas nibh facilisi at
-            venenatis neque ultrices tellus. Vel libero nisi pellentesque lacus
-            in mattis non. Vulputate quisque neque urna habitasse justo pulvinar
-            egestas auctor. Vel id sed lacus bibendum mauris sed vel.
-            Suspendisse ultrices ipsum a proin augue arcu sodales fermentum.
-            <br></br> Lorem ipsum dolor sit amet consectetur. Euismod rutrum nisi ante
-            nunc. Vitae odio ornare condimentum libero. Est sed laoreet sed at
-            at lectus neque. Amet eu mauris fermentum eu nunc eleifend eu
-            elementum natoque. Pretium nulla et pulvinar nisi fames arcu nulla.
-            Dictumst maecenas pharetra et pellentesque. Urna urna nec dignissim
-            habitant ipsum. Turpis mi vitae fames amet pulvinar. Donec amet
-            ultrices egestas sit nam enim. Sed sed mattis nunc libero sit
-            interdum.
+            O Projeto Pão do Povo da Rua é uma iniciativa social dedicada a oferecer alimentação a pessoas em situação de rua em São Paulo. Fundado em 2014, o projeto distribui pães e outros alimentos a indivíduos que enfrentam a fome e a vulnerabilidade, garantindo que aqueles que vivem nas ruas tenham acesso ao básico para sua sobrevivência. A organização é movida por voluntários e doações da comunidade, que se unem para preparar e distribuir as refeições diariamente, priorizando o atendimento humanizado e o respeito à dignidade de cada pessoa.
+            <br></br>
+            <br></br>
+            Além da distribuição de alimentos, o Pão do Povo da Rua também atua como um agente de conscientização sobre a realidade da população de rua, buscando mobilizar a sociedade para ações de apoio e inclusão social. O projeto promove eventos, campanhas de arrecadação e parcerias com outras entidades para ampliar o impacto de suas atividades, sempre com o foco em minimizar os efeitos da fome e da exclusão social. Através do engajamento solidário, o projeto se destaca por sua dedicação em oferecer não apenas alimento físico, mas também esperança e cuidado.
           </p>
         </section>
 
@@ -108,22 +79,22 @@ function Servicos01() {
               Site:{" "}
               <a
                 style={{ color: "#FFF" }}
-                href="https://www.casaum.org/"
+                href="https://www.paodopovodarua.com.br/"
                 target="_blank"
                 rel="noreferrer"
               >
-                https://www.casaum.org/
+                https://www.paodopovodarua.com.br/
               </a>
             </p>
             <p style={{ color: "#FFF" }}>
               Rede social:{" "}
               <a
                 style={{ color: "#FFF" }}
-                href="https://www.instagram.com/casa1/"
+                href="https://www.instagram.com/paodopovodarua/"
                 target="_blank"
                 rel="noreferrer"
               >
-                https://www.instagram.com/casa1/
+                hhttps://www.instagram.com/paodopovodarua/
               </a>
             </p>
           </div>
@@ -150,11 +121,11 @@ function Servicos01() {
               Endereço:{" "}
               <a
                 style={{ color: "#FFF" }}
-                href="https://www.google.com/search?sca_esv=db38b91c37c5cf98&sxsrf=ADLYWIJg_RRJrJ5BLQ2sQaKnAf74rvbblg:1726444969151&q=CASA+1+-+Centro+de+Cultura+e+Acolhimento+LGBT&ludocid=2957159734955648964&lsig=AB86z5XQxjXJ4whGJapQGIZMc-OG&sa=X&ved=2ahUKEwid7fDYlMaIAxXGqpUCHWLdCwkQoAJ6BAgdEAc"
+                href="https://www.google.com.br/maps/place/R.+Dr.+Pedro+Arbues,+147+-+Luz,+S%C3%A3o+Paulo+-+SP,+01105-030/@-23.5336397,-46.6326675,17z/data=!3m1!4b1!4m6!3m5!1s0x94ce58f65d49e56b:0x8abe5a79623a98f0!8m2!3d-23.5336397!4d-46.6300926!16s%2Fg%2F11c5nbfsyl?entry=ttu&g_ep=EgoyMDI0MTAwMi4xIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
                 rel="noreferrer"
               >
-                Rua Adoniran Barbosa 151, São Paulo, SP, 01318-020
+                R. Dr. Pedro Arbues, 147 - Bom Retiro, São Paulo - SP, 01105-030
               </a>
             </p>
             <p style={{ color: "#FFF" }}>
@@ -165,11 +136,11 @@ function Servicos01() {
               Contato:{" "}
               <a
                 style={{ color: "#FFF" }}
-                href="tel:11982976671"
+                href="tel:1133131888"
                 target="_blank"
                 rel="noreferrer"
               >
-                (11) 98297-6671
+                (11) 3313-1888
               </a>
             </p>
           </div>
@@ -195,60 +166,25 @@ function Servicos01() {
             }}
           >
             <img
-              src="/img/acolhimento/casa1/img1.png"
-              alt="Biblioteca"
+              src="/img/alimentacao/PaoPovo/img1.jpg"
+              alt="Food truck"
               style={{ width: "35%", borderRadius: "5px" }}
             />
             <img
-              src="/img/acolhimento/casa1/img2.png"
-              alt="Palestra"
+              src="/img/alimentacao/PaoPovo/img2.jpg"
+              alt="Pães"
               style={{ width: "35%", borderRadius: "5px" }}
             />
             <img
-              src="/img/acolhimento/casa1/img3.png"
-              alt="Abraço"
+              src="/img/alimentacao/PaoPovo/img3.jpg"
+              alt="Padeiros"
               style={{ width: "35%", borderRadius: "5px" }}
             />
             <img
-              src="/img/acolhimento/casa1/img4.png"
-              alt="Aula de yoga"
+              src="/img/alimentacao/PaoPovo/img4.jpg"
+              alt="Pães e padeiros"
               style={{ width: "35%", borderRadius: "5px" }}
             />
-          </div>
-        </section>
-
-        <section
-          style={{
-            marginTop: "40px",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
-        >
-          <div style={{ flex: 1, marginLeft: "70px" }}>
-            <h2 style={{ color: "#9B0202", fontSize: "15px", fontWeight: "bolder", marginBottom: "20px" }}>
-              VAMOS CONVERSAR
-            </h2>
-            <p style={{ fontSize: "30px", color: "#FFF", fontWeight: "bolder" }}>
-              Dê suas opiniões, sugestões, tire dúvidas!
-            </p>
-          </div>
-
-          <div>
-            <button
-              onClick={handleContactClick} // Usa a função handleContactClick ao invés de href
-              style={{
-                padding: "20px 20px",
-                marginRight: "350px",
-                fontSize: "1.3rem",
-                backgroundColor: "#000",
-                border: "2px solid #fff",
-                color: "#fff",
-                cursor: "pointer",
-              }}
-            >
-              ENTRE EM CONTATO!
-            </button>
           </div>
         </section>
       </main>
@@ -259,7 +195,7 @@ function Servicos01() {
 
 const styles = {
   background: {
-    backgroundImage: "url(/img/acolhimento/casa1/casa1background.png)", // Certifique-se de que a extensão do arquivo está correta
+    backgroundImage: "url(/img/alimentacao/PaoPovo/PaoBack.png)", // Certifique-se de que a extensão do arquivo está correta
     backgroundSize: "cover",
     backgroundPosition: "center",
     height: "80vh", // Ajuste conforme necessário
@@ -289,7 +225,7 @@ const styles = {
     height: "80px",
     borderRadius: "50%", // Torna o contêiner circular
     overflow: "hidden", // Garante que a imagem não ultrapasse os limites do círculo
-    backgroundImage: "url(/img/acolhimento/casa1/casa1.jpeg)",
+    backgroundImage: "url(/img/alimentacao/PaoPovo/PaoLogo2.jpg)",
     backgroundSize: "cover", // Garante que a imagem preencha todo o contêiner
     backgroundPosition: "center", // Centraliza a imagem
   },
@@ -312,4 +248,4 @@ const styles = {
   },
 };
 
-export default Servicos01;
+export default Servicos21;

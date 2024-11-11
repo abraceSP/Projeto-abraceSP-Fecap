@@ -3,13 +3,12 @@ import Footer from '../components/Footer'
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
 
 const HomeServicos = styled.div` /* Design para abaixo do header */
   .containerSuperior {
     width: 100%;
     min-height: 60vh;
-    background-image: url('img/saudeMental/capaSaude.jpg');
+    background-image: url('img/maisServicos/capaMaisServicos.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -31,7 +30,7 @@ const HomeServicos = styled.div` /* Design para abaixo do header */
   }
 
   .containerSuperior h1:hover{
-    transform: scale(1.06);
+    transform: scale(1.02);
   }
   .contentSuperior h2 {
     font-size: 25px;
@@ -119,7 +118,7 @@ background-color: #000;
 
 .card-link:hover {
   color: #fff;
-  transform: scale(1.2); /* Zoom de 1.2 */
+  transform: scale(1.07);
 }
 
 .subtituloCards{
@@ -154,111 +153,92 @@ background-color: #000;
 
 function MaisServicos() {
 
-    const navigate = useNavigate();
+  return (
+    <div>
+      <Header />
 
-    const handleContactClick = () => {
-        navigate('/#contato'); // Navega para a página HOME e para o container 'servicos'
-    };
+      <HomeServicos> {/* Importação home abaixo do header */}
+        <div className="containerSuperior">
+          <div className="contentSuperior">
+            <h1>
+              <span className="abrace"> Mais</span>
+              <span className="sp"> Serviços </span>
+            </h1>
+            <h2>Descubra mais serviços em nosso site e apoie diversas ONGs por meio de doações, voluntariado e eventos solidários.</h2>
 
-    return (
-        <div>
-            <Header />
-
-            <HomeServicos> {/* Importação home abaixo do header */}
-                <div className="containerSuperior">
-                    <div className="contentSuperior">
-                        <h1>
-                            <span className="abrace"> Mais</span>
-                            <span className="sp"> Serviços </span>
-                        </h1>
-                        <h2>Para momentos em que um lugar para receber acolhimento é essencial!</h2>
-
-                    </div>
-                </div>
-            </HomeServicos>
-
-
-            <Cards>
-                <div className="cards-container">
-
-                    <h2 title="O Melhos Site ddo Mundo " className='subtituloCards'>
-                        SAÚDE MENTAL
-                    </h2>
-
-                    <h1 className='tituloCards'>
-                        Encontre diversos <span className="sp"> espaços! </span>
-                    </h1>
-
-                    <p className='text '>
-                        Locais para ajuda quando a vida estiver muito dificil e você precisar conversar com alguém!
-                    </p>
-
-                    {/* Primeira linha de cartões */}
-                    <div className="row">
-                        <div className="card">
-                            <img src="img/saudeMental/paroquia.png" alt="Imagem 1" className="card-image" />
-                            <h3 title="Atendimento Psicológico Paróquia São Luís Gonzaga" className="card-title">Atendimento Psicológico Paróquia... </h3>
-                            <p className="card-description">Um grupo de psicólogos voluntários ao qual atendem às quintas-feiras na Paróquia da Igreja São Luís Gonzaga, recebendo todos os tipos de pacientes. </p>
-                            <Link className="card-link" to="/acolhimento/servicos25"> Veja Mais! </Link>
-                        </div>
-
-                        <div className="card">
-                            <img src='img/saudeMental/sinpesp.jpg' alt="Imagem 2" className="card-image" />
-                            <h3 title="SINPESP" className="card-title">SINPESP</h3>
-                            <p className="card-description">O valor mínimo de cada sessão é, em média, R$ 40, definido de acordo com a condição financeira do paciente. Atendem pessoas de todas as classes sociais, incluindo adultos, jovens, crianças, adolescentes, famílias e idosos.</p>
-                            <Link className="card-link" to="/acolhimento/servicos26"> Veja Mais! </Link>
-                        </div>
-
-                        <div className="card">
-                            <img src="img/saudeMental/AnaMariaPopo.jpg" alt="Imagem 3" className="card-image" />
-                            <h3 title="Clínica  Ana Maria Popovic" className="card-title">Clínica  Ana Maria Popovic </h3>
-                            <p className="card-description">"A Clínica Psicológica 'Ana Maria Poppovic' oferece terapia para casais e famílias, crianças e adultos, além de tratar processos de luto, dificuldades nos relacionamentos, questões relacionadas ao trabalho, orientação vocacional/profissional e outros. O atendimento é online e gratuito. Antes de iniciar o tratamento, é necessário agendar por telefone.</p>
-                            <Link className="card-link" to="/acolhimento/servicos27"> Veja Mais! </Link>
-                        </div>
-                    </div>
-
-                    {/* Segunda linha de cartões */}
-                    <div className="row">
-                        <div className="card">
-                            <img src="img/saudeMental/ClinicaGuarulhos.jpg" alt="Imagem 4" className="card-image" />
-                            <h3 title="Clínica Pscicologica da Universidade de Guarulhos" className="card-title">Clínica Psicologa da Universidade...</h3>
-                            <p className="card-description">Entre os serviços prestados estão psicodiagnóstico, psicoterapia infantil e para adultos, psicoterapia familiar e de casal. As inscrições devem ser feitas por telefone. As sessões, com duração de 50 minutos e ao custo de R$ 10 cada, são realizadas exclusivamente no formato presencial. </p>
-                            <Link className="card-link" to="/acolhimento/servicos28"> Veja Mais! </Link>
-                        </div>
-
-                        <div className="card">
-                            <img src="img/saudeMental/PAN.avif" alt="Imagem 5" className="card-image" />
-                            <h3 title="PAN" className="card-title">PAN</h3>
-                            <p className="card-description">É um serviço especializado em São Paulo, voltado para o atendimento de idosos com necessidades neuropsiquiátricas. Oferece suporte e tratamento para condições como demência, depressão, ansiedade e outras questões de saúde mental que afetam a população idosa.</p>
-                            <Link className="card-link" to="/acolhimento/servicos29"> Veja Mais! </Link>
-                        </div>
-
-                        <div className="card">
-                            <img src="img/saudeMental/ABPS.jpeg" alt="Imagem 6" className="card-image" />
-                            <h3 title="ABPS" className="card-title">ABPS</h3>
-                            <p className="card-description">O centro de formação em psicodrama para psicólogos já graduados (com CRP) oferece atendimentos psicológicos online para adultos, adolescentes, crianças, casais e famílias. O valor é social, sendo o mínimo R$ 160 por quatro sessões, ou R$ 40 cada uma.</p>
-                            <Link className="card-link" to="/acolhimento/servicos30"> Veja Mais! </Link>
-                        </div>
-                    </div>
-
-                </div>
-            </Cards>
-
-            <section
-                style={{
-                    marginTop: "0px", /* Ajuste ou remova a margem superior */
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    backgroundColor: "#000",
-                    padding: "20px 0", /* Reduza o padding se necessário */
-                }}
-            >
-                
-            </section>
-            <Footer />
+          </div>
         </div>
-    )
+      </HomeServicos>
+
+
+      <Cards>
+        <div className="cards-container">
+
+          <h2 title="O Melhos Site ddo Mundo " className='subtituloCards'>
+            MAIS SERVIÇOS
+          </h2>
+
+          <h1 className='tituloCards'>
+            Encontre diversos <span className="sp"> espaços! </span>
+          </h1>
+
+          <p className='text '>
+            Demais locais para quando você estiver precisando de ajuda!
+          </p>
+
+          {/* Primeira linha de cartões */}
+          <div className="row">
+            <div className="card">
+              <img src="img/maisServicos/carrapicho.jpg" alt="Imagem 1" className="card-image" />
+              <h3 title="Associação Vida Carrapicho" className="card-title">Associação Vida Carrapicho </h3>
+              <p className="card-description">A Associação Vida Carrapicho, é uma organização sem fins lucrativos,  com a iniciativa de um grupo de amigos que trabalhavam em um abrigo como educadores sociais. </p>
+              <Link className="card-link" to="/mais-servicos/servicos07"> Veja Mais! </Link>
+            </div>
+
+            <div className="card">
+              <img src="img/maisServicos/caoSemDono.jpg" alt="Imagem 2" className="card-image" />
+              <h3 title="Cão Sem Dono" className="card-title">Cão Sem Dono</h3>
+              <p className="card-description">O Cão Sem Dono é uma ONG, sem fins lucrativos, e que nasceu de um grande sonho do seu atual presidente: tirar o maior número possível de animais das ruas, dar tratamento adequado e integrá-los a famílias que lhes deem amor, carinho e uma vida digna.</p>
+              <Link className="card-link" to="/mais-servicos/servicos08"> Veja Mais! </Link>
+            </div>
+
+            <div className="card">
+              <img src="img/maisServicos/favelaPaz.png" alt="Imagem 3" className="card-image" />
+              <h3 title="Instituto Favela da Paz" className="card-title">Instituto Favela da Paz</h3>
+              <p className="card-description">O Instituto Favela da Paz é um guarda chuva que abriga diversas iniciativas e coletivos, desde alimentação saudável, arte, cultura, sustentabilidade, saúde e bem estar e educação.</p>
+              <Link className="card-link" to="/mais-servicos/servicos09"> Veja Mais! </Link>
+            </div>
+          </div>
+
+          {/* Segunda linha de cartões */}
+          <div className="row">
+            <div className="card">
+              <img src="img/maisServicos/adus.png" alt="Imagem 4" className="card-image" />
+              <h3 title="Instituto Adus" className="card-title">Instituto Adus</h3>
+              <p className="card-description">O Instituto Adus é uma ONG que promove a integração de refugiados na sociedade brasileira desde outubro de 2010. Que oferece ao refugiado todo o suporte para conseguir documentação, capacitação, intermediação junto a empresas e ensino de português.</p>
+              <Link className="card-link" to="/mais-servicos/servicos10"> Veja Mais! </Link>
+            </div>
+
+            <div className="card">
+              <img src="img/maisServicos/graacc.jpg" alt="Imagem 5" className="card-image" />
+              <h3 title="GRAACC" className="card-title">GRAACC</h3>
+              <p className="card-description">O hospital do GRAACC realiza mensalmente cerca de 2.500 atendimentos, entre sessões de quimioterapia, consultas, procedimentos ambulatoriais, cirurgias, transplantes de medula óssea e outros. Além de diagnosticar e tratar o câncer infantil, o GRAACC atua no desenvolvimento do ensino e pesquisa.</p>
+              <Link className="card-link" to="/mais-servicos/servicos11"> Veja Mais! </Link>
+            </div>
+
+            <div className="card">
+              <img src="img/maisServicos/abrinq.jpg" alt="Imagem 6" className="card-image" />
+              <h3 title="Fundação ABRINQ" className="card-title">Fundação ABRINQ</h3>
+              <p className="card-description">A Fundação Abrinq, é uma fundação de direito privado, sem fins lucrativos, constituída em 13 de fevereiro de 1990 com o objetivo de mobilizar a sociedade para questões relacionadas aos direitos da infância e da adolescência</p>
+              <Link className="card-link" to="/mais-servicos/servicos12"> Veja Mais! </Link>
+            </div>
+          </div>
+
+        </div>
+      </Cards>
+      <Footer />
+    </div>
+  )
 }
 
 export default MaisServicos

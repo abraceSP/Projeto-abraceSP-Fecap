@@ -1,23 +1,16 @@
 import React, { useEffect } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLocationDot,
   faPhoneVolume,
 } from "@fortawesome/free-solid-svg-icons";
 
-function Servicos01() {
+function Servicos11() {
   useEffect(() => {
     document.body.style.backgroundColor = "black";
   }, []);
-
-  const navigate = useNavigate();
-
-  const handleContactClick = () => {
-    navigate('/#contato'); // Navega para a página HOME e para o container 'servicos'
-  };
 
   return (
     <div>
@@ -29,19 +22,16 @@ function Servicos01() {
               <div style={styles.logoContainer}>
                 <div style={styles.logoCircle}>
                   <img
-                    src="/img/acolhimento/casa1/casa1.jpeg"
-                    alt="Logo Casa1"
+                    src="/img/maisServicos/graacc/graacclogo.jpg"
+                    alt="Logo GRAAC"
                     style={styles.logoImage}
                   />
                 </div>
               </div>
               <div style={styles.textContainer}>
-                <h1 style={styles.title}>Casa 1</h1>
+                <h1 style={styles.title}>GRAACC</h1>
                 <p style={styles.description}>
-                  Um projeto de sociedade civil que tem como propósito a
-                  acolhida de jovens entre 18 e 25 anos que foram expulsos de
-                  casa pela família por suas orientações afetivas sexuais e
-                  identidade de gênero.
+                  O Grupo de Apoio ao Adolescente e à Criança com Câncer fornece tratamento especializado e gratuito para jovens com câncer, investindo também em pesquisa e formação de profissionais na área.
                 </p>
               </div>
             </div>
@@ -56,29 +46,13 @@ function Servicos01() {
           <p
             style={{ color: "#FFF", paddingLeft: "70px", paddingRight: "70px" }}
           >
-            Lorem ipsum dolor sit amet consectetur. Euismod rutrum nisi ante
-            nunc. Vitae odio ornare condimentum libero. Est sed laoreet sed at
-            at lectus neque. Amet eu mauris fermentum eu nunc eleifend eu
-            elementum natoque. Pretium nulla et pulvinar nisi fames arcu nulla.
-            Dictumst maecenas pharetra et pellentesque. Urna urna nec dignissim
-            habitant ipsum. Turpis mi vitae fames amet pulvinar. Donec amet
-            ultrices egestas sit nam enim. Sed sed mattis nunc libero sit
-            interdum.
-            <br></br> Leo leo et quisque ut tellus. Eget egestas sed
-            pharetra sem gravida semper nisi proin. Imperdiet quis vel aliquam
-            quam vehicula feugiat arcu sit. Erat egestas nibh facilisi at
-            venenatis neque ultrices tellus. Vel libero nisi pellentesque lacus
-            in mattis non. Vulputate quisque neque urna habitasse justo pulvinar
-            egestas auctor. Vel id sed lacus bibendum mauris sed vel.
-            Suspendisse ultrices ipsum a proin augue arcu sodales fermentum.
-            <br></br> Lorem ipsum dolor sit amet consectetur. Euismod rutrum nisi ante
-            nunc. Vitae odio ornare condimentum libero. Est sed laoreet sed at
-            at lectus neque. Amet eu mauris fermentum eu nunc eleifend eu
-            elementum natoque. Pretium nulla et pulvinar nisi fames arcu nulla.
-            Dictumst maecenas pharetra et pellentesque. Urna urna nec dignissim
-            habitant ipsum. Turpis mi vitae fames amet pulvinar. Donec amet
-            ultrices egestas sit nam enim. Sed sed mattis nunc libero sit
-            interdum.
+            O GRAACC (Grupo de Apoio ao Adolescente e à Criança com Câncer) é uma instituição sem fins lucrativos que oferece tratamento especializado e de alta complexidade a crianças e adolescentes com câncer. Desde sua fundação em 1991, o GRAACC tem se destacado por oferecer acesso gratuito aos tratamentos mais avançados na oncologia pediátrica, sempre com o objetivo de alcançar altos índices de cura e melhorar a qualidade de vida dos pacientes. A organização conta com um hospital especializado, que é referência no Brasil e oferece desde consultas até tratamentos complexos, como cirurgias e transplantes.
+            <br></br>
+            <br></br>
+            Além de prestar cuidados médicos, o GRAACC investe em pesquisa e na formação de profissionais de saúde especializados em oncologia pediátrica, garantindo a continuidade e o aprimoramento de seus serviços. A instituição também realiza campanhas de conscientização e arrecadação de recursos, mobilizando a sociedade para manter suas atividades e expandir sua capacidade de atendimento. A transparência e a eficiência na gestão dos recursos são marcas registradas do GRAACC, o que reforça sua credibilidade e compromisso com a causa.
+            <br></br>
+            <br></br>
+            A missão do GRAACC vai além do tratamento médico: a organização busca proporcionar dignidade, esperança e uma chance real de cura para crianças e adolescentes com câncer. Com um atendimento humanizado e especializado, o GRAACC tem contribuído para aumentar as chances de cura de milhares de pacientes, garantindo que eles possam voltar a sonhar com o futuro.
           </p>
         </section>
 
@@ -108,22 +82,22 @@ function Servicos01() {
               Site:{" "}
               <a
                 style={{ color: "#FFF" }}
-                href="https://www.casaum.org/"
+                href="https://graacc.org.br/"
                 target="_blank"
                 rel="noreferrer"
               >
-                https://www.casaum.org/
+                https://graacc.org.br/
               </a>
             </p>
             <p style={{ color: "#FFF" }}>
               Rede social:{" "}
               <a
                 style={{ color: "#FFF" }}
-                href="https://www.instagram.com/casa1/"
+                href="https://www.instagram.com/instagraacc/"
                 target="_blank"
                 rel="noreferrer"
               >
-                https://www.instagram.com/casa1/
+                https://www.instagram.com/instagraacc/
               </a>
             </p>
           </div>
@@ -150,11 +124,11 @@ function Servicos01() {
               Endereço:{" "}
               <a
                 style={{ color: "#FFF" }}
-                href="https://www.google.com/search?sca_esv=db38b91c37c5cf98&sxsrf=ADLYWIJg_RRJrJ5BLQ2sQaKnAf74rvbblg:1726444969151&q=CASA+1+-+Centro+de+Cultura+e+Acolhimento+LGBT&ludocid=2957159734955648964&lsig=AB86z5XQxjXJ4whGJapQGIZMc-OG&sa=X&ved=2ahUKEwid7fDYlMaIAxXGqpUCHWLdCwkQoAJ6BAgdEAc"
+                href="https://www.google.com/maps/place/GRAACC/@-23.5982227,-46.6422768,15z/data=!4m2!3m1!1s0x0:0xd7abb48c53783ee1?sa=X&ved=1t:2428&ictx=111"
                 target="_blank"
                 rel="noreferrer"
               >
-                Rua Adoniran Barbosa 151, São Paulo, SP, 01318-020
+                Rua Pedro de Toledo 572, São Paulo, SP, 04039-001
               </a>
             </p>
             <p style={{ color: "#FFF" }}>
@@ -165,11 +139,11 @@ function Servicos01() {
               Contato:{" "}
               <a
                 style={{ color: "#FFF" }}
-                href="tel:11982976671"
+                href="tel:1150808400"
                 target="_blank"
                 rel="noreferrer"
               >
-                (11) 98297-6671
+                (11) 5080-8400
               </a>
             </p>
           </div>
@@ -195,60 +169,25 @@ function Servicos01() {
             }}
           >
             <img
-              src="/img/acolhimento/casa1/img1.png"
-              alt="Biblioteca"
+              src="/img/maisServicos/graacc/img1.jpg"
+              alt="Médica"
               style={{ width: "35%", borderRadius: "5px" }}
             />
             <img
-              src="/img/acolhimento/casa1/img2.png"
-              alt="Palestra"
+              src="/img/maisServicos/graacc/img2.jpg"
+              alt="Sussurando"
               style={{ width: "35%", borderRadius: "5px" }}
             />
             <img
-              src="/img/acolhimento/casa1/img3.png"
-              alt="Abraço"
+              src="/img/maisServicos/graacc/img3.jpg"
+              alt="Visita Personagens"
               style={{ width: "35%", borderRadius: "5px" }}
             />
             <img
-              src="/img/acolhimento/casa1/img4.png"
-              alt="Aula de yoga"
+              src="/img/maisServicos/graacc/img4.jpg"
+              alt="Brincando"
               style={{ width: "35%", borderRadius: "5px" }}
             />
-          </div>
-        </section>
-
-        <section
-          style={{
-            marginTop: "40px",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
-        >
-          <div style={{ flex: 1, marginLeft: "70px" }}>
-            <h2 style={{ color: "#9B0202", fontSize: "15px", fontWeight: "bolder", marginBottom: "20px" }}>
-              VAMOS CONVERSAR
-            </h2>
-            <p style={{ fontSize: "30px", color: "#FFF", fontWeight: "bolder" }}>
-              Dê suas opiniões, sugestões, tire dúvidas!
-            </p>
-          </div>
-
-          <div>
-            <button
-              onClick={handleContactClick} // Usa a função handleContactClick ao invés de href
-              style={{
-                padding: "20px 20px",
-                marginRight: "350px",
-                fontSize: "1.3rem",
-                backgroundColor: "#000",
-                border: "2px solid #fff",
-                color: "#fff",
-                cursor: "pointer",
-              }}
-            >
-              ENTRE EM CONTATO!
-            </button>
           </div>
         </section>
       </main>
@@ -259,7 +198,7 @@ function Servicos01() {
 
 const styles = {
   background: {
-    backgroundImage: "url(/img/acolhimento/casa1/casa1background.png)", // Certifique-se de que a extensão do arquivo está correta
+    backgroundImage: "url(/img/maisServicos/graacc/graaccbanner.jpg)", // Certifique-se de que a extensão do arquivo está correta
     backgroundSize: "cover",
     backgroundPosition: "center",
     height: "80vh", // Ajuste conforme necessário
@@ -289,7 +228,7 @@ const styles = {
     height: "80px",
     borderRadius: "50%", // Torna o contêiner circular
     overflow: "hidden", // Garante que a imagem não ultrapasse os limites do círculo
-    backgroundImage: "url(/img/acolhimento/casa1/casa1.jpeg)",
+    backgroundImage: "url(/img/maisServicos/graacc/graacclogo.jpg)",
     backgroundSize: "cover", // Garante que a imagem preencha todo o contêiner
     backgroundPosition: "center", // Centraliza a imagem
   },
@@ -312,4 +251,4 @@ const styles = {
   },
 };
 
-export default Servicos01;
+export default Servicos11;

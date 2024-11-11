@@ -1,23 +1,16 @@
 import React, { useEffect } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLocationDot,
   faPhoneVolume,
 } from "@fortawesome/free-solid-svg-icons";
 
-function Servicos01() {
+function Servicos09() {
   useEffect(() => {
     document.body.style.backgroundColor = "black";
   }, []);
-
-  const navigate = useNavigate();
-
-  const handleContactClick = () => {
-    navigate('/#contato'); // Navega para a página HOME e para o container 'servicos'
-  };
 
   return (
     <div>
@@ -29,19 +22,16 @@ function Servicos01() {
               <div style={styles.logoContainer}>
                 <div style={styles.logoCircle}>
                   <img
-                    src="/img/acolhimento/casa1/casa1.jpeg"
-                    alt="Logo Casa1"
+                    src="/img/maisServicos/favelapaz/favelapazlogo.jpg"
+                    alt="Logo Favela da Paz"
                     style={styles.logoImage}
                   />
                 </div>
               </div>
               <div style={styles.textContainer}>
-                <h1 style={styles.title}>Casa 1</h1>
+                <h1 style={styles.title}>Instituto Favela Paz</h1>
                 <p style={styles.description}>
-                  Um projeto de sociedade civil que tem como propósito a
-                  acolhida de jovens entre 18 e 25 anos que foram expulsos de
-                  casa pela família por suas orientações afetivas sexuais e
-                  identidade de gênero.
+                  Utilizando cultura e educação como ferramentas de transformação, o instituto busca reduzir a violência e promover a inclusão social em comunidades periféricas por meio de atividades artísticas e esportivas.
                 </p>
               </div>
             </div>
@@ -56,29 +46,13 @@ function Servicos01() {
           <p
             style={{ color: "#FFF", paddingLeft: "70px", paddingRight: "70px" }}
           >
-            Lorem ipsum dolor sit amet consectetur. Euismod rutrum nisi ante
-            nunc. Vitae odio ornare condimentum libero. Est sed laoreet sed at
-            at lectus neque. Amet eu mauris fermentum eu nunc eleifend eu
-            elementum natoque. Pretium nulla et pulvinar nisi fames arcu nulla.
-            Dictumst maecenas pharetra et pellentesque. Urna urna nec dignissim
-            habitant ipsum. Turpis mi vitae fames amet pulvinar. Donec amet
-            ultrices egestas sit nam enim. Sed sed mattis nunc libero sit
-            interdum.
-            <br></br> Leo leo et quisque ut tellus. Eget egestas sed
-            pharetra sem gravida semper nisi proin. Imperdiet quis vel aliquam
-            quam vehicula feugiat arcu sit. Erat egestas nibh facilisi at
-            venenatis neque ultrices tellus. Vel libero nisi pellentesque lacus
-            in mattis non. Vulputate quisque neque urna habitasse justo pulvinar
-            egestas auctor. Vel id sed lacus bibendum mauris sed vel.
-            Suspendisse ultrices ipsum a proin augue arcu sodales fermentum.
-            <br></br> Lorem ipsum dolor sit amet consectetur. Euismod rutrum nisi ante
-            nunc. Vitae odio ornare condimentum libero. Est sed laoreet sed at
-            at lectus neque. Amet eu mauris fermentum eu nunc eleifend eu
-            elementum natoque. Pretium nulla et pulvinar nisi fames arcu nulla.
-            Dictumst maecenas pharetra et pellentesque. Urna urna nec dignissim
-            habitant ipsum. Turpis mi vitae fames amet pulvinar. Donec amet
-            ultrices egestas sit nam enim. Sed sed mattis nunc libero sit
-            interdum.
+            O Instituto Favela Paz é uma organização que promove a cultura, a educação e a cidadania como ferramentas para transformar comunidades periféricas. Seu objetivo principal é reduzir a violência e oferecer alternativas positivas para jovens e famílias que vivem em situação de vulnerabilidade. Por meio de oficinas de arte, esporte e educação, o instituto proporciona oportunidades de inclusão social e empoderamento, acreditando que a cultura de paz é um meio eficaz de criar mudanças duradouras nas comunidades.
+            <br></br>
+            <br></br>
+            Além das atividades educativas, o Instituto Favela Paz também promove eventos culturais e diálogos comunitários que fortalecem os laços sociais e incentivam o respeito mútuo. O instituto busca não apenas capacitar os indivíduos, mas também criar um espaço onde a comunidade possa se unir e compartilhar experiências que promovam o crescimento coletivo. Através de suas iniciativas, o Instituto contribui para a construção de uma identidade comunitária mais forte e solidária.
+            <br></br>
+            <br></br>
+            O trabalho do Instituto Favela Paz vai além da oferta de atividades recreativas ou educativas. Ele é um agente de transformação social que combate as desigualdades e incentiva o protagonismo juvenil. Ao investir em jovens e em suas famílias, a organização ajuda a construir um futuro mais promissor e justo, contribuindo para a pacificação e o desenvolvimento sustentável das regiões em que atua.
           </p>
         </section>
 
@@ -108,22 +82,22 @@ function Servicos01() {
               Site:{" "}
               <a
                 style={{ color: "#FFF" }}
-                href="https://www.casaum.org/"
+                href="https://faveladapazcom.wordpress.com/"
                 target="_blank"
                 rel="noreferrer"
               >
-                https://www.casaum.org/
+                https://faveladapazcom.wordpress.com/
               </a>
             </p>
             <p style={{ color: "#FFF" }}>
               Rede social:{" "}
               <a
                 style={{ color: "#FFF" }}
-                href="https://www.instagram.com/casa1/"
+                href="https://www.instagram.com/institutofaveladapaz/"
                 target="_blank"
                 rel="noreferrer"
               >
-                https://www.instagram.com/casa1/
+                https://www.instagram.com/institutofaveladapaz/
               </a>
             </p>
           </div>
@@ -150,11 +124,11 @@ function Servicos01() {
               Endereço:{" "}
               <a
                 style={{ color: "#FFF" }}
-                href="https://www.google.com/search?sca_esv=db38b91c37c5cf98&sxsrf=ADLYWIJg_RRJrJ5BLQ2sQaKnAf74rvbblg:1726444969151&q=CASA+1+-+Centro+de+Cultura+e+Acolhimento+LGBT&ludocid=2957159734955648964&lsig=AB86z5XQxjXJ4whGJapQGIZMc-OG&sa=X&ved=2ahUKEwid7fDYlMaIAxXGqpUCHWLdCwkQoAJ6BAgdEAc"
+                href="https://www.google.com/maps/place/Instituto+Favela+da+Paz/@-23.6947947,-46.7786147,15z/data=!4m6!3m5!1s0x94ce5268a46b6b71:0x3766647cabe62022!8m2!3d-23.6947947!4d-46.7786147!16s%2Fg%2F11csgr4j4w?entry=ttu&g_ep=EgoyMDI0MTAxMy4wIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
                 rel="noreferrer"
               >
-                Rua Adoniran Barbosa 151, São Paulo, SP, 01318-020
+                Rua Miguel Dionísio Valle 35, São Paulo, SP, 04942-040
               </a>
             </p>
             <p style={{ color: "#FFF" }}>
@@ -165,11 +139,11 @@ function Servicos01() {
               Contato:{" "}
               <a
                 style={{ color: "#FFF" }}
-                href="tel:11982976671"
+                href="https://www.instagram.com/institutofaveladapaz/"
                 target="_blank"
                 rel="noreferrer"
               >
-                (11) 98297-6671
+                https://www.instagram.com/institutofaveladapaz/
               </a>
             </p>
           </div>
@@ -195,60 +169,25 @@ function Servicos01() {
             }}
           >
             <img
-              src="/img/acolhimento/casa1/img1.png"
-              alt="Biblioteca"
+              src="/img/maisServicos/favelapaz/img1.jpg"
+              alt="Cozinha"
               style={{ width: "35%", borderRadius: "5px" }}
             />
             <img
-              src="/img/acolhimento/casa1/img2.png"
-              alt="Palestra"
+              src="/img/maisServicos/favelapaz/img2.jpg"
+              alt="Reunião"
               style={{ width: "35%", borderRadius: "5px" }}
             />
             <img
-              src="/img/acolhimento/casa1/img3.png"
-              alt="Abraço"
+              src="/img/maisServicos/favelapaz/img3.jpg"
+              alt="Candomblé"
               style={{ width: "35%", borderRadius: "5px" }}
             />
             <img
-              src="/img/acolhimento/casa1/img4.png"
-              alt="Aula de yoga"
+              src="/img/maisServicos/favelapaz/img4.jpg"
+              alt="Instituto"
               style={{ width: "35%", borderRadius: "5px" }}
             />
-          </div>
-        </section>
-
-        <section
-          style={{
-            marginTop: "40px",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
-        >
-          <div style={{ flex: 1, marginLeft: "70px" }}>
-            <h2 style={{ color: "#9B0202", fontSize: "15px", fontWeight: "bolder", marginBottom: "20px" }}>
-              VAMOS CONVERSAR
-            </h2>
-            <p style={{ fontSize: "30px", color: "#FFF", fontWeight: "bolder" }}>
-              Dê suas opiniões, sugestões, tire dúvidas!
-            </p>
-          </div>
-
-          <div>
-            <button
-              onClick={handleContactClick} // Usa a função handleContactClick ao invés de href
-              style={{
-                padding: "20px 20px",
-                marginRight: "350px",
-                fontSize: "1.3rem",
-                backgroundColor: "#000",
-                border: "2px solid #fff",
-                color: "#fff",
-                cursor: "pointer",
-              }}
-            >
-              ENTRE EM CONTATO!
-            </button>
           </div>
         </section>
       </main>
@@ -259,7 +198,7 @@ function Servicos01() {
 
 const styles = {
   background: {
-    backgroundImage: "url(/img/acolhimento/casa1/casa1background.png)", // Certifique-se de que a extensão do arquivo está correta
+    backgroundImage: "url(/img/maisServicos/favelapaz/favelapazbanner.jpg)", // Certifique-se de que a extensão do arquivo está correta
     backgroundSize: "cover",
     backgroundPosition: "center",
     height: "80vh", // Ajuste conforme necessário
@@ -289,7 +228,7 @@ const styles = {
     height: "80px",
     borderRadius: "50%", // Torna o contêiner circular
     overflow: "hidden", // Garante que a imagem não ultrapasse os limites do círculo
-    backgroundImage: "url(/img/acolhimento/casa1/casa1.jpeg)",
+    backgroundImage: "url(/img/maisServicos/favelapaz/favelapazlogo.jpg)",
     backgroundSize: "cover", // Garante que a imagem preencha todo o contêiner
     backgroundPosition: "center", // Centraliza a imagem
   },
@@ -312,4 +251,4 @@ const styles = {
   },
 };
 
-export default Servicos01;
+export default Servicos09;

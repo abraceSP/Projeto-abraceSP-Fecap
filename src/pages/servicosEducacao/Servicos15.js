@@ -8,7 +8,7 @@ import {
   faPhoneVolume,
 } from "@fortawesome/free-solid-svg-icons";
 
-function Servicos01() {
+function Servicos15() {
   useEffect(() => {
     document.body.style.backgroundColor = "black";
   }, []);
@@ -397,4 +397,4 @@ const styles = {
   },
 };
 
-export default Servicos01;
+export default Servicos15;

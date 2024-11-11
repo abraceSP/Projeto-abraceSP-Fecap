@@ -1,23 +1,16 @@
 import React, { useEffect } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLocationDot,
   faPhoneVolume,
 } from "@fortawesome/free-solid-svg-icons";
 
-function Servicos01() {
+function Servicos19() {
   useEffect(() => {
     document.body.style.backgroundColor = "black";
   }, []);
-
-  const navigate = useNavigate();
-
-  const handleContactClick = () => {
-    navigate('/#contato'); // Navega para a página HOME e para o container 'servicos'
-  };
 
   return (
     <div>
@@ -28,20 +21,12 @@ function Servicos01() {
             <div style={styles.container}>
               <div style={styles.logoContainer}>
                 <div style={styles.logoCircle}>
-                  <img
-                    src="/img/acolhimento/casa1/casa1.jpeg"
-                    alt="Logo Casa1"
-                    style={styles.logoImage}
-                  />
                 </div>
               </div>
               <div style={styles.textContainer}>
-                <h1 style={styles.title}>Casa 1</h1>
+                <h1 style={styles.title}>Bom-Prato</h1>
                 <p style={styles.description}>
-                  Um projeto de sociedade civil que tem como propósito a
-                  acolhida de jovens entre 18 e 25 anos que foram expulsos de
-                  casa pela família por suas orientações afetivas sexuais e
-                  identidade de gênero.
+                  Criado em 28 de dezembro de 2.000, o programa Bom Prato tem como objetivo oferecer refeições saudáveis e de alta qualidade a um custo acessível à população em vulnerabilidade social.
                 </p>
               </div>
             </div>
@@ -56,29 +41,13 @@ function Servicos01() {
           <p
             style={{ color: "#FFF", paddingLeft: "70px", paddingRight: "70px" }}
           >
-            Lorem ipsum dolor sit amet consectetur. Euismod rutrum nisi ante
-            nunc. Vitae odio ornare condimentum libero. Est sed laoreet sed at
-            at lectus neque. Amet eu mauris fermentum eu nunc eleifend eu
-            elementum natoque. Pretium nulla et pulvinar nisi fames arcu nulla.
-            Dictumst maecenas pharetra et pellentesque. Urna urna nec dignissim
-            habitant ipsum. Turpis mi vitae fames amet pulvinar. Donec amet
-            ultrices egestas sit nam enim. Sed sed mattis nunc libero sit
-            interdum.
-            <br></br> Leo leo et quisque ut tellus. Eget egestas sed
-            pharetra sem gravida semper nisi proin. Imperdiet quis vel aliquam
-            quam vehicula feugiat arcu sit. Erat egestas nibh facilisi at
-            venenatis neque ultrices tellus. Vel libero nisi pellentesque lacus
-            in mattis non. Vulputate quisque neque urna habitasse justo pulvinar
-            egestas auctor. Vel id sed lacus bibendum mauris sed vel.
-            Suspendisse ultrices ipsum a proin augue arcu sodales fermentum.
-            <br></br> Lorem ipsum dolor sit amet consectetur. Euismod rutrum nisi ante
-            nunc. Vitae odio ornare condimentum libero. Est sed laoreet sed at
-            at lectus neque. Amet eu mauris fermentum eu nunc eleifend eu
-            elementum natoque. Pretium nulla et pulvinar nisi fames arcu nulla.
-            Dictumst maecenas pharetra et pellentesque. Urna urna nec dignissim
-            habitant ipsum. Turpis mi vitae fames amet pulvinar. Donec amet
-            ultrices egestas sit nam enim. Sed sed mattis nunc libero sit
-            interdum.
+            O Bom Prato é um programa social criado pelo Governo do Estado de São Paulo em 2000, com o objetivo de oferecer refeições saudáveis e de baixo custo à população de baixa renda. A iniciativa visa combater a fome e garantir segurança alimentar, principalmente em áreas urbanas, onde o custo de vida é mais elevado. O programa atende principalmente pessoas em situação de vulnerabilidade social, como desempregados, moradores de rua e aposentados.
+            <br></br>
+            <br></br>
+            O Bom Prato se destaca pelos preços acessíveis das refeições. Atualmente, o almoço custa R$ 1,00, e o café da manhã é oferecido por apenas R$ 0,50. Esses valores são subsidiados pelo governo para garantir que as refeições sejam acessíveis a todos. Além disso, a qualidade nutricional é uma prioridade. As refeições são preparadas com base em recomendações nutricionais, garantindo que os usuários recebam uma alimentação balanceada e adequada. O almoço, por exemplo, oferece cerca de 1.200 calorias e inclui arroz, feijão, carne, salada, suco e sobremesa.
+            <br></br>
+            <br></br>
+            Ao longo dos anos, o programa cresceu e expandiu sua atuação, com várias unidades espalhadas por São Paulo e outros municípios do estado. O Bom Prato tem um impacto positivo direto na vida de milhões de pessoas, ajudando a mitigar os efeitos da pobreza, promover a saúde e reduzir a insegurança alimentar nas comunidades atendidas.
           </p>
         </section>
 
@@ -108,24 +77,14 @@ function Servicos01() {
               Site:{" "}
               <a
                 style={{ color: "#FFF" }}
-                href="https://www.casaum.org/"
+                href="https://www.desenvolvimentosocial.sp.gov.br/acoes-de-protecao-social/programa-bom-prato/"
                 target="_blank"
                 rel="noreferrer"
               >
-                https://www.casaum.org/
+                https://www.desenvolvimentosocial.sp.gov.br/acoes-de-protecao-social/programa-bom-prato/
               </a>
             </p>
-            <p style={{ color: "#FFF" }}>
-              Rede social:{" "}
-              <a
-                style={{ color: "#FFF" }}
-                href="https://www.instagram.com/casa1/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                https://www.instagram.com/casa1/
-              </a>
-            </p>
+
           </div>
         </section>
 
@@ -139,8 +98,8 @@ function Servicos01() {
         >
           <div style={{ flexBasis: "48%" }}>
             <h2 style={{ marginBottom: "10px" }}>
-              <span style={{ color: "#FFF" }}>Endereço e</span>{" "}
-              <span style={{ color: "#9B0202" }}>contato:</span>
+              <span style={{ color: "#FFF" }}>Endereço </span>{" "}
+              <span style={{ color: "#9B0202" }}></span>
             </h2>
             <p style={{ color: "#FFF" }}>
               <FontAwesomeIcon
@@ -150,28 +109,14 @@ function Servicos01() {
               Endereço:{" "}
               <a
                 style={{ color: "#FFF" }}
-                href="https://www.google.com/search?sca_esv=db38b91c37c5cf98&sxsrf=ADLYWIJg_RRJrJ5BLQ2sQaKnAf74rvbblg:1726444969151&q=CASA+1+-+Centro+de+Cultura+e+Acolhimento+LGBT&ludocid=2957159734955648964&lsig=AB86z5XQxjXJ4whGJapQGIZMc-OG&sa=X&ved=2ahUKEwid7fDYlMaIAxXGqpUCHWLdCwkQoAJ6BAgdEAc"
+                href="https://www.google.com.br/maps/place/S%C3%A3o+Paulo,+SP/@-23.6820635,-46.9249594,10z/data=!3m1!4b1!4m6!3m5!1s0x94ce448183a461d1:0x9ba94b08ff335bae!8m2!3d-23.5557714!4d-46.6395571!16zL20vMDIycGZt?entry=ttu&g_ep=EgoyMDI0MTAwMi4xIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
                 rel="noreferrer"
               >
-                Rua Adoniran Barbosa 151, São Paulo, SP, 01318-020
+                São Paulo, SP
               </a>
             </p>
-            <p style={{ color: "#FFF" }}>
-              <FontAwesomeIcon
-                icon={faPhoneVolume}
-                style={{ marginRight: "8px" }}
-              />
-              Contato:{" "}
-              <a
-                style={{ color: "#FFF" }}
-                href="tel:11982976671"
-                target="_blank"
-                rel="noreferrer"
-              >
-                (11) 98297-6671
-              </a>
-            </p>
+
           </div>
         </section>
 
@@ -195,60 +140,25 @@ function Servicos01() {
             }}
           >
             <img
-              src="/img/acolhimento/casa1/img1.png"
-              alt="Biblioteca"
+              src="/img/alimentacao/bomprato/img-bp1.png"
+              alt="Almoço"
               style={{ width: "35%", borderRadius: "5px" }}
             />
             <img
-              src="/img/acolhimento/casa1/img2.png"
-              alt="Palestra"
+              src="/img/alimentacao/bomprato/img-bp2.png"
+              alt="Cozinheiro"
               style={{ width: "35%", borderRadius: "5px" }}
             />
             <img
-              src="/img/acolhimento/casa1/img3.png"
-              alt="Abraço"
+              src="/img/alimentacao/bomprato/img-bp3.png"
+              alt="Janta"
               style={{ width: "35%", borderRadius: "5px" }}
             />
             <img
-              src="/img/acolhimento/casa1/img4.png"
-              alt="Aula de yoga"
+              src="/img/alimentacao/bomprato/img-bp4.png"
+              alt="Pessoas sendo servidas"
               style={{ width: "35%", borderRadius: "5px" }}
             />
-          </div>
-        </section>
-
-        <section
-          style={{
-            marginTop: "40px",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
-        >
-          <div style={{ flex: 1, marginLeft: "70px" }}>
-            <h2 style={{ color: "#9B0202", fontSize: "15px", fontWeight: "bolder", marginBottom: "20px" }}>
-              VAMOS CONVERSAR
-            </h2>
-            <p style={{ fontSize: "30px", color: "#FFF", fontWeight: "bolder" }}>
-              Dê suas opiniões, sugestões, tire dúvidas!
-            </p>
-          </div>
-
-          <div>
-            <button
-              onClick={handleContactClick} // Usa a função handleContactClick ao invés de href
-              style={{
-                padding: "20px 20px",
-                marginRight: "350px",
-                fontSize: "1.3rem",
-                backgroundColor: "#000",
-                border: "2px solid #fff",
-                color: "#fff",
-                cursor: "pointer",
-              }}
-            >
-              ENTRE EM CONTATO!
-            </button>
           </div>
         </section>
       </main>
@@ -259,7 +169,7 @@ function Servicos01() {
 
 const styles = {
   background: {
-    backgroundImage: "url(/img/acolhimento/casa1/casa1background.png)", // Certifique-se de que a extensão do arquivo está correta
+    backgroundImage: "url(/img/alimentacao/bomprato/BackBom.jpg", // Certifique-se de que a extensão do arquivo está correta
     backgroundSize: "cover",
     backgroundPosition: "center",
     height: "80vh", // Ajuste conforme necessário
@@ -289,7 +199,7 @@ const styles = {
     height: "80px",
     borderRadius: "50%", // Torna o contêiner circular
     overflow: "hidden", // Garante que a imagem não ultrapasse os limites do círculo
-    backgroundImage: "url(/img/acolhimento/casa1/casa1.jpeg)",
+    backgroundImage: "url(/img/alimentacao/bomprato/circulobom.jpg)",
     backgroundSize: "cover", // Garante que a imagem preencha todo o contêiner
     backgroundPosition: "center", // Centraliza a imagem
   },
@@ -312,4 +222,4 @@ const styles = {
   },
 };
 
-export default Servicos01;
+export default Servicos19;
