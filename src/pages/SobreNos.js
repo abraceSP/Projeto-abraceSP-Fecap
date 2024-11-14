@@ -8,8 +8,6 @@ import {
     faXTwitter,
     faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
-import { width } from "@fortawesome/free-brands-svg-icons/fa42Group";
-import styled from "styled-components";
 
 function SobreNos() {
     useEffect(() => {
@@ -130,15 +128,15 @@ function SobreNos() {
                     <section style={styles.content2}>
                         <h2 style={styles.titulo2}>Acompanhe nosso projeto nas redes sociais! </h2>
                         <div style={styles.linksContainer}>
-                            <a href="https://www.instagram.com/abracesp" target="_blank" style={styles.link}> {/* Alterar o link para nossa rede */}
+                            <a href="https://www.instagram.com/abracesp" target="_blank" rel="noreferrer" style={styles.link}>
                                 <FontAwesomeIcon icon={faInstagram} style={styles.icon} />
                                 Instagram
                             </a>
-                            <a href="https://x.com/projetoabracesp" target="_blank" style={styles.link}> {/* Alterar o link para nossa rede */}
+                            <a href="https://x.com/projetoabracesp" target="_blank" rel="noreferrer" style={styles.link}>
                                 <FontAwesomeIcon icon={faXTwitter} style={styles.icon} />
                                 X
                             </a>
-                            <a href="https://www.linkedin.com/in/abracesp" target="_blank" style={styles.link}> {/* Alterar o link para nossa rede */}
+                            <a href="https://www.linkedin.com/in/abracesp" target="_blank" rel="noreferrer" style={styles.link}>
                                 <FontAwesomeIcon icon={faLinkedin} style={styles.icon} />
                                 LinkedIn
                             </a>
@@ -195,7 +193,6 @@ const styles = {
         display: "flex",
         justifyContent: "space-between",
         maxWidth: "1000px",
-        width: "100%",
     },
     content2: {
         display: "block",

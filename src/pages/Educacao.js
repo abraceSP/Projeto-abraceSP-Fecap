@@ -158,10 +158,6 @@ const Cards = styled.div`
 function Educacao() {
   const navigate = useNavigate();
 
-  const handleContactClick = () => {
-    navigate("/#contato"); // Navega para a página HOME e para o container 'servicos'
-  };
-
   return (
     <div>
       <Header />

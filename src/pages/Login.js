@@ -124,7 +124,7 @@ function Login() {
       window.removeEventListener("mousemove", resetLogoutTimer);
       window.removeEventListener("keydown", resetLogoutTimer);
     };
-  }, []);
+  }, [resetLogoutTimer]); // Add the missing dependency
 
   return (
     <div>

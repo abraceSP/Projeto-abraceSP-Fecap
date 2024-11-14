@@ -178,15 +178,6 @@ function Cadastro() {
   const logoOngRef = useRef(null);
   const fotosCarroselRef = useRef(null);
 
-  function formatPhoneNumber(value) {
-    const phoneNumber = value.replace(/\D/g, "");
-    const match = phoneNumber.match(/^(\d{2})(\d{5})(\d{4})$/);
-    if (match) {
-      return `(${match[1]}) ${match[2]}-${match[3]}`;
-    }
-    return value;
-  }
-
   const handleTelefoneChange = (e) => {
     const input = e.target.value.replace(/\D/g, '');
     const formattedPhone = input.replace(/^(\d{2})(\d{5})(\d{4})$/, '($1) $2-$3');

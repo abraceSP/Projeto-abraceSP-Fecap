@@ -4,7 +4,6 @@ import Footer from "../../components/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLocationDot,
-  faPhoneVolume,
 } from "@fortawesome/free-solid-svg-icons";
 
 function Servicos23() {

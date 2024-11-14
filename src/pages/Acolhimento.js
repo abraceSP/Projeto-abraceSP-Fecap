@@ -155,15 +155,6 @@ function Acolhimento() {
 
   const navigate = useNavigate();
 
-  const handleContactClick = () => {
-    navigate('/'); // Navega para a Home primeiro
-
-    // Aguardar para garantir que a navegação foi concluída, então rolar até o contato
-    setTimeout(() => {
-      document.getElementById('contato').scrollIntoView({ behavior: 'smooth' });
-    }, 100);
-  };
-
   return (
     <div>
       <Header />

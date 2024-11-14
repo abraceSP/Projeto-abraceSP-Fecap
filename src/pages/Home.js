@@ -231,10 +231,6 @@ function Home() {
 
   const contactRef = useRef(null);
 
-  const scrollToContact = () => {
-    contactRef.current.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
     <div>
       <Header /> {/*Importação do Header */}

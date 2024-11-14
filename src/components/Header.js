@@ -129,6 +129,11 @@ function Header() {
   const handleMouseOver = () => setDropdownVisible(true);
   const handleMouseOut = () => setDropdownVisible(false);
 
+  const handleClick = (e) => {
+    e.preventDefault();
+    setDropdownVisible(!dropdownVisible);
+  };
+
   return (
 
     <HeaderContainer>
@@ -150,7 +155,7 @@ function Header() {
               onMouseOver={handleMouseOver}
               onMouseOut={handleMouseOut}
             >
-              <a href="#"> Mais &#9662;</a>
+              <a href="#" onClick={handleClick}>Mais &#9662;</a>
               {dropdownVisible && (
                 <ul className="dropdownMenu">
                   <li><Link to="/mais-servicos">Mais Serviços</Link></li>
