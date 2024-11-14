@@ -95,6 +95,13 @@ const Select = styled.select`
   border-radius: 5px;
   font-size: 16px;
   color: #b78f8f;
+  appearance: none; /* Remove o estilo padrão do sistema operacional */
+  -webkit-appearance: none; /* Remove o estilo padrão no Safari */
+  -moz-appearance: none; /* Remove o estilo padrão no Firefox */
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23b78f8f" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>'); /* Adiciona um ícone de seta personalizado */
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
 
   option {
     // Estiliza as opções dentro do seletor

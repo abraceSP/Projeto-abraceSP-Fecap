@@ -206,7 +206,7 @@ const styles = {
     fotoGrupo: {
         flex: 1,
         marginRight: "20px",
-        backgroundImage: "url(/img/sobreNos/grupo.jpg)",
+        backgroundImage: "url(/img/sobreNos/grupoFoto.jpg)",
         backgroundSize: "cover",
         backgroundPosition: "center",
         border: "5px solid #9B0202", // Defina a espessura, estilo e cor da borda
