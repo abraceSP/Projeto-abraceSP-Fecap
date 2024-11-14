@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLocationDot,
@@ -12,12 +11,6 @@ function Servicos18() {
   useEffect(() => {
     document.body.style.backgroundColor = "black";
   }, []);
-
-  const navigate = useNavigate();
-
-  const handleContactClick = () => {
-    navigate("/#contato"); // Navega para a página HOME e para o container 'servicos'
-  };
 
   return (
     <div>

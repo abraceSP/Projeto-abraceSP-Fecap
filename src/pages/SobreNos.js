@@ -210,7 +210,6 @@ const styles = {
         borderRadius: "20px", // Opcional: arredonda os cantos da borda
     },
     fotoPlaceholder: {
-        width: "100%",
         marginRight: "400px",
         height: "500px",
         width: "150px",

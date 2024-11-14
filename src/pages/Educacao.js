@@ -3,7 +3,6 @@ import Footer from "../components/Footer";
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 
 const HomeServicos = styled.div`
   /* Design para abaixo do header */
@@ -156,8 +155,6 @@ const Cards = styled.div`
 `;
 
 function Educacao() {
-  const navigate = useNavigate();
-
   return (
     <div>
       <Header />

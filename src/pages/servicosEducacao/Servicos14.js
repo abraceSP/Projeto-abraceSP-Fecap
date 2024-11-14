@@ -15,10 +15,6 @@ function Servicos14() {
 
   const navigate = useNavigate();
 
-  const handleContactClick = () => {
-    navigate("/#contato"); // Navega para a página HOME e para o container 'servicos'
-  };
-
   return (
     <div>
       <Header />

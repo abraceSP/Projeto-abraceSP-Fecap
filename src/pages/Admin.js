@@ -348,7 +348,6 @@ function Admin() {
   const [cadastros, setCadastros] = useState([]);
   const [editIndex, setEditIndex] = useState(null);
   const [editData, setEditData] = useState({});
-  const [adminData, setAdminData] = useState({ nome: "", foto: "" });
 
   useEffect(() => {
     // Fetch cadastros from the server
@@ -361,19 +360,6 @@ function Admin() {
       .catch((error) => {
         console.error("Erro ao buscar cadastros: ", error);
       });
-  }, []);
-
-  useEffect(() => {
-    const token = localStorage.getItem('token');
-    axios.get('http://localhost:3001/admin', {
-      headers: { Authorization: token }
-    })
-    .then(response => {
-      setAdminData(response.data);
-    })
-    .catch(error => {
-      console.error("Erro ao buscar dados do admin: ", error);
-    });
   }, []);
 
   const toggleExpand = (index) => {
