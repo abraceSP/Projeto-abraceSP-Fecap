@@ -40,7 +40,7 @@ import Servicos29 from './pages/servicosAcolhimento/Servicos29.js';
 import Servicos30 from './pages/servicosAcolhimento/Servicos30.js';
 import Admin from './pages/Admin.js';
 import Login from './pages/Login.js';
-import RotaProtegida from './pages/RotaProtegida.js';
+import RotaProtegida from './backend/RotaProtegida.js';
 
 function App() {
   useEffect(() => {
