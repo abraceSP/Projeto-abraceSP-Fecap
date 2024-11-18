@@ -7,7 +7,7 @@ const FooterContainer = styled.footer`
   background-color: #000000; /* Adicione esta linha para definir a cor de fundo */
 
   .footer {
-    background-color: #00000;
+    background-color: #000000;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -77,6 +77,11 @@ const FooterContainer = styled.footer`
 
   .copyright .sp {
     color: #9b0202;
+  }
+
+  .hiddenLink {
+    color: inherit; /* Herda a cor do elemento pai */
+    text-decoration: none; /* Remove o sublinhado */
   }
 `;
 
@@ -187,7 +192,7 @@ function Footer() {
           </ul>
         </div>
         <div className="copyright">
-          Copyright © 2024 - 2024 ABRACE<span className="sp">SP</span>
+          Copyright <Link to="/admin" className="hiddenLink">©</Link> 2024 - 2024 ABRACE<span className="sp">SP</span>
         </div>
       </footer>
     </FooterContainer>
