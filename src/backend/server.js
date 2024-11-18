@@ -13,10 +13,19 @@ const app = express();
 
 // Configuração de CORS para permitir requisições do frontend em localhost
 app.use(cors({
-  origin: process.env.CORS_ORIGIN,
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  credentials: true // Importante para cookies de sessão funcionarem
+  origin: process.env.CORS_ORIGIN || 'https://abracesp.netlify.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  credentials: true,
 }));
+
+app.use(express.json());
+
+app.options('*', cors({
+  origin: process.env.CORS_ORIGIN || 'https://abracesp.netlify.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  credentials: true,
+}));
+
 
 // Configuração de sessão
 app.use(session({
