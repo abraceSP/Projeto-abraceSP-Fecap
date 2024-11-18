@@ -13,7 +13,7 @@ const RotaProtegida = ({ component: Component }) => {
     }
 
     axios
-      .get("https://abracesp.azurewebsites.net/admin", {
+      .get("http://localhost:3000/admin", {
         headers: { Authorization: token },
       })
       .then(() => setIsAuthenticated(true))
