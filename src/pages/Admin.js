@@ -352,7 +352,7 @@ function Admin() {
   useEffect(() => {
     // Fetch cadastros from the server
     axios
-      .get("http://localhost:3000/cadastros")
+      .get("http://localhost:3001/cadastros")
       .then((response) => {
         console.log("Dados recebidos do servidor:", response.data); // Adicione este log
         setCadastros(response.data);
@@ -377,7 +377,7 @@ function Admin() {
   const handleDelete = (index) => {
     const cadastro = cadastros[index];
     axios
-      .delete(`http://localhost:3000/cadastros/${cadastro.idUsuario}`)
+      .delete(`http://localhost:3001/cadastros/${cadastro.idUsuario}`)
       .then(() => {
         console.log(`Card ${index + 1} recusado`);
         setCadastros((prev) => prev.filter((_, i) => i !== index));
@@ -394,7 +394,7 @@ function Admin() {
 
   const handleSave = (index) => {
     axios
-      .put(`http://localhost:3000/cadastros/${editData.idUsuario}`, editData)
+      .put(`http://localhost:3001/cadastros/${editData.idUsuario}`, editData)
       .then((response) => {
         setCadastros((prev) =>
           prev.map((cadastro, i) => (i === index ? editData : cadastro))
@@ -463,7 +463,7 @@ function Admin() {
                       {formatDate(cadastro.dataCadastro)}
                     </span>
                     <LogoCircle
-                      src={`http://localhost:3000/${cadastro.logoOng}`}
+                      src={`http://localhost:3001/${cadastro.logoOng}`}
                       alt="Logo"
                     />
                     <CardTitle>{cadastro.nomeOng}</CardTitle>
@@ -472,7 +472,7 @@ function Admin() {
                         {JSON.parse(cadastro.fotosCarrosel).map((foto, idx) => (
                           <Carousel.Item key={idx}>
                             <CarouselImage
-                              src={`hhttp://localhost:3000/${foto}`}
+                              src={`hhttp://localhost:3001/${foto}`}
                               alt={`Slide ${idx + 1}`}
                             />
                           </Carousel.Item>

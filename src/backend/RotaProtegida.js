@@ -13,7 +13,7 @@ const RotaProtegida = ({ component: Component }) => {
     }
 
     axios
-      .get("http://localhost:3000/admin", {
+      .get("http://localhost:3001/admin", {
         headers: { Authorization: token },
       })
       .then(() => setIsAuthenticated(true))
